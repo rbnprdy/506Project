@@ -1,23 +1,27 @@
 import network
 import mnist_loader
 import numpy as np
+import matplotlib.pyplot as plt
+import post_processing
 
 def main():
 	training_data, validation_data, testing_data = mnist_loader.load_data_wrapper()
 	net = network.Network([784, 30, 10])
-	noise = 10 * np.random.normal(0, 1, 784)
-	noise = noise.reshape((784, 1))
+	noisy_testing_data = []
+	
+	noisy_testing_data = post_processing.create_noisy_data(testing_data, 100)
+	post_processing.create_image_from_mnist(testing_data[0][0], "No Noise", "MNISTdata_no_noise.png")
+	post_processing.create_image_from_mnist(noisy_testing_data[0][0], "With Noise", "MNISTdata_noise.png")
+	
+	net.SGD(training_data, 10, 10, 3.0, test_data=testing_data)
 
-	noisy_data = np.clip(training_data[0][0] + noise, 0, 256)
-	net.SGD(training_data, 30, 10, 3.0, test_data=testing_data)
-	noisy_data = np.clip(training_data[0][0] + noise, 0, 256)
 	print "No noise confidence"
-	print net.feedforward(training_data[0][0])
+	print net.feedforward(testing_data[0][0])
 	print "Noise confidence"
-	print net.feedforward(noisy_data)
-	print "Classification"
-	print training_data[0][1]
-	#net.write_parameters("../parameter_data")
+	print net.feedforward(noisy_testing_data[0][0])
+
+	print "Score of no noise: {}/1000".format(net.evaluate(testing_data))
+	print "Score of noise: {}/1000".format(net.evaluate(noisy_testing_data))
 
 
 
