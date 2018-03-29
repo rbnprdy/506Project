@@ -28,6 +28,22 @@ def create_noisy_data(data, amplitude):
 
 	return noisy_testing_data
 
+def create_noisy_fixed_point_data(data, amplitude):
+	noisy_testing_data = [None] * len(data)
+	noise = amplitude * np.random.normal(0, 1, 784)			# Creating noise
+	noise = noise.reshape((784, 1))
+
+	for count, i in enumerate(data):						# Adding noise to all data
+		pixels = i[0] * 256
+		noisy_pixels = np.clip(noise + pixels, 0, 256)
+		noisy_pixels = noisy_pixels / 256
+		noisy_testing_data[count] = [noisy_pixels.astype(i[0].dtype), i[1]]
+
+	for i in range(0, len(noisy_testing_data)):
+		noisy_testing_data[i][0] *= 256
+		np.round(noisy_testing_data[i][0])
+		
+	return noisy_testing_data
 
 def create_lighter_data(data, amplitude):
 	noisy_testing_data = [None] * len(data)
