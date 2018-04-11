@@ -12,25 +12,26 @@ def main():
 		
 	for count in range(1, 11):
 		print "\nRun {}".format(count)
-		for i in [0, 20, 40, 60, 80,100]:
-			noisy_testing_data, noisy_training_data = post_processing.create_two_noisy_data(testing_data, training_data, i)
-			ssim_noise = ssim(testing_data[0][0].reshape((28, 28)), noisy_testing_data[0][0].reshape((28, 28)))		
+		#for i in [0, 20, 40, 60, 80,100]:
+		noisy_testing_data, noisy_training_data = post_processing.create_two_noisy_data(testing_data, training_data, 80)
+		ssim_noise = ssim(testing_data[0][0].reshape((28, 28)), noisy_testing_data[0][0].reshape((28, 28)))		
 
-			#post_processing.create_image_from_mnist(testing_data[0][0], "No Noise", "testing_data_no_noise.png")
-			#post_processing.create_image_from_mnist(noisy_testing_data[0][0], "With Noise", "testing_data_with_noise.png")
-			#post_processing.create_image_from_mnist(training_data[0][0], "No Noise", "training_data_no_noise.png")
-			#post_processing.create_image_from_mnist(noisy_training_data[0][0], "With Noise", "training_data_with_noise.png")
-			
-			net = network.Network([784, 30, 10])
-			net.SGD(noisy_training_data, 10, 10, 3.0)
+		net = network.Network([784, 30, 10])
+		net.SGD(noisy_training_data, 10, 10, 3.0)
 
-			#print "No noise confidence"
-			#print net.feedforward(testing_data[0][0])
-			#print "Noise confidence"
-			#print net.feedforward(noisy_testing_data[0][0])
-			print "{}, {}, {}, {}".format(i, ssim_noise, net.evaluate(testing_data)/10000.0, net.evaluate(noisy_testing_data)/10000.0)
-			#print "Score of no noise: {}/1000".format(net.evaluate(testing_data))
-			#print "Score of noise: {}/1000".format(net.evaluate(noisy_testing_data))
+		print("Noise: ")
+		net.print_network_info()
+
+		net_no_noise = network.Network([784, 30, 10])
+		net_no_noise.SGD(training_data, 10, 10, 3.0)
+
+		print("No Noise: ")
+		net_no_noise.print_network_info()
+
+		print "{}, {}, {}, {}".format(i, ssim_noise, net.evaluate(testing_data)/10000.0, net.evaluate(noisy_testing_data)/10000.0)
+
+
+
 	
 
 

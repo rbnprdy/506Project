@@ -137,6 +137,16 @@ class Network(object):
             for neuron_count, neuron in enumerate(layer):
                 np.savetxt("{}/weight_{}_{}.txt".format(data_path, layer_count, neuron_count), np.array(neuron), delimiter = "\n")
 
+    def print_network_info(self):
+        max_weight = 0
+        for ed_is_dumb in self.weights:
+            for l in ed_is_dumb:
+                for w in l:
+                    if w > max_weight:
+                        max_weight = w
+
+        print("Max Weight: {}".format(max_weight))
+
 
 #### Miscellaneous functions
 def sigmoid(z):
