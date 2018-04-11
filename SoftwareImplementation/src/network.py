@@ -16,6 +16,10 @@ import random
 # Third-party libraries
 import numpy as np
 
+# Our Libraries
+import fixed_point
+
+
 class Network(object):
 
     def __init__(self, sizes):
@@ -34,6 +38,7 @@ class Network(object):
         self.biases = [np.random.randn(y, 1) for y in sizes[1:]]
         self.weights = [np.random.randn(y, x)
                         for x, y in zip(sizes[:-1], sizes[1:])]
+
 
     def feedforward(self, a):
         """Return the output of the network if ``a`` is input."""
@@ -146,6 +151,18 @@ class Network(object):
                         max_weight = w
 
         print("Max Weight: {}".format(max_weight))
+
+    def convert_to_fix(self, W, F):
+        for layer in self.biases:
+            for bias_count, bias in enumerate(layer):
+                layer[bias_count] = fixed_point.float2fix_val(bias, W, F)
+                bias = fixed_point.float2fix_val(bias, W, F)
+
+        for layer in self.weights:
+            for neuron in layer:
+                for weight_count, weight in enumerate(neuron):
+                    neuron[weight_count] = fixed_point.float2fix_val(weight, W, F)
+
 
 
 #### Miscellaneous functions
