@@ -77,5 +77,6 @@ def create_two_noisy_data(data1, data2, amplitude):
 
 	return noisy_data1, noisy_data2
 
+
 if __name__ == '__main__':
 	main()
