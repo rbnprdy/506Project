@@ -4,20 +4,33 @@ import numpy as np
 import matplotlib.pyplot as plt
 import post_processing
 from skimage.measure import compare_ssim as ssim
+import fixed_point
 
-def main():
+def main():	
 
 	training_data, validation_data, testing_data = mnist_loader.load_data_wrapper()
 	noisy_testing_data, noisy_training_data = post_processing.create_two_noisy_data(testing_data, training_data, 80)
-
-	
-	net = network.Network([784, 30, 10])	
+	net = network.Network([784, 30, 10])
 	net.SGD(training_data, 10, 10, 3.0)
-	print 'Floating point accuracy: {}'.format(net.evaluate(testing_data) / 10000.0)
+	
+	# Writing the floating and fixed data, with binary true so we can get the binary represention of the data
+	net.write_parameters("../floating_parameter_data")
+	net.write_parameters("../fixed_parameter_data", binary=True)
 
-	for i in range(8, 14):
-		net.convert_to_fix(16, i)
-		print 'Fixed point accuracy with F = {}: {}'.format(i, net.evaluate(testing_data) / 10000.0)
+	'''
+	# This is a test of how changing the Fraction bitwidth effects the accuracy.
+	# Mostly seems to remain unchanged
+	for i in range(8, 13):
+		print "On F={}".format(i)
+		net = network.Network([784, 30, 10])
+		net.SGD(training_data, 10, 10, 3.0)
+		print "Floatng point accuracy: {}".format(net.evaluate(testing_data))
+		print net.biases[0][0]
+		net.convert_to_fix(15, i)
+		print "Floating point accuracy for F={}: {}".format(i, net.evaluate(testing_data))
+		print net.biases[0][0]
+	'''
+
 	
 
 if __name__ == '__main__':
