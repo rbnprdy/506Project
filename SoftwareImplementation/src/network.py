@@ -134,7 +134,7 @@ class Network(object):
         \partial a for the output activations."""
         return (output_activations-y)
 
-    def write_parameters(self, data_path, binary=False, F=15, W=11):
+    def write_parameters(self, data_path, binary=False, W=15, F=12):
         if not binary:
             for count, layer in enumerate(self.biases):
                 np.savetxt("{}/biases_{}.txt".format(data_path, count), np.array(layer), delimiter = "\n")
@@ -146,14 +146,14 @@ class Network(object):
             for count, layer in enumerate(self.biases):
                 with open("{}/biases_{}.txt".format(data_path, count), 'w') as f:
                     for bias_count, bias in enumerate(layer):
-                        f.write(fixed_point.float2fix_bin(bias, F, W, twos_compliment=True) + "\n")
+                        f.write(fixed_point.float2fix_bin(bias, W, F, twos_compliment=True) + "\n")
                     
 
             for layer_count, layer in enumerate(self.weights):
                 for neuron_count, neuron in enumerate(layer):
                     with open("{}/weight_{}_{}.txt".format(data_path, layer_count, neuron_count), 'w') as f:
                         for weight_count, weight in enumerate(neuron):
-                            f.write(fixed_point.float2fix_bin(weight, F, W, twos_compliment=True) + "\n")
+                            f.write(fixed_point.float2fix_bin(weight, W, F, twos_compliment=True) + "\n")
 
     def print_network_info(self):
         max_weight = 0

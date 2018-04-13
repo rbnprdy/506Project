@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import fixed_point
 
 def main():
 	print 'You are in the post processing module :). Welcome to our genius.'
@@ -76,6 +77,16 @@ def create_two_noisy_data(data1, data2, amplitude):
 		noisy_data2[count] = [noisy_pixels.astype(i[0].dtype), i[1]]
 
 	return noisy_data1, noisy_data2
+
+
+def create_fixed_image(pixels, path, W, F):
+	fixed_pixels = []
+	for i in pixels:
+		fixed_pixels.append(fixed_point.float2fix_bin(i, W, F, twos_compliment=True))
+
+	with open(path, 'w') as f:
+		for i in fixed_pixels:
+			f.write('{}\n'.format(i))
 
 
 if __name__ == '__main__':

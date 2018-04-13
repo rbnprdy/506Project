@@ -12,7 +12,7 @@ def float2fix_bin(a, W, F, twos_compliment=False):
 		print 'ERROR. FIXED POINT CONVERSION NOT COVERED. MUST FIX :('
 		return 0
 
-	if(not twos_compliment or a > 0):
+	if(not twos_compliment or a >= 0):
 		return '0' + c[:W-F] + c[-F:]
 	else:
 		return bin_twos_comp('0' + c[:W-F] + c[-F:])
