@@ -16,6 +16,10 @@ import random
 # Third-party libraries
 import numpy as np
 
+# Our Libraries
+import fixed_point
+
+
 class Network(object):
 
     def __init__(self, sizes):
@@ -34,6 +38,7 @@ class Network(object):
         self.biases = [np.random.randn(y, 1) for y in sizes[1:]]
         self.weights = [np.random.randn(y, x)
                         for x, y in zip(sizes[:-1], sizes[1:])]
+
 
     def feedforward(self, a):
         """Return the output of the network if ``a`` is input."""
@@ -129,13 +134,48 @@ class Network(object):
         \partial a for the output activations."""
         return (output_activations-y)
 
-    def write_parameters(self, data_path):
-        for count, layer in enumerate(self.biases):
-            np.savetxt("{}/biases_{}.txt".format(data_path, count), np.array(layer), delimiter = "\n")
+    def write_parameters(self, data_path, binary=False, W=15, F=12):
+        if not binary:
+            for count, layer in enumerate(self.biases):
+                np.savetxt("{}/biases_{}.txt".format(data_path, count), np.array(layer), delimiter = "\n")
 
-        for layer_count, layer in enumerate(self.weights):
-            for neuron_count, neuron in enumerate(layer):
-                np.savetxt("{}/weight_{}_{}.txt".format(data_path, layer_count, neuron_count), np.array(neuron), delimiter = "\n")
+            for layer_count, layer in enumerate(self.weights):
+                for neuron_count, neuron in enumerate(layer):
+                    np.savetxt("{}/weight_{}_{}.txt".format(data_path, layer_count, neuron_count), np.array(neuron), delimiter = "\n")
+        else:
+            for count, layer in enumerate(self.biases):
+                with open("{}/biases_{}.txt".format(data_path, count), 'w') as f:
+                    for bias_count, bias in enumerate(layer):
+                        f.write(fixed_point.float2fix_bin(bias, W, F, twos_compliment=True) + "\n")
+                    
+
+            for layer_count, layer in enumerate(self.weights):
+                for neuron_count, neuron in enumerate(layer):
+                    with open("{}/weight_{}_{}.txt".format(data_path, layer_count, neuron_count), 'w') as f:
+                        for weight_count, weight in enumerate(neuron):
+                            f.write(fixed_point.float2fix_bin(weight, W, F, twos_compliment=True) + "\n")
+
+    def print_network_info(self):
+        max_weight = 0
+        for ed_is_dumb in self.weights:
+            for l in ed_is_dumb:
+                for w in l:
+                    if w > max_weight:
+                        max_weight = w
+
+        print("Max Weight: {}".format(max_weight))
+
+    def convert_to_fix(self, W, F):
+        for layer in self.biases:
+            for bias_count, bias in enumerate(layer):
+                layer[bias_count] = fixed_point.float2fix_val(bias, W, F)
+                bias = fixed_point.float2fix_val(bias, W, F)
+
+        for layer in self.weights:
+            for neuron in layer:
+                for weight_count, weight in enumerate(neuron):
+                    neuron[weight_count] = fixed_point.float2fix_val(weight, W, F)
+
 
 
 #### Miscellaneous functions
@@ -153,4 +193,7 @@ def sigmoid_prime(z):
     """Derivative of the sigmoid function."""
     return sigmoid(z)*(1-sigmoid(z))
 
-
+def one_hot_encode(a):
+    ret_array = np.zeros((10, 1))
+    ret_array[a] = 1
+    return ret_array

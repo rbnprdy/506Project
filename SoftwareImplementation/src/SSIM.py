@@ -7,8 +7,8 @@ import struct
 
 def main():
     training_data, _, _ = mnist_loader.load_data_wrapper()
-   
-    # Setup Data
+
+     # Setup Data
     pixels = training_data[0][0]*256
 
     noisy_data = post_processing.create_noisy_data(training_data, 80)
@@ -51,6 +51,7 @@ def SSIM(x, y, verbose = False, use_c = False):
     
     # calculate SSIM
     SSIM = l(mean_x, mean_y, use_c=use_c) * c(stdev_x, stdev_y, use_c=use_c) * s(cov_xy, stdev_x, stdev_y, use_c=use_c)
+    SSIM = SSIM / (100*100)
 
     if verbose:
         print("mean_x: {}".format(mean_x))
@@ -58,8 +59,6 @@ def SSIM(x, y, verbose = False, use_c = False):
         print("st_x: {}".format(stdev_x))
         print("st_y: {}".format(stdev_y))
         print("COV: {}".format(cov_xy))
-        print("STDEV x: {}".format(stdev_x))
-        print("STDEV y: {}".format(stdev_y))
         print("STDEV mult: {}".format(stdev_x*stdev_y))
         print("l: {}".format(l(mean_x, mean_y)))
         print("c: {}".format(c(stdev_x, stdev_y)))
@@ -80,7 +79,7 @@ def mean(x):
     sum = 0
     for i in range(0, len(x)):
         sum = sum + x[i]
-    return sum / len(x)
+    return int(sum) / int(len(x))
 
 def dev(x, u_x):
     sum = 0
@@ -93,19 +92,19 @@ def l(u_x, u_y, use_c = False):
     c1 = 0
     if use_c:
         c1 = (0.0001*255)**2
-    return (2*u_x*u_y + c1) / (u_x**2 + u_y**2 + c1)
+    return (100*(2*u_x*u_y + c1)) / ((u_x**2 + u_y**2 + c1))
 
 def c(s_x, s_y, use_c = False):
     c2 = 0
     if use_c:
         c2 = (0.0001*255)**2
-    return (2*s_x*s_y+c2) / (s_x**2 + s_y**2 + c2)
+    return (100*(2*s_x*s_y+c2)) / ((s_x**2 + s_y**2 + c2))
 
 def s(s_xy, s_x, s_y, use_c = False):
     c3 = 0
     if use_c:
-        c3 = ((0.0001*255)**2) / 2
-    return (s_xy+c3) / (s_x*s_y + c3)
+        c3 = int((0.0001*255)**2) / int(2)
+    return min(100, (100*(s_xy+c3)) / ((s_x*s_y + c3)))
 
 def float_to_hex(f):
     return hex(struct.unpack('<I', struct.pack('<f', f))[0])
