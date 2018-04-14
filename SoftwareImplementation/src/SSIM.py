@@ -2,7 +2,7 @@ import mnist_loader
 import numpy as np
 import matplotlib.pyplot as plt
 import post_processing
-from skimage.measure import compare_ssim as ssim_ski
+#from skimage.measure import compare_ssim as ssim_ski
 import struct
 
 def main():

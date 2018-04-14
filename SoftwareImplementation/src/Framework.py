@@ -3,7 +3,6 @@ import mnist_loader
 import numpy as np
 import matplotlib.pyplot as plt
 import post_processing
-from skimage.measure import compare_ssim as ssim
 import fixed_point
 import random
 import SSIM
@@ -81,7 +80,7 @@ def main():
 			confidence_true_positive = confidence_true_positive + int(not network_prediction == np.argmax(curr_image[1]))
 
 		else:
-			ssim_val = ssim(curr_image[0].reshape((28, 28)), running_average[network_prediction].reshape((28, 28)))
+			ssim_val = SSIM.SSIM(curr_image[0], running_average[network_prediction])
 
 			if ssim_val < SSIM_THRESHOLD:
 				training_images.append(curr_image)
