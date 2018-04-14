@@ -193,4 +193,7 @@ def sigmoid_prime(z):
     """Derivative of the sigmoid function."""
     return sigmoid(z)*(1-sigmoid(z))
 
-
+def one_hot_encode(a):
+    ret_array = np.zeros((10, 1))
+    ret_array[a] = 1
+    return ret_array
