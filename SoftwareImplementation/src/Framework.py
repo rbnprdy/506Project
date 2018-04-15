@@ -10,12 +10,17 @@ import SSIM
 
 TRAINING_THRESHOLD = 100	# The number of times we are not confident before we train on the data
 CONFIDENCE_THRESHOLD = 0.75	# The confidence that we need in order say that we are right
-SSIM_THRESHOLD = 0.45		# The SSIM threshold before we have to train again
+SSIM_THRESHOLD = 0.5		# The SSIM threshold before we have to train again
 NUM_TRAIN = 1000			# How many times we will run through this
 
 def main():
 
+	run_framework(TRAINING_THRESHOLD, CONFIDENCE_THRESHOLD, SSIM_THRESHOLD, NUM_TRAIN)
+	
 
+
+
+def run_framework(training_threshold, confidence_threshold, ssim_threshold, num_train):
 	'''
 	These are statistics to see how useful the SSIM and confidence check are, over time
 	'''
@@ -70,7 +75,7 @@ def main():
 	'''
 	Actually going through the adaptive training for net. Similar to deploying into real world.
 	'''
-	for train_iter in range(NUM_TRAIN):
+	for train_iter in range(num_train):
 		'''
 		Network sees image in the field. It produces 10 outputs
 		'''
@@ -80,7 +85,7 @@ def main():
 		network_prediction = np.argmax(network_output)
 		network_confidence = np.max(network_output)
 
-		if network_confidence < CONFIDENCE_THRESHOLD:
+		if network_confidence < confidence_threshold:
 			training_images.append(curr_image)
 			num_incorrect = num_incorrect + 1
 			confidence_true_positive = confidence_true_positive + int(not network_prediction == np.argmax(curr_image[1]))
@@ -90,19 +95,19 @@ def main():
 			#ssim_val = SSIM(curr_image[0]).cw_ssim_value(running_average[network_prediction])
 
 
-			if ssim_val < SSIM_THRESHOLD:
+			if ssim_val < ssim_threshold:
 				training_images.append(curr_image)
 				num_incorrect = num_incorrect + 1
 				ssim_true_positive = ssim_true_positive + int(not network_prediction == np.argmax(curr_image[1]))
 				ssim_false_positive = ssim_false_positive + int(network_prediction == np.argmax(curr_image[1]))
 
 
-		if num_incorrect >= TRAINING_THRESHOLD:
+		if num_incorrect >= training_threshold:
 			print 'We are retraining at step {}. Triggering a retrain. SSIM got {} correct, confidence got {} correct'.format(train_iter, ssim_true_positive, confidence_true_positive)
 			try:
-				print 'SSIM was {}% right, and confidence was {}% right'.format(ssim_true_positive * 1.0 / (ssim_false_positive + ssim_true_positive), confidence_true_positive * 1.0 / (confidence_false_positive + confidence_true_positive))
+				print 'SSIM was {} right, and confidence was {} right'.format(ssim_true_positive * 1.0 / (ssim_false_positive + ssim_true_positive), confidence_true_positive * 1.0 / (confidence_false_positive + confidence_true_positive))
 			except:
-				print 'One was 0'
+				print 'Diving by zero, so either ssim or confidence did not happen'
 
 			net.SGD(training_images, 10, 10, 3.0)
 			print "Net accuracy on noisy data: {}".format(net.evaluate(noisy_testing_data)/10000.0)
