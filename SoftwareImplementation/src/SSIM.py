@@ -4,19 +4,49 @@ import matplotlib.pyplot as plt
 import post_processing
 #from skimage.measure import compare_ssim as ssim_ski
 import struct
+from scipy import signal
+import ssim
+from PIL import Image, ImageOps
+
+
 
 def main():
-    training_data, _, _ = mnist_loader.load_data_wrapper()
+    im = ssim.SSIMImage(Image.open('AfterFramework0.png'))
+    im_noise = ssim.SSIMImage(Image.open('AfterFramework1.png'))
+
+
+    width = 30
+
+    # Define a width for the wavelet convolution
+    widths = np.arange(1, width+1)
+
+    # Use the image data as arrays
+    sig1 = np.asarray(im.img_gray.getdata())
+    sig2 = np.asarray(im_noise.img_gray.getdata())
+
+    print CW_SSIM(sig1, sig2)
+
+    #cw_ssim_rot = ssim.SSIM(im).cw_ssim_value(im_noise)
+    #print cw_ssim_rot
+
+
+
+
+
+
+
+
+    #training_data, _, _ = mnist_loader.load_data_wrapper()
 
      # Setup Data
-    pixels = training_data[0][0]*256
+    #pixels = training_data[0][0]*256
 
-    noisy_data = post_processing.create_noisy_data(training_data, 80)
-    noisy_pixels = noisy_data[0][0]*256
+    #noisy_data = post_processing.create_noisy_data(training_data, 80)
+    #noisy_pixels = noisy_data[0][0]*256
 
-    generate_input_mem(noisy_pixels)
+    #generate_input_mem(noisy_pixels)
 
-    SSIM(pixels, noisy_pixels, verbose=True)
+    #SSIM(pixels, noisy_pixels, verbose=True)
 
     # for i in range(0, 101):
     #     noisy_data = post_processing.create_noisy_data(training_data, i)
@@ -24,6 +54,39 @@ def main():
     #     #SSIM(pixels, noisy_pixels, verbose=True)
     #     print("SSIM for Amplitude {}: {}\tSSIM-SKI for Amplitude {}: {}".format(i, SSIM(pixels, noisy_pixels), i, ssim_ski(pixels.reshape(28,28), noisy_pixels.reshape(28,28))))
     #     #print("SSIM for Amplitude {}: {}".format(i, SSIM(pixels, noisy_pixels)))
+
+
+# Define a width for the wavelet convolution
+def CW_SSIM(x, y, width=30, k = 0.01):
+    widths = np.arange(1, width+1)
+
+    # Use the image data as arrays
+    sig1 = x
+    sig2 = y
+
+    # Convolution
+    cwtmatr1 = signal.cwt(sig1, signal.ricker, widths)
+    cwtmatr2 = signal.cwt(sig2, signal.ricker, widths)
+
+    # Compute the first term
+    c1c2 = np.multiply(abs(cwtmatr1), abs(cwtmatr2))
+    c1_2 = np.square(abs(cwtmatr1))
+    c2_2 = np.square(abs(cwtmatr2))
+    num_ssim_1 = 2 * np.sum(c1c2, axis=0) + k
+    den_ssim_1 = np.sum(c1_2, axis=0) + np.sum(c2_2, axis=0) + k
+
+    # Compute the second term
+    c1c2_conj = np.multiply(cwtmatr1, np.conjugate(cwtmatr2))
+    num_ssim_2 = 2 * np.abs(np.sum(c1c2_conj, axis=0)) + k
+    den_ssim_2 = 2 * np.sum(np.abs(c1c2_conj), axis=0) + k
+
+    # Construct the result
+    ssim_map = (num_ssim_1 / den_ssim_1) * (num_ssim_2 / den_ssim_2)
+
+    # Average the per pixel results
+    index = np.average(ssim_map)
+    return index
+
 
 def generate_input_mem(data):
 
