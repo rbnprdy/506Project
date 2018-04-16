@@ -35,12 +35,12 @@ module covariance #(parameter NUM_INPUTS = 784)(in_x, u_x, in_y, clk, clr, in_x_
     wire b_valid;
     wire div_a_ready, div_b_ready, divider_valid;
     wire fixed_ready, fixed_valid;
-    wire accum_to_float_in_ready, accum_to_float_valid;
+    wire accum_to_float_in_ready, accum_to_float_valid, data_counter_done, div_to_float_ready;
     wire [31:0] accum_to_float_out;
     
     assign in_y_ready = sub_valid;
     
-    fixed_to_float in_to_float (
+    fixed_to_float_converter in_to_float (
         .aclk(clk),                                  // input wire aclk
         .s_axis_a_tvalid(in_x_valid),            // input wire s_axis_a_tvalid
         .s_axis_a_tready(x_ready),            // output wire s_axis_a_tready
@@ -68,7 +68,8 @@ module covariance #(parameter NUM_INPUTS = 784)(in_x, u_x, in_y, clk, clr, in_x_
         .clk(clk),
         .ready(sub_valid),
         .clr(clr),
-        .out(d_out)
+        .out(d_out),
+        .done(data_counter_done)
     );
         
     multiplier_float mult (
@@ -101,7 +102,7 @@ module covariance #(parameter NUM_INPUTS = 784)(in_x, u_x, in_y, clk, clr, in_x_
       .Q(accumulator_out)      // output wire [31 : 0] Q
     );
         
-    fixed_to_float accumulator_to_float (
+    fixed_to_float_converter accumulator_to_float (
         .aclk(clk),                                  // input wire aclk
         .s_axis_a_tvalid(multiplier_valid),            // input wire s_axis_a_tvalid
         .s_axis_a_tready(accum_to_float_in_ready),            // output wire s_axis_a_tready
@@ -111,9 +112,10 @@ module covariance #(parameter NUM_INPUTS = 784)(in_x, u_x, in_y, clk, clr, in_x_
         .m_axis_result_tdata(accum_to_float_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    fixed_to_float div_to_float (
+    fixed_to_float_converter div_to_float (
         .aclk(clk),                                  // input wire aclk
         .s_axis_a_tvalid(1),            // input wire s_axis_a_tvalid
+        .s_axis_a_tready(div_to_float_ready),            // output wire s_axis_a_tready
         .s_axis_a_tdata(NUM_INPUTS - 32'd1),              // input wire [31 : 0] s_axis_a_tdata
         .m_axis_result_tvalid(b_valid),  // output wire m_axis_result_tvalid
         .m_axis_result_tready(div_b_ready),  // input wire m_axis_result_tready

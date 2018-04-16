@@ -19,15 +19,15 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module stdev #(parameter NUM_INPUTS = 784)(in, u, clk, clr, in_valid, u_valid, out, out_valid);
+module stdev #(parameter NUM_INPUTS = 784)(in, u, clk, clr, in_valid, u_valid, result_ready, in_ready, out, out_valid);
     input [31:0] in, u;
-    input clk, clr, in_valid, u_valid;
+    input clk, clr, in_valid, u_valid, result_ready;
     
     output [31:0] out;
-    output out_valid;
+    output out_valid, in_ready;
     
     wire [31:0] x, subtractor_out, multiplier_out, accumulator_out, div_converter_out, divider_out, fixed_out, d_out;
-    wire x_ready, x_valid;
+    wire x_valid;
     wire sub_a_ready, sub_b_ready, sub_valid;
     wire multiplier_a_ready, multiplier_b_ready, multiplier_valid;
     wire b_valid;
@@ -36,11 +36,12 @@ module stdev #(parameter NUM_INPUTS = 784)(in, u, clk, clr, in_valid, u_valid, o
     wire accum_to_float_in_ready, accum_to_float_valid;
     wire [31:0] accum_to_float_out;
     wire square_root_a_ready, square_root_valid;
+    wire data_counter_done, div_to_float_ready;
     
-    fixed_to_float in_to_float (
+    fixed_to_float_converter in_to_float (
         .aclk(clk),                                  // input wire aclk
         .s_axis_a_tvalid(in_valid),            // input wire s_axis_a_tvalid
-        .s_axis_a_tready(x_ready),            // output wire s_axis_a_tready
+        .s_axis_a_tready(in_ready),            // output wire s_axis_a_tready
         .s_axis_a_tdata(in),              // input wire [31 : 0] s_axis_a_tdata
         .m_axis_result_tvalid(x_valid),  // output wire m_axis_result_tvalid
         .m_axis_result_tready(sub_a_ready),  // input wire m_axis_result_tready
@@ -52,7 +53,6 @@ module stdev #(parameter NUM_INPUTS = 784)(in, u, clk, clr, in_valid, u_valid, o
       .s_axis_a_tvalid(x_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(sub_a_ready),            // output wire s_axis_a_tready
       .s_axis_a_tdata(x),              // input wire [31 : 0] s_axis_a_tdata
-      //.s_axis_a_tdata(in),              // input wire [31 : 0] s_axis_a_tdata
       .s_axis_b_tvalid(u_valid),            // input wire s_axis_b_tvalid
       .s_axis_b_tready(sub_b_ready),            // output wire s_axis_b_tready
       .s_axis_b_tdata(u),              // input wire [31 : 0] s_axis_b_tdata
@@ -61,12 +61,14 @@ module stdev #(parameter NUM_INPUTS = 784)(in, u, clk, clr, in_valid, u_valid, o
       .m_axis_result_tdata(subtractor_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    data_counter #(.BIT_WIDTH(32), .NUM(NUM_INPUTS - 1)) d (
+    //data_counter #(.BIT_WIDTH(32), .NUM(NUM_INPUTS - 1)) d (
+    data_counter #(.BIT_WIDTH(32), .NUM(NUM_INPUTS)) d (
         .in(subtractor_out),
         .clk(clk),
         .ready(sub_valid),
         .clr(clr),
-        .out(d_out)
+        .out(d_out),
+        .done(data_counter_done)
     );
         
     multiplier_float mult (
@@ -99,7 +101,7 @@ module stdev #(parameter NUM_INPUTS = 784)(in, u, clk, clr, in_valid, u_valid, o
       .Q(accumulator_out)      // output wire [31 : 0] Q
     );
         
-    fixed_to_float accumulator_to_float (
+    fixed_to_float_converter accumulator_to_float (
         .aclk(clk),                                  // input wire aclk
         .s_axis_a_tvalid(multiplier_valid),            // input wire s_axis_a_tvalid
         .s_axis_a_tready(accum_to_float_in_ready),            // output wire s_axis_a_tready
@@ -109,10 +111,10 @@ module stdev #(parameter NUM_INPUTS = 784)(in, u, clk, clr, in_valid, u_valid, o
         .m_axis_result_tdata(accum_to_float_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    fixed_to_float div_to_float (
+    fixed_to_float_converter div_to_float (
         .aclk(clk),                                  // input wire aclk
         .s_axis_a_tvalid(1),            // input wire s_axis_a_tvalid
-        //.s_axis_a_tready(b_ready),            // output wire s_axis_a_tready // DON'T NEED, inputing a constant
+        .s_axis_a_tready(div_to_float_ready),            // output wire s_axis_a_tready
         .s_axis_a_tdata(NUM_INPUTS - 32'd1),              // input wire [31 : 0] s_axis_a_tdata
         .m_axis_result_tvalid(b_valid),  // output wire m_axis_result_tvalid
         .m_axis_result_tready(div_b_ready),  // input wire m_axis_result_tready
@@ -138,12 +140,11 @@ module stdev #(parameter NUM_INPUTS = 784)(in, u, clk, clr, in_valid, u_valid, o
       .s_axis_a_tready(square_root_a_ready),            // output wire s_axis_a_tready
       .s_axis_a_tdata(divider_out),              // input wire [31 : 0] s_axis_a_tdata
       .m_axis_result_tvalid(square_root_valid),  // output wire m_axis_result_tvalid
-      .m_axis_result_tready(1),  // input wire m_axis_result_tready
+      .m_axis_result_tready(result_ready),  // input wire m_axis_result_tready
       .m_axis_result_tdata(out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
     counter #(.NUM(NUM_INPUTS - 1)) c(
-        //.in(out),
         .clk(clk),
         .rst(clr),
         .start(square_root_valid),

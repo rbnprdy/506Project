@@ -5,7 +5,7 @@
 // 
 // Create Date: 04/03/2018 07:35:54 PM
 // Design Name: 
-// Module Name: data_counter\
+// Module Name: data_counter
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -34,20 +34,40 @@ module data_counter #(parameter BIT_WIDTH = 32, NUM = 784)(in, clk, ready, clr, 
     end
     
     always@(posedge clk) begin
-        if (curr >= NUM - 1) begin
+        if (clr) begin
+            curr <= 0;
+            done <= 0;
+        end
+        else if (curr >= NUM - 1) begin
             done = 1;
-            out = 0;
+            //out = 0;
         end
         else if (ready && !clr)
             curr = curr + 1;
     end
     
-    always@(in, clr) begin
-        if (clr) begin
-            curr <= 0;
-            done <= 0;
-        end
-        else if (!done)
+    always@(in, done, clr) begin
+        if (!done && !clr)
             out <= in;
-    end
+        else
+            out <= 0;
+    end    
+    
+//    always@(posedge clk) begin
+//        if (curr >= NUM - 1) begin
+//            done = 1;
+//            out = 0;
+//        end
+//        else if (ready && !clr)
+//            curr = curr + 1;
+//    end
+    
+//    always@(in, clr) begin
+//        if (clr) begin
+//            curr <= 0;
+//            done <= 0;
+//        end
+//        else if (!done)
+//            out <= in;
+//    end
 endmodule

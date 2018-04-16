@@ -32,7 +32,7 @@ module mean #(parameter NUM_INPUTS = 784)(in, clr, clk, in_valid, result_ready, 
     wire a_valid, b_ready, b_valid, out_a_ready, out_b_ready, div_valid;
     wire [31:0] accumulator_out, converter_out, div_converter_out;
     
-    c_accum_0 accumulator (
+    accumulator_32bit accumulator (
       .B(in),            // input wire [7 : 0] B
       .CLK(clk),        // input wire CLK
       .BYPASS(!in_valid),  // input wire BYPASS
@@ -40,7 +40,7 @@ module mean #(parameter NUM_INPUTS = 784)(in, clr, clk, in_valid, result_ready, 
       .Q(accumulator_out)            // output wire [31 : 0] Q
     );
     
-    fixed_to_float accumulator_to_float (
+    fixed_to_float_converter accumulator_to_float (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(in_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(in_ready),            // output wire s_axis_a_tready
@@ -50,7 +50,7 @@ module mean #(parameter NUM_INPUTS = 784)(in, clr, clk, in_valid, result_ready, 
       .m_axis_result_tdata(converter_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    fixed_to_float div_to_float (
+    fixed_to_float_converter div_to_float (
         .aclk(clk),                                  // input wire aclk
         .s_axis_a_tvalid(1),            // input wire s_axis_a_tvalid
         .s_axis_a_tready(b_ready),            // output wire s_axis_a_tready
