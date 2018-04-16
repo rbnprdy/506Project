@@ -1,25 +1,27 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 04/12/2018 09:40:54 PM
-// Design Name: 
-// Module Name: covariance
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// covariance.v
+// Created by Ruben Purdy on 04/12/2018 09:40:54 PM
 //////////////////////////////////////////////////////////////////////////////////
 
-
+/*
+    Calculates the covariance of two different input streams. For the x values, the mean and values should be
+    seperated. The y values should be already subtracted by the mean.
+    
+    - inputs:
+        - [31:0] in_x: The x input data, in fixed point.
+        - [31:0] u_x: The x mean, in floating point.
+        - [31:0] in_y: The y input data, in floating point. This is each value subtracted by the mean value.
+        - clk: The clock.
+        - clr: The clear signal.
+        - in_x_valid: Indicates whether the input x data is valid.
+        - u_x_valid: Indicates whether the x mean is valid.
+        - in_y_valid: Indicates whether the input y data is valid.
+    - outputs:
+        - in_y_ready: Indicates whether the input is ready for the y data.
+        - [31:0] out: The covariance, in floating point.
+        - out_valid: Indicates whether the covariance value is valid.
+*/
 module covariance #(parameter NUM_INPUTS = 784)(in_x, u_x, in_y, clk, clr, in_x_valid, u_x_valid, in_y_valid, in_y_ready, out, out_valid);
 
     input [31:0] in_x, u_x, in_y;
@@ -95,7 +97,7 @@ module covariance #(parameter NUM_INPUTS = 784)(in_x, u_x, in_y, clk, clr, in_x_
       .m_axis_result_tdata(fixed_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    accumulator_32_bit accumulator (
+    accumulator_32bit accumulator (
       .B(fixed_out),      // input wire [31 : 0] B
       .CLK(clk),  // input wire CLK
       .BYPASS(!fixed_valid),
@@ -142,5 +144,4 @@ module covariance #(parameter NUM_INPUTS = 784)(in_x, u_x, in_y, clk, clr, in_x_
         .done(out_valid)
     );
     
-
 endmodule

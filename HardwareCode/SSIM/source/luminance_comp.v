@@ -1,25 +1,27 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 03/27/2018 10:46:40 PM
-// Design Name: 
-// Module Name: luminance_comp
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// luminance_comp.v
+// Created by Ruben Purdy on 03/27/2018 10:46:40 PM
 //////////////////////////////////////////////////////////////////////////////////
 
-
+/*
+    Performs the luminance comparator operation between two sets of means. The formula is as follows:
+    
+        l(x,y) = (2*u_x*u_y) / (u_x^2 + u_y^2)
+        
+    - inputs:
+        - clk: The clock.
+        - [31:0] mean_x: The mean value for the x data, in floating point.
+        - [31:0] mean_y: The mean value for the y data, in floating point.
+        - mean_x_valid: Indicates whether the x mean value is valid
+        - mean_y_valid: Indicates whether the y mean value is valid
+        - out_ready: Indicates whether the outside world is ready for output.
+    - outputs:
+        -  mean_x_ready: Indicates whether the unit is ready to recieve the x mean value.
+        -  mean_y_ready: Indicates whether the unit is ready to recieve the y mean value.
+        - [31:0] out: The output value, in floating point.
+        - out_valid: Indicates whether the output value is valid.
+*/
 module luminance_comp(clk, mean_x, mean_y, mean_x_valid, mean_y_valid, out_ready, mean_x_ready, mean_y_ready, out, out_valid);
 
     input [31:0] mean_x, mean_y;

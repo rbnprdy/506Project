@@ -15,7 +15,7 @@
         - result_ready: Indicates whether the outside world is ready for the result.
     - outputs:
         - in_ready: Indicates whether the module is ready for input.
-        - [31:0] out: The running mean in single point precision floating point.
+        - [31:0] out: The mean in single point precision floating point.
         - out_valid: Indicates whether the output is valid.
     - parameters:
         - NUM_INPUTS: The number of inputs that are going to be sent to the module.
@@ -33,7 +33,7 @@ module mean #(parameter NUM_INPUTS = 784)(in, clr, clk, in_valid, result_ready, 
     wire [31:0] accumulator_out, converter_out, div_converter_out;
     
     accumulator_32bit accumulator (
-      .B(in),            // input wire [7 : 0] B
+      .B({24'd0, in}),            // input wire [31 : 0] B
       .CLK(clk),        // input wire CLK
       .BYPASS(!in_valid),  // input wire BYPASS
       .SCLR(clr),      // input wire SCLR

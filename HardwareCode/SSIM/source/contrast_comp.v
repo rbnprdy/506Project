@@ -1,25 +1,28 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 03/27/2018 10:46:40 PM
-// Design Name: 
-// Module Name: contrast_comp
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// contrast_comp.v
+// Created by Ruben Purdy on 03/27/2018 10:46:40 PM
 //////////////////////////////////////////////////////////////////////////////////
 
-
+/*
+    Performs the contrast comparator operation between two sets of standard deviations. 
+    The formula is as follows:
+    
+        c(x,y) = (2*std_x*std_y) / (std_x^2 + std_y^2)
+        
+    - inputs:
+        - clk: The clock.
+        - [31:0] std_x: The std value for the x data, in floating point.
+        - [31:0] std_y: The std value for the y data, in floating point.
+        - std_x_valid: Indicates whether the x std value is valid
+        - std_y_valid: Indicates whether the y std value is valid
+        - out_ready: Indicates whether the outside world is ready for output.
+    - outputs:
+        -  std_x_ready: Indicates whether the unit is ready to recieve the x std value.
+        -  std_y_ready: Indicates whether the unit is ready to recieve the y std value.
+        - [31:0] out: The output value, in floating point.
+        - out_valid: Indicates whether the output value is valid.
+*/
 module contrast_comp(clk, std_x, std_y, std_x_valid, std_y_valid, out_ready, std_x_ready, std_y_ready, out, out_valid);
 
     input [31:0] std_x, std_y;

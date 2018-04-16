@@ -4,12 +4,26 @@
 // Created by Ruben Purdy on 03/27/2018 10:46:40 PM
 //////////////////////////////////////////////////////////////////////////////////
 
-//module ssim #(parameter NUM_INPUTS = 784) (in, in_valid, mean_y, mean_y_valid, std_y, std_y_valid, clk, clr, out, out_valid);
+/*
+    Calculates the SSIM between two images. The first image is stored in input_mem x. The second image should
+    be stored as the pixel values subtracted by the mean in input_mem_y y.
+    
+    - inputs:
+        - [31:0] mean_y: The mean value for the y image, in floating point.
+        - mean_y_valid: Indicates whether the mean y value is valid.
+        - [31:0] std_y: The std value for the y image, in floating point.
+        - std_y_valid: Indicates whether the std y value is valid.
+        - clk: The clock.
+        - clr: A clear signal.
+    - outputs:
+        - [31:0] The SSIM between the two images, in floating point.
+        - out_valid: Indicates whether the output is valid.
+    - parameters:
+        - NUM_INPUTS: The number of pixels in each image. Defaults to 784.
+*/
 module ssim #(parameter NUM_INPUTS = 784) (mean_y, mean_y_valid, std_y, std_y_valid, clk, clr, out, out_valid);
 
     input [31:0] mean_y, std_y;
-    //input [7:0] in;
-    //input in_valid;
     input clk, clr, mean_y_valid, std_y_valid;
     output [31:0] out;
     output out_valid;

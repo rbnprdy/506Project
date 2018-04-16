@@ -1,24 +1,28 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 03/27/2018 10:46:40 PM
-// Design Name: 
-// Module Name: stdev
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// stdev.v
+// Created by Ruben Purdy on 03/27/2018 10:46:40 PM
 //////////////////////////////////////////////////////////////////////////////////
 
+/*
+    Takes the standard deviation of the inputs values given their mean.
+    
+    - inputs:
+        - [31:0] in: An integer pixel value (grayscale between 0 and 255).
+        - [31:0] u: The mean for the input data.
+        - clr: Clears the buffer and registers. Set to 1 when done with image calculations.
+        - clk: The clock.
+        - in_valid: Indicates whether the input data is valid.
+        - u_valid: Indicates whether the mean is valid
+        - result_ready: Indicates whether the outside world is ready for the result.
+    - outputs:
+        - in_ready: Indicates whether the module is ready for input.
+        - [31:0] out: The standard deviation in single point precision floating point.
+        - out_valid: Indicates whether the output is valid.
+    - parameters:
+        - NUM_INPUTS: The number of inputs that are going to be sent to the module.
+                      Defaults to 784 (the number of pixels per image).
+*/
 module stdev #(parameter NUM_INPUTS = 784)(in, u, clk, clr, in_valid, u_valid, result_ready, in_ready, out, out_valid);
     input [31:0] in, u;
     input clk, clr, in_valid, u_valid, result_ready;
@@ -94,7 +98,7 @@ module stdev #(parameter NUM_INPUTS = 784)(in, u, clk, clr, in_valid, u_valid, r
       .m_axis_result_tdata(fixed_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    accumulator_32_bit accumulator (
+    accumulator_32bit accumulator (
       .B(fixed_out),      // input wire [31 : 0] B
       .CLK(clk),  // input wire CLK
       .BYPASS(!fixed_valid),
