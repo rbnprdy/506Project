@@ -1,25 +1,27 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 04/12/2018 09:40:54 PM
-// Design Name: 
-// Module Name: covariance
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// covariance.v
+// Created by Ruben Purdy on 04/12/2018 09:40:54 PM
 //////////////////////////////////////////////////////////////////////////////////
 
-
+/*
+    Calculates the covariance of two different input streams. For the x values, the mean and values should be
+    seperated. The y values should be already subtracted by the mean.
+    
+    - inputs:
+        - [31:0] in_x: The x input data, in fixed point.
+        - [31:0] u_x: The x mean, in floating point.
+        - [31:0] in_y: The y input data, in floating point. This is each value subtracted by the mean value.
+        - clk: The clock.
+        - clr: The clear signal.
+        - in_x_valid: Indicates whether the input x data is valid.
+        - u_x_valid: Indicates whether the x mean is valid.
+        - in_y_valid: Indicates whether the input y data is valid.
+    - outputs:
+        - in_y_ready: Indicates whether the input is ready for the y data.
+        - [31:0] out: The covariance, in floating point.
+        - out_valid: Indicates whether the covariance value is valid.
+*/
 module covariance #(parameter NUM_INPUTS = 784)(in_x, u_x, in_y, clk, clr, in_x_valid, u_x_valid, in_y_valid, in_y_ready, out, out_valid);
 
     input [31:0] in_x, u_x, in_y;
@@ -35,12 +37,12 @@ module covariance #(parameter NUM_INPUTS = 784)(in_x, u_x, in_y, clk, clr, in_x_
     wire b_valid;
     wire div_a_ready, div_b_ready, divider_valid;
     wire fixed_ready, fixed_valid;
-    wire accum_to_float_in_ready, accum_to_float_valid;
+    wire accum_to_float_in_ready, accum_to_float_valid, data_counter_done, div_to_float_ready;
     wire [31:0] accum_to_float_out;
     
     assign in_y_ready = sub_valid;
     
-    fixed_to_float in_to_float (
+    fixed_to_float_converter in_to_float (
         .aclk(clk),                                  // input wire aclk
         .s_axis_a_tvalid(in_x_valid),            // input wire s_axis_a_tvalid
         .s_axis_a_tready(x_ready),            // output wire s_axis_a_tready
@@ -50,7 +52,7 @@ module covariance #(parameter NUM_INPUTS = 784)(in_x, u_x, in_y, clk, clr, in_x_
         .m_axis_result_tdata(x)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    subtractor_float sub (
+    subtractor_floating_point sub (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(x_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(sub_a_ready),            // output wire s_axis_a_tready
@@ -68,10 +70,11 @@ module covariance #(parameter NUM_INPUTS = 784)(in_x, u_x, in_y, clk, clr, in_x_
         .clk(clk),
         .ready(sub_valid),
         .clr(clr),
-        .out(d_out)
+        .out(d_out),
+        .done(data_counter_done)
     );
         
-    multiplier_float mult (
+    multiplier_floating_point mult (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(sub_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(multiplier_a_ready),            // output wire s_axis_a_tready
@@ -84,7 +87,7 @@ module covariance #(parameter NUM_INPUTS = 784)(in_x, u_x, in_y, clk, clr, in_x_
       .m_axis_result_tdata(multiplier_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    float_to_fixed mult_to_fixed (
+    float_to_fixed_converter mult_to_fixed (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(multiplier_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(fixed_ready),            // output wire s_axis_a_tready
@@ -94,14 +97,14 @@ module covariance #(parameter NUM_INPUTS = 784)(in_x, u_x, in_y, clk, clr, in_x_
       .m_axis_result_tdata(fixed_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    accumulator_32_bit accumulator (
+    accumulator_32bit accumulator (
       .B(fixed_out),      // input wire [31 : 0] B
       .CLK(clk),  // input wire CLK
       .BYPASS(!fixed_valid),
       .Q(accumulator_out)      // output wire [31 : 0] Q
     );
         
-    fixed_to_float accumulator_to_float (
+    fixed_to_float_converter accumulator_to_float (
         .aclk(clk),                                  // input wire aclk
         .s_axis_a_tvalid(multiplier_valid),            // input wire s_axis_a_tvalid
         .s_axis_a_tready(accum_to_float_in_ready),            // output wire s_axis_a_tready
@@ -111,16 +114,17 @@ module covariance #(parameter NUM_INPUTS = 784)(in_x, u_x, in_y, clk, clr, in_x_
         .m_axis_result_tdata(accum_to_float_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    fixed_to_float div_to_float (
+    fixed_to_float_converter div_to_float (
         .aclk(clk),                                  // input wire aclk
         .s_axis_a_tvalid(1),            // input wire s_axis_a_tvalid
+        .s_axis_a_tready(div_to_float_ready),            // output wire s_axis_a_tready
         .s_axis_a_tdata(NUM_INPUTS - 32'd1),              // input wire [31 : 0] s_axis_a_tdata
         .m_axis_result_tvalid(b_valid),  // output wire m_axis_result_tvalid
         .m_axis_result_tready(div_b_ready),  // input wire m_axis_result_tready
         .m_axis_result_tdata(div_converter_out)    // output wire [31 : 0] m_axis_result_tdat 
     );
     
-    divider_float div (
+    divider_floating_point div (
        .aclk(clk),                                  // input wire aclk         
        .s_axis_a_tvalid(accum_to_float_valid),  // input wire s_axis_a_tvalid
        .s_axis_a_tready(div_a_ready),            // output wire s_axis_a_tready          
@@ -140,5 +144,4 @@ module covariance #(parameter NUM_INPUTS = 784)(in_x, u_x, in_y, clk, clr, in_x_
         .done(out_valid)
     );
     
-
 endmodule

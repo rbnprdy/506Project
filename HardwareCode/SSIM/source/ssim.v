@@ -4,16 +4,34 @@
 // Created by Ruben Purdy on 03/27/2018 10:46:40 PM
 //////////////////////////////////////////////////////////////////////////////////
 
-module ssim #(parameter NUM_INPUTS = 784) (in, in_valid, mean_y, mean_y_valid, std_y, std_y_valid, clk, clr, out, out_valid);
+/*
+    Calculates the SSIM between two images. The first image is stored in input_mem x. The second image should
+    be stored as the pixel values subtracted by the mean in input_mem_y y.
+    
+    - inputs:
+        - [31:0] mean_y: The mean value for the y image, in floating point.
+        - mean_y_valid: Indicates whether the mean y value is valid.
+        - [31:0] std_y: The std value for the y image, in floating point.
+        - std_y_valid: Indicates whether the std y value is valid.
+        - clk: The clock.
+        - clr: A clear signal.
+    - outputs:
+        - [31:0] The SSIM between the two images, in floating point.
+        - out_valid: Indicates whether the output is valid.
+    - parameters:
+        - NUM_INPUTS: The number of pixels in each image. Defaults to 784.
+*/
+module ssim #(parameter NUM_INPUTS = 784) (mean_y, mean_y_valid, std_y, std_y_valid, clk, clr, out, out_valid);
 
     input [31:0] mean_y, std_y;
-    input [7:0] in;
-    input clk, clr, in_valid, mean_y_valid, std_y_valid;
+    input clk, clr, mean_y_valid, std_y_valid;
     output [31:0] out;
     output out_valid;
     
-    wire mean_in_ready;
-    wire input_mem_x_valid, input_mem_y_valid, mean_x_valid, std_x_valid, covar_y_ready, covar_valid, covar_ready, mean_x_ready, mean_y_ready, std_x_ready, std_y_ready, l_valid, c_valid, s_valid;
+    wire mean_in_ready, stdev_in_ready;
+    wire input_mem_x_valid, input_mem_y_valid, mean_x_valid, mean_x_valid_delay, buffer_data_valid, std_x_valid, covar_y_ready, covar_valid;
+    wire covar_ready, mean_x_ready, mean_y_ready, std_x_ready_contrast, std_y_ready_contrast;
+    wire std_x_ready_structure, std_y_ready_structure, l_valid, c_valid, s_valid;
     wire l_times_c_a_ready, l_times_c_b_ready, l_times_c_valid, l_times_c_times_s_a_ready, l_times_c_times_s_b_ready;
     wire [31:0] mean_x, mem_y_out, std_x, covar, l_out, c_out, s_out, l_times_c_out;
     wire [7:0] mem_x_out, buffer_out;
@@ -39,7 +57,7 @@ module ssim #(parameter NUM_INPUTS = 784) (in, in_valid, mean_y, mean_y_valid, s
         .clr(clr), 
         .clk(clk), 
         .in_valid(input_mem_x_valid),
-        .result_ready(1),
+        .result_ready(stdev_in_ready),
         .in_ready(mean_in_ready),
         .out(mean_x), 
         .out_valid(mean_x_valid)
@@ -51,16 +69,26 @@ module ssim #(parameter NUM_INPUTS = 784) (in, in_valid, mean_y, mean_y_valid, s
         .clk(clk), 
         .clr(clr),
         .ready(mean_x_valid), 
-        .read_data(buffer_out)
+        .read_data(buffer_out),
+        .read_data_valid(buffer_data_valid)
     );
+    
+//    register delay_reg(
+//        .clk(clk),
+//        .in(mean_x_valid),
+//        .out(mean_x_valid_delay)
+//    );
     
     stdev #(.NUM_INPUTS(NUM_INPUTS)) s(
         .in({24'd0, buffer_out}), 
         .u(mean_x), 
         .clk(clk), 
         .clr(clr), 
-        .in_valid(mean_x_valid), 
+        .in_valid(buffer_data_valid), 
         .u_valid(mean_x_valid), 
+        //.u_valid(mean_x_valid_delay), 
+        .result_ready(1),
+        .in_ready(stdev_in_ready),
         .out(std_x), 
         .out_valid(std_x_valid)
     );
@@ -99,8 +127,8 @@ module ssim #(parameter NUM_INPUTS = 784) (in, in_valid, mean_y, mean_y_valid, s
         .std_x_valid(std_x_valid), 
         .std_y_valid(std_y_valid), 
         .out_ready(1), 
-        .std_x_ready(std_x_ready), 
-        .std_y_ready(std_y_ready), 
+        .std_x_ready(std_x_ready_contrast), 
+        .std_y_ready(std_y_ready_contrast), 
         .out(c_out), 
         .out_valid(c_valid)
     );
@@ -114,14 +142,14 @@ module ssim #(parameter NUM_INPUTS = 784) (in, in_valid, mean_y, mean_y_valid, s
         .std_y_valid(std_y_valid), 
         .covariance_valid(covar_valid),
         .out_ready(1), 
-        .std_x_ready(std_x_ready), 
-        .std_y_ready(std_y_ready), 
+        .std_x_ready(std_x_ready_structure), 
+        .std_y_ready(std_y_ready_structure), 
         .covariance_ready(covar_ready),
         .out(s_out), 
         .out_valid(s_valid)
     );
     
-    multiplier_float l_times_c (
+    multiplier_floating_point l_times_c (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(l_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(l_times_c_a_ready),            // output wire s_axis_a_tready
@@ -134,7 +162,7 @@ module ssim #(parameter NUM_INPUTS = 784) (in, in_valid, mean_y, mean_y_valid, s
       .m_axis_result_tdata(l_times_c_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    multiplier_float l_times_c_times_s (
+    multiplier_floating_point l_times_c_times_s (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(l_times_c_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(l_times_c_times_s_a_ready),            // output wire s_axis_a_tready
