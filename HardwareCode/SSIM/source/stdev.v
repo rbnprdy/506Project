@@ -48,7 +48,7 @@ module stdev #(parameter NUM_INPUTS = 784)(in, u, clk, clr, in_valid, u_valid, r
         .m_axis_result_tdata(x)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    subtractor_float sub (
+    subtractor_floating_point sub (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(x_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(sub_a_ready),            // output wire s_axis_a_tready
@@ -71,7 +71,7 @@ module stdev #(parameter NUM_INPUTS = 784)(in, u, clk, clr, in_valid, u_valid, r
         .done(data_counter_done)
     );
         
-    multiplier_float mult (
+    multiplier_floating_point mult (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(sub_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(multiplier_a_ready),            // output wire s_axis_a_tready
@@ -84,7 +84,7 @@ module stdev #(parameter NUM_INPUTS = 784)(in, u, clk, clr, in_valid, u_valid, r
       .m_axis_result_tdata(multiplier_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    float_to_fixed mult_to_fixed (
+    float_to_fixed_converter mult_to_fixed (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(multiplier_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(fixed_ready),            // output wire s_axis_a_tready
@@ -121,7 +121,7 @@ module stdev #(parameter NUM_INPUTS = 784)(in, u, clk, clr, in_valid, u_valid, r
         .m_axis_result_tdata(div_converter_out)    // output wire [31 : 0] m_axis_result_tdat 
     );
     
-    divider_float div (
+    divider_floating_point div (
        .aclk(clk),                                  // input wire aclk         
        .s_axis_a_tvalid(accum_to_float_valid),  // input wire s_axis_a_tvalid
        .s_axis_a_tready(div_a_ready),            // output wire s_axis_a_tready          
@@ -134,7 +134,7 @@ module stdev #(parameter NUM_INPUTS = 784)(in, u, clk, clr, in_valid, u_valid, r
        .m_axis_result_tdata(divider_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    square_root_float sqrt (
+    square_root_floating_point sqrt (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(divider_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(square_root_a_ready),            // output wire s_axis_a_tready

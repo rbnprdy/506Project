@@ -32,7 +32,7 @@ module contrast_comp(clk, std_x, std_y, std_x_valid, std_y_valid, out_ready, std
     wire std_x_times_std_y_valid, times_two_valid, times_two_a_ready, times_two_b_ready, std_x_squared_a_ready, std_x_squared_b_ready, std_y_squared_a_ready, std_y_squared_b_ready;
     wire std_x_squared_valid, std_y_squared_valid, adder_a_ready, adder_b_ready, adder_valid, divider_a_ready, divider_b_ready;
     
-    multiplier_float std_x_times_std_y (
+    multiplier_floating_point std_x_times_std_y (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(std_x_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(std_x_ready),            // output wire s_axis_a_tready
@@ -45,7 +45,7 @@ module contrast_comp(clk, std_x, std_y, std_x_valid, std_y_valid, out_ready, std
       .m_axis_result_tdata(std_x_times_std_y_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    multiplier_float times_two (
+    multiplier_floating_point times_two (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(std_x_times_std_y_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(times_two_a_ready),            // output wire s_axis_a_tready
@@ -58,7 +58,7 @@ module contrast_comp(clk, std_x, std_y, std_x_valid, std_y_valid, out_ready, std
       .m_axis_result_tdata(times_two_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    multiplier_float std_x_squarer (
+    multiplier_floating_point std_x_squarer (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(std_x_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(std_x_squared_a_ready),            // output wire s_axis_a_tready
@@ -71,7 +71,7 @@ module contrast_comp(clk, std_x, std_y, std_x_valid, std_y_valid, out_ready, std
       .m_axis_result_tdata(std_x_squared)    // output wire [31 : 0] m_axis_result_tdata
     );  
       
-    multiplier_float std_y_squarer (
+    multiplier_floating_point std_y_squarer (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(std_y_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(std_y_squared_a_ready),            // output wire s_axis_a_tready
@@ -84,7 +84,7 @@ module contrast_comp(clk, std_x, std_y, std_x_valid, std_y_valid, out_ready, std
       .m_axis_result_tdata(std_y_squared)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    adder_float mean_squared_adder (
+    adder_floating_point mean_squared_adder (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(std_x_squared_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(adder_a_ready),            // output wire s_axis_a_tready
@@ -97,7 +97,7 @@ module contrast_comp(clk, std_x, std_y, std_x_valid, std_y_valid, out_ready, std
       .m_axis_result_tdata(adder_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    divider_float divider (
+    divider_floating_point divider (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(times_two_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(divider_a_ready),            // output wire s_axis_a_tready

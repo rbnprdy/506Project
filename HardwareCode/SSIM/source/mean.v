@@ -60,7 +60,7 @@ module mean #(parameter NUM_INPUTS = 784)(in, clr, clk, in_valid, result_ready, 
         .m_axis_result_tdata(div_converter_out)    // output wire [31 : 0] m_axis_result_tdat 
     );
     
-    divider_float div (
+    divider_floating_point div (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(a_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(out_a_ready),            // output wire s_axis_a_tready

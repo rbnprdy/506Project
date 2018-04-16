@@ -32,7 +32,7 @@ module structure_comp(clk, std_x, std_y, covariance, std_x_valid, std_y_valid, c
     wire std_x_times_std_y_valid, times_two_valid, times_two_a_ready, times_two_b_ready, std_x_squared_a_ready, std_x_squared_b_ready, std_y_squared_a_ready, std_y_squared_b_ready;
     wire std_x_squared_valid, std_y_squared_valid, adder_a_ready, adder_b_ready, adder_valid, divider_b_ready;
     
-    multiplier_float std_x_times_std_y (
+    multiplier_floating_point std_x_times_std_y (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(std_x_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(std_x_ready),            // output wire s_axis_a_tready
@@ -46,7 +46,7 @@ module structure_comp(clk, std_x, std_y, covariance, std_x_valid, std_y_valid, c
     );
 
     
-    divider_float divider (
+    divider_floating_point divider (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(covariance_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(covariance_ready),            // output wire s_axis_a_tready

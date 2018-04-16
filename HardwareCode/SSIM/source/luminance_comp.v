@@ -32,7 +32,7 @@ module luminance_comp(clk, mean_x, mean_y, mean_x_valid, mean_y_valid, out_ready
     wire mean_x_times_mean_y_valid, times_two_valid, times_two_a_ready, times_two_b_ready, mean_x_squared_a_ready, mean_x_squared_b_ready, mean_y_squared_a_ready, mean_y_squared_b_ready;
     wire mean_x_squared_valid, mean_y_squared_valid, adder_a_ready, adder_b_ready, adder_valid, divider_a_ready, divider_b_ready;
     
-    multiplier_float mean_x_times_mean_y (
+    multiplier_floating_point mean_x_times_mean_y (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(mean_x_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(mean_x_ready),            // output wire s_axis_a_tready
@@ -45,7 +45,7 @@ module luminance_comp(clk, mean_x, mean_y, mean_x_valid, mean_y_valid, out_ready
       .m_axis_result_tdata(mean_x_times_mean_y_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    multiplier_float times_two (
+    multiplier_floating_point times_two (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(mean_x_times_mean_y_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(times_two_a_ready),            // output wire s_axis_a_tready
@@ -58,7 +58,7 @@ module luminance_comp(clk, mean_x, mean_y, mean_x_valid, mean_y_valid, out_ready
       .m_axis_result_tdata(times_two_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    multiplier_float mean_x_squarer (
+    multiplier_floating_point mean_x_squarer (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(mean_x_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(mean_x_squared_a_ready),            // output wire s_axis_a_tready
@@ -71,7 +71,7 @@ module luminance_comp(clk, mean_x, mean_y, mean_x_valid, mean_y_valid, out_ready
       .m_axis_result_tdata(mean_x_squared)    // output wire [31 : 0] m_axis_result_tdata
     );  
       
-    multiplier_float mean_y_squarer (
+    multiplier_floating_point mean_y_squarer (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(mean_y_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(mean_y_squared_a_ready),            // output wire s_axis_a_tready
@@ -84,7 +84,7 @@ module luminance_comp(clk, mean_x, mean_y, mean_x_valid, mean_y_valid, out_ready
       .m_axis_result_tdata(mean_y_squared)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    adder_float mean_squared_adder (
+    adder_floating_point mean_squared_adder (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(mean_x_squared_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(adder_a_ready),            // output wire s_axis_a_tready
@@ -97,7 +97,7 @@ module luminance_comp(clk, mean_x, mean_y, mean_x_valid, mean_y_valid, out_ready
       .m_axis_result_tdata(adder_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    divider_float divider (
+    divider_floating_point divider (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(times_two_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(divider_a_ready),            // output wire s_axis_a_tready

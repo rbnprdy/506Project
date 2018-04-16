@@ -135,7 +135,7 @@ module ssim #(parameter NUM_INPUTS = 784) (mean_y, mean_y_valid, std_y, std_y_va
         .out_valid(s_valid)
     );
     
-    multiplier_float l_times_c (
+    multiplier_floating_point l_times_c (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(l_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(l_times_c_a_ready),            // output wire s_axis_a_tready
@@ -148,7 +148,7 @@ module ssim #(parameter NUM_INPUTS = 784) (mean_y, mean_y_valid, std_y, std_y_va
       .m_axis_result_tdata(l_times_c_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    multiplier_float l_times_c_times_s (
+    multiplier_floating_point l_times_c_times_s (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(l_times_c_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(l_times_c_times_s_a_ready),            // output wire s_axis_a_tready
