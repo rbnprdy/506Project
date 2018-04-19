@@ -53,32 +53,9 @@ module ssim_tb();
         std_y_valid <= 0;
         @(posedge clk);
         #2 clr <= 0;
-        mean_y <= 32'h426d7d68;
+        mean_y <= 32'h42745c1b;
         mean_y_valid <= 1;
-        std_y <= 32'h42995088;
+        std_y <= 32'h429e9bd9;
         std_y_valid <= 1;
-        // needed for post-implementation simulation
-        @(posedge clk);
-        @(posedge clk);
-        @(posedge clk);
-        @(posedge clk);
-        @(posedge clk);
-        @(posedge clk);
-        @(posedge clk);
-        @(posedge clk);
-        ////////////////////////////////////////////
-        @(negedge clk);
-//        #2 in = 2;
-//        in_valid <= 1;
-//        @(negedge clk);
-//        #2 in = 4;
-//        @(negedge clk);
-//        #2 in = 6;
-//        @(negedge clk);
-//        #2 in = 8;    
-//        @(negedge clk);
-//        #2 in = 10;
-//        @(negedge clk);
-//        #2 in = 0;
     end
 endmodule

@@ -1,0 +1,12 @@
+mean_normal: [35.108418]
+mean_noisy: [61.089947]
+standard_deviation_normal: [79.701744]
+standard_deviation_noisy: [79.30439]
+covaraince: [4873.009]
+l: [0.8640288]
+c: [0.9999875]
+s: [0.7709605]
+SSIM: [0.66612375]
+
+Noisy mean in hex: 0x42745c1b
+Noisy standard deviation in hex: 0x429e9bd9
