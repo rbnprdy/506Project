@@ -15,7 +15,7 @@
         - result_ready: Indicates whether the outside world is ready for the result.
     - outputs:
         - in_ready: Indicates whether the module is ready for input.
-        - [31:0] out: The running mean in single point precision floating point.
+        - [31:0] out: The mean in single point precision floating point.
         - out_valid: Indicates whether the output is valid.
     - parameters:
         - NUM_INPUTS: The number of inputs that are going to be sent to the module.
@@ -32,15 +32,15 @@ module mean #(parameter NUM_INPUTS = 784)(in, clr, clk, in_valid, result_ready, 
     wire a_valid, b_ready, b_valid, out_a_ready, out_b_ready, div_valid;
     wire [31:0] accumulator_out, converter_out, div_converter_out;
     
-    c_accum_0 accumulator (
-      .B(in),            // input wire [7 : 0] B
+    accumulator_32bit accumulator (
+      .B({24'd0, in}),            // input wire [31 : 0] B
       .CLK(clk),        // input wire CLK
       .BYPASS(!in_valid),  // input wire BYPASS
       .SCLR(clr),      // input wire SCLR
       .Q(accumulator_out)            // output wire [31 : 0] Q
     );
     
-    fixed_to_float accumulator_to_float (
+    fixed_to_float_converter accumulator_to_float (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(in_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(in_ready),            // output wire s_axis_a_tready
@@ -50,7 +50,7 @@ module mean #(parameter NUM_INPUTS = 784)(in, clr, clk, in_valid, result_ready, 
       .m_axis_result_tdata(converter_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    fixed_to_float div_to_float (
+    fixed_to_float_converter div_to_float (
         .aclk(clk),                                  // input wire aclk
         .s_axis_a_tvalid(1),            // input wire s_axis_a_tvalid
         .s_axis_a_tready(b_ready),            // output wire s_axis_a_tready
@@ -60,7 +60,7 @@ module mean #(parameter NUM_INPUTS = 784)(in, clr, clk, in_valid, result_ready, 
         .m_axis_result_tdata(div_converter_out)    // output wire [31 : 0] m_axis_result_tdat 
     );
     
-    divider_float div (
+    divider_floating_point div (
       .aclk(clk),                                  // input wire aclk
       .s_axis_a_tvalid(a_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(out_a_ready),            // output wire s_axis_a_tready

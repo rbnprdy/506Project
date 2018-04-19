@@ -1,25 +1,20 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 04/12/2018 10:29:45 PM
-// Design Name: 
-// Module Name: input_mem_y
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// input_mem_y.v
+// Created by Ruben Purdy on 04/12/2018 10:29:45 PM
 //////////////////////////////////////////////////////////////////////////////////
 
-
+/*
+    Input memory for each pixel subtracted by the mean value of the average of the training data.
+    
+    - inputs: 
+        - clk: The clock.
+        - rst: A synchronous reset signal.
+        - start: Indicates when the memory should begin reading out values.
+    - outputs:
+        - valid: Indicates whether the out data is valid.
+        - [31:0] out: The current output value in floating point form.
+*/
 module input_mem_y(clk, rst, start, valid, out);
 
     input clk, rst, start;
@@ -35,32 +30,17 @@ module input_mem_y(clk, rst, start, valid, out);
         out = 0;
         $readmemh("input_y.txt", memory);
     end
-    
+
     always@(posedge clk) begin
+        // if we're not resetting and start is high
         if (!rst && start) begin
+            // show that the data is valid
             valid = 1;
+            // if we're not on the last memory location, output the new data and then increment address
             if (address < 783) begin
                 out = memory[address];
                 address = address + 1;
             end
-//            else
-//                out = 0;
         end
-//        else if (!rst) begin
-//            valid = 1;
-//            out = memory[address];
-//        end
     end
-    
-    always@(start) begin
-        if (!rst && start) begin
-            valid = 1;
-            if (address < 783) begin
-                out = memory[address];
-                address = address + 1;
-            end
-//            else
-//                out = 0;
-        end
-   end
 endmodule

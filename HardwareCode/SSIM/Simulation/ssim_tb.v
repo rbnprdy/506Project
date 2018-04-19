@@ -22,15 +22,14 @@
 
 module ssim_tb();
 
-    reg [7:0] in;
+    //reg [7:0] in;
+    // reg in_valid;
     reg [31:0] mean_y, std_y;
-    reg clr, clk, in_valid, mean_y_valid, std_y_valid;
+    reg clr, clk, mean_y_valid, std_y_valid;
     wire [31:0] out;
     wire out_valid;
     
     ssim #(.NUM_INPUTS(784)) s(
-        .in(in),
-        .in_valid(in_valid),
         .mean_y(mean_y),
         .mean_y_valid(mean_y_valid),
         .std_y(std_y),
@@ -43,14 +42,14 @@ module ssim_tb();
     
     initial begin
         clk <= 1'b0;
-        forever #10 clk <= ~clk;
+        forever #1000 clk <= ~clk;
     end
     
     initial begin
-        in = 0;
+        //in = 0;
         clr <= 1;
         mean_y_valid <= 0;
-        in_valid <= 0;
+        //in_valid <= 0;
         std_y_valid <= 0;
         @(posedge clk);
         #2 clr <= 0;
@@ -69,17 +68,17 @@ module ssim_tb();
         @(posedge clk);
         ////////////////////////////////////////////
         @(negedge clk);
-        #2 in = 2;
-        in_valid <= 1;
-        @(negedge clk);
-        #2 in = 4;
-        @(negedge clk);
-        #2 in = 6;
-        @(negedge clk);
-        #2 in = 8;    
-        @(negedge clk);
-        #2 in = 10;
-        @(negedge clk);
-        #2 in = 0;
+//        #2 in = 2;
+//        in_valid <= 1;
+//        @(negedge clk);
+//        #2 in = 4;
+//        @(negedge clk);
+//        #2 in = 6;
+//        @(negedge clk);
+//        #2 in = 8;    
+//        @(negedge clk);
+//        #2 in = 10;
+//        @(negedge clk);
+//        #2 in = 0;
     end
 endmodule
