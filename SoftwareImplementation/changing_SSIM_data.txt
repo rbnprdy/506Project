@@ -1,0 +1,141 @@
+Running simulation wtih ssim_threshold: 0.1, confidence_threshold: 0.75, training_threshold: 100.0
+Statistics:
+Original clean accuracy: 0.9421
+Original noisy accuracy: 0.6333
+New clean accuracy: 0.9169
+New clean accuracy: 0.9114
+Number of retrains: 1
+Number of missed: 44
+Number of SSIM triggers: 0
+Number of confidence triggers: 198
+No SSIM triggers.
+Confidence true positive rate: 0.555555555556
+
+
+Running simulation wtih ssim_threshold: 0.133333333333, confidence_threshold: 0.75, training_threshold: 100.0
+Statistics:
+Original clean accuracy: 0.9457
+Original noisy accuracy: 0.5847
+New clean accuracy: 0.9235
+New clean accuracy: 0.9288
+Number of retrains: 2
+Number of missed: 94
+Number of SSIM triggers: 0
+Number of confidence triggers: 205
+No SSIM triggers.
+Confidence true positive rate: 0.434146341463
+
+
+Running simulation wtih ssim_threshold: 0.166666666667, confidence_threshold: 0.75, training_threshold: 100.0
+Statistics:
+Original clean accuracy: 0.9404
+Original noisy accuracy: 0.6117
+New clean accuracy: 0.9232
+New clean accuracy: 0.922
+Number of retrains: 1
+Number of missed: 56
+Number of SSIM triggers: 0
+Number of confidence triggers: 184
+No SSIM triggers.
+Confidence true positive rate: 0.592391304348
+
+
+Running simulation wtih ssim_threshold: 0.2, confidence_threshold: 0.75, training_threshold: 100.0
+Statistics:
+Original clean accuracy: 0.9455
+Original noisy accuracy: 0.657
+New clean accuracy: 0.9226
+New clean accuracy: 0.9108
+Number of retrains: 1
+Number of missed: 48
+Number of SSIM triggers: 0
+Number of confidence triggers: 195
+No SSIM triggers.
+Confidence true positive rate: 0.548717948718
+
+
+Running simulation wtih ssim_threshold: 0.233333333333, confidence_threshold: 0.75, training_threshold: 100.0
+Statistics:
+Original clean accuracy: 0.9466
+Original noisy accuracy: 0.8254
+New clean accuracy: 0.919
+New clean accuracy: 0.9278
+Number of retrains: 1
+Number of missed: 38
+Number of SSIM triggers: 1
+Number of confidence triggers: 161
+SSIM true positive rate: 1.0
+Confidence true positive rate: 0.39751552795
+
+
+Running simulation wtih ssim_threshold: 0.266666666667, confidence_threshold: 0.75, training_threshold: 100.0
+Statistics:
+Original clean accuracy: 0.9447
+Original noisy accuracy: 0.7441
+New clean accuracy: 0.9192
+New clean accuracy: 0.9012
+Number of retrains: 1
+Number of missed: 71
+Number of SSIM triggers: 1
+Number of confidence triggers: 191
+SSIM true positive rate: 0.0
+Confidence true positive rate: 0.465968586387
+
+
+Running simulation wtih ssim_threshold: 0.3, confidence_threshold: 0.75, training_threshold: 100.0
+Statistics:
+Original clean accuracy: 0.9443
+Original noisy accuracy: 0.6476
+New clean accuracy: 0.9228
+New clean accuracy: 0.9335
+Number of retrains: 2
+Number of missed: 77
+Number of SSIM triggers: 7
+Number of confidence triggers: 198
+SSIM true positive rate: 0.142857142857
+Confidence true positive rate: 0.464646464646
+
+
+Running simulation wtih ssim_threshold: 0.333333333333, confidence_threshold: 0.75, training_threshold: 100.0
+Statistics:
+Original clean accuracy: 0.9451
+Original noisy accuracy: 0.7819
+New clean accuracy: 0.9281
+New clean accuracy: 0.929
+Number of retrains: 4
+Number of missed: 38
+Number of SSIM triggers: 269
+Number of confidence triggers: 175
+SSIM true positive rate: 0.0371747211896
+Confidence true positive rate: 0.451428571429
+
+
+Running simulation wtih ssim_threshold: 0.366666666667, confidence_threshold: 0.75, training_threshold: 100.0
+Statistics:
+Original clean accuracy: 0.9472
+Original noisy accuracy: 0.7639
+New clean accuracy: 0.934
+New clean accuracy: 0.9266
+Number of retrains: 6
+Number of missed: 28
+Number of SSIM triggers: 480
+Number of confidence triggers: 170
+SSIM true positive rate: 0.0354166666667
+Confidence true positive rate: 0.441176470588
+
+
+Running simulation wtih ssim_threshold: 0.4, confidence_threshold: 0.75, training_threshold: 100.0
+Statistics:
+Original clean accuracy: 0.943
+Original noisy accuracy: 0.6964
+New clean accuracy: 0.9272
+New clean accuracy: 0.923
+Number of retrains: 7
+Number of missed: 31
+Number of SSIM triggers: 508
+Number of confidence triggers: 193
+SSIM true positive rate: 0.0413385826772
+Confidence true positive rate: 0.523316062176
+
+
+[Finished in 885.5s]

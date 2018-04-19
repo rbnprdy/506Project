@@ -1,0 +1,10 @@
+Mean of clean cw ssim: 0.697836142468
+Mean of clean ssim: 0.600088243168
+std dev of clean cw ssim: 0.109611871901
+std dev of clean ssim: 0.112559103839
+
+
+Mean of noisy cw ssim: 0.526911944939
+Mean of noisy ssim: 0.396888231999
+std dev of noisy cw ssim: 0.0566207648596
+std dev of noisy ssim: 0.076866782247

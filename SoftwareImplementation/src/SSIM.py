@@ -2,7 +2,7 @@ import mnist_loader
 import numpy as np
 import matplotlib.pyplot as plt
 import post_processing
-#from skimage.measure import compare_ssim as ssim_ski
+from skimage.measure import compare_ssim as ssim_ski
 import struct
 from scipy import signal
 import ssim
@@ -11,50 +11,25 @@ from PIL import Image, ImageOps
 
 
 def main():
-    im = ssim.SSIMImage(Image.open('AfterFramework0.png'))
-    im_noise = ssim.SSIMImage(Image.open('AfterFramework1.png'))
+    
+    training_data, _, _ = mnist_loader.load_data_wrapper()
 
+    # Setup Data
+    pixels = training_data[0][0]*256
 
-    width = 30
-
-    # Define a width for the wavelet convolution
-    widths = np.arange(1, width+1)
-
-    # Use the image data as arrays
-    sig1 = np.asarray(im.img_gray.getdata())
-    sig2 = np.asarray(im_noise.img_gray.getdata())
-
-    print CW_SSIM(sig1, sig2)
-
-    #cw_ssim_rot = ssim.SSIM(im).cw_ssim_value(im_noise)
-    #print cw_ssim_rot
-
-
-
-
-
-
-
-
-    #training_data, _, _ = mnist_loader.load_data_wrapper()
-
-     # Setup Data
-    #pixels = training_data[0][0]*256
-
-    #noisy_data = post_processing.create_noisy_data(training_data, 80)
-    #noisy_pixels = noisy_data[0][0]*256
+    noisy_data = post_processing.create_noisy_data(training_data, 80)
+    noisy_pixels = noisy_data[0][0]*256
 
     #generate_input_mem(noisy_pixels)
 
-    #SSIM(pixels, noisy_pixels, verbose=True)
-
-    # for i in range(0, 101):
-    #     noisy_data = post_processing.create_noisy_data(training_data, i)
-    #     noisy_pixels = noisy_data[0][0]*256
-    #     #SSIM(pixels, noisy_pixels, verbose=True)
-    #     print("SSIM for Amplitude {}: {}\tSSIM-SKI for Amplitude {}: {}".format(i, SSIM(pixels, noisy_pixels), i, ssim_ski(pixels.reshape(28,28), noisy_pixels.reshape(28,28))))
-    #     #print("SSIM for Amplitude {}: {}".format(i, SSIM(pixels, noisy_pixels)))
-
+    print SSIM(pixels, noisy_pixels, verbose=True)
+    
+    for i in range(0, 101):
+         noisy_data = post_processing.create_noisy_data(training_data, i)
+         noisy_pixels = noisy_data[0][0]*256
+         #SSIM(pixels, noisy_pixels, verbose=True)
+         print("SSIM for Amplitude {}: {}\tSSIM-SKI for Amplitude {}: {}".format(i, SSIM(pixels, noisy_pixels), i, ssim_ski(pixels.reshape(28,28), noisy_pixels.reshape(28,28))))
+         #print("SSIM for Amplitude {}: {}".format(i, SSIM(pixels, noisy_pixels)))
 
 # Define a width for the wavelet convolution
 def CW_SSIM(x, y, width=30, k = 0.01):
@@ -103,7 +78,7 @@ def SSIM(x, y, verbose = False, use_c = False):
     # Calculate Means
     mean_x = mean(x)
     mean_y = mean(y)
-    
+
     # Calculate Stdevs
     stdev_x = dev(x, mean_x)
     stdev_y = dev(y, mean_y)
