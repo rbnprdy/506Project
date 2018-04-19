@@ -1,11 +1,11 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
--- Date        : Tue Apr  3 18:01:26 2018
+-- Date        : Thu Apr 19 14:40:19 2018
 -- Host        : DESKTOP-S65ON12 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top adder_floating_point -prefix
---               adder_floating_point_ adder_float_stub.vhdl
--- Design      : adder_float
+-- Command     : write_vhdl -force -mode synth_stub
+--               C:/Users/Ruben/Documents/ECE506/506Project/HardwareCode/SSIM/source/ip/adder_floating_point/adder_floating_point_stub.vhdl
+-- Design      : adder_floating_point
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1
 -- --------------------------------------------------------------------------------

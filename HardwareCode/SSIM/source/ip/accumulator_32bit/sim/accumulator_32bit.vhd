@@ -125,7 +125,7 @@ BEGIN
       C_VERBOSITY => 0,
       C_B_WIDTH => 32,
       C_OUT_WIDTH => 32,
-      C_B_TYPE => 1,
+      C_B_TYPE => 0,
       C_CE_OVERRIDES_SCLR => 0,
       C_ADD_MODE => 0,
       C_HAS_C_IN => 0,

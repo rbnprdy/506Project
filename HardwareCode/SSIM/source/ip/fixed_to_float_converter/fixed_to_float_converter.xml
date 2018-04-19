@@ -958,11 +958,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 13 23:09:00 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 19 05:22:49 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:9e552639</spirit:value>
+            <spirit:value>7:6f59c404</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1001,11 +1001,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 13 23:09:08 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 19 05:22:49 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:9e552639</spirit:value>
+            <spirit:value>7:6f59c404</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1019,11 +1019,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 13 23:09:08 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 19 05:22:49 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:9e552639</spirit:value>
+            <spirit:value>7:6f59c404</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1038,11 +1038,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 13 23:09:08 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 19 05:22:49 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:9e552639</spirit:value>
+            <spirit:value>7:6f59c404</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1081,11 +1081,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 13 23:09:08 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 19 05:22:49 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:bd9d3af4</spirit:value>
+            <spirit:value>7:b2b2ec28</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1100,11 +1100,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 13 23:09:08 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 19 05:22:49 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:bd9d3af4</spirit:value>
+            <spirit:value>7:b2b2ec28</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1119,11 +1119,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 13 23:09:08 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 19 05:22:49 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:9e552639</spirit:value>
+            <spirit:value>7:6f59c404</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1138,11 +1138,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 13 23:09:08 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 19 05:22:49 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:9e552639</spirit:value>
+            <spirit:value>7:6f59c404</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1156,11 +1156,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 13 23:09:08 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 19 05:22:49 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:9e552639</spirit:value>
+            <spirit:value>7:6f59c404</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1174,11 +1174,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 13 23:09:10 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 19 05:23:46 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:9e552639</spirit:value>
+            <spirit:value>7:6f59c404</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1956,7 +1956,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_LATENCY</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_LATENCY">7</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_LATENCY">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_OPTIMIZATION</spirit:name>
@@ -2542,6 +2542,18 @@
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
+        <spirit:name>fixed_to_float_converter_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>fixed_to_float_converter_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>fixed_to_float_converter_sim_netlist.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
@@ -2553,18 +2565,6 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
         <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>fixed_to_float_converter_stub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>fixed_to_float_converter_stub.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
@@ -2649,11 +2649,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Maximum_Latency</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.Maximum_Latency" spirit:order="20">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.Maximum_Latency" spirit:order="20">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_Latency</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_Latency" spirit:order="21" spirit:minimum="1" spirit:maximum="7" spirit:rangeType="long">7</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_Latency" spirit:order="21" spirit:minimum="1" spirit:maximum="7" spirit:rangeType="long">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_Rate</spirit:name>
@@ -2788,6 +2788,7 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_Rate" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_Result_Exponent_Width" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_Result_Fraction_Width" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Maximum_Latency" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Operation_Type" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Result_Precision_Type" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
