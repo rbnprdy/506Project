@@ -18,6 +18,7 @@ import numpy as np
 
 # Our Libraries
 import fixed_point
+import SSIM
 
 
 class Network(object):
@@ -134,8 +135,25 @@ class Network(object):
         \partial a for the output activations."""
         return (output_activations-y)
 
-    def write_parameters(self, data_path, binary=False, W=15, F=12):
-        if not binary:
+    def write_parameters(self, data_path, binary=False, hex_=False, W=15, F=12):
+        
+        if binary and hex_:
+            print "Cannot have both binary and hex be true."
+            return
+
+        if hex_:
+            for count, layer in enumerate(self.biases):
+                with open("{}/biases_{}.txt".format(data_path, count), 'w') as f:
+                    for bias_count, bias in enumerate(layer):
+                        f.write(SSIM.float_to_hex(bias) + "\n")
+                    
+
+            for layer_count, layer in enumerate(self.weights):
+                for neuron_count, neuron in enumerate(layer):
+                    with open("{}/weight_{}_{}.txt".format(data_path, layer_count, neuron_count), 'w') as f:
+                        for weight_count, weight in enumerate(neuron):
+                            f.write(SSIM.float_to_hex(weight) + "\n")
+        elif not binary:
             for count, layer in enumerate(self.biases):
                 np.savetxt("{}/biases_{}.txt".format(data_path, count), np.array(layer), delimiter = "\n")
 

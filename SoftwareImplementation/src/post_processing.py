@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import fixed_point
+import SSIM
 
 def main():
 	print 'You are in the post processing module :). Welcome to our genius.'
@@ -81,12 +82,26 @@ def create_two_noisy_data(data1, data2, amplitude):
 
 def create_fixed_image(pixels, path, W, F):
 	fixed_pixels = []
+	pixels = pixels * 256
 	for i in pixels:
 		fixed_pixels.append(fixed_point.float2fix_bin(i, W, F, twos_compliment=True))
 
 	with open(path, 'w') as f:
 		for i in fixed_pixels:
 			f.write('{}\n'.format(i))
+
+
+
+def create_hex_float_image(pixels, path):
+	fixed_pixels = []
+	pixels = pixels * 256
+	for i in pixels:
+		fixed_pixels.append(SSIM.float_to_hex(i))
+
+	with open(path, 'w') as f:
+		for i in fixed_pixels:
+			f.write('{}\n'.format(i))
+
 
 
 if __name__ == '__main__':

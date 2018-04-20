@@ -5,19 +5,22 @@ import matplotlib.pyplot as plt
 import post_processing
 from skimage.measure import compare_ssim as ssim
 import fixed_point
+import SSIM
 
 def main():	
 
 	training_data, validation_data, testing_data = mnist_loader.load_data_wrapper()
 	noisy_testing_data, noisy_training_data = post_processing.create_two_noisy_data(testing_data, training_data, 80)
-	post_processing.create_fixed_image(training_data[0][0], 'fixed_point_data.txt', 15, 11)
-	post_processing.create_image_from_mnist(training_data[0][0], 'First Element of Training Data', 'data.png')
+	post_processing.create_hex_float_image(training_data[0][0], 'fixed_point_data.txt')
+	for i in training_data[0][0]:
+		print '{}'.format(i * 256)
 	net = network.Network([784, 30, 10])
 	#net.SGD(training_data, 10, 10, 3.0)
 	
 	# Writing the floating and fixed data, with binary true so we can get the binary represention of the data
 	net.write_parameters("../floating_parameter_data")
 	net.write_parameters("../fixed_parameter_data", binary=True)
+	net.write_parameters("../floating_parameter_hex_data", hex_=True)
 
 	'''
 	# This is a test of how changing the Fraction bitwidth effects the accuracy.
