@@ -85,7 +85,7 @@ architecture tb of tb_fixed_to_float_converter is
   constant CLOCK_PERIOD : time := 100 ns;
   constant T_HOLD       : time := 10 ns;
   constant T_STROBE     : time := CLOCK_PERIOD - (1 ns);
-  constant DUT_DELAY    : time := CLOCK_PERIOD * 7;
+  constant DUT_DELAY    : time := CLOCK_PERIOD * 1;
 
   -----------------------------------------------------------------------
   -- Testbench types and signals

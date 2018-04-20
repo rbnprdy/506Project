@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
--- Date        : Sun Apr 15 18:40:16 2018
+-- Date        : Thu Apr 19 12:11:01 2018
 -- Host        : DESKTOP-S65ON12 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/Ruben/Documents/ECE506/506Project/HardwareCode/SSIM/source/ip/accumulator_32bit/accumulator_32bit_stub.vhdl
+--               C:/Users/Ruben/Documents/ECE506/506Project/HardwareCode/SSIM/source/ip/accumulator_32bit/accumulator_32bit_stub.vhdl
 -- Design      : accumulator_32bit
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1
