@@ -2,7 +2,7 @@ import mnist_loader
 import numpy as np
 import matplotlib.pyplot as plt
 import post_processing
-from skimage.measure import compare_ssim as ssim_ski
+#from skimage.measure import compare_ssim as ssim_ski
 import struct
 from scipy import signal
 import ssim
@@ -63,13 +63,15 @@ def CW_SSIM(x, y, width=30, k = 0.01):
     return index
 
 
-def generate_input_mem(data):
+def generate_input_mem(data, path):
 
-    f = open("input_y.txt", "w+")
+    f = open(path, "w+")
     m = mean(data)
     i = 0
     for d in data:
-        f.write(str(float_to_hex(d[0] - m[0]))[0:10])
+        print d
+        print m
+        f.write(str(float_to_hex(d[0] - m))[0:10])
         f.write("\n")
 
     f.close()

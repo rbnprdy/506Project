@@ -92,11 +92,14 @@ def create_fixed_image(pixels, path, W, F):
 
 
 
-def create_hex_float_image(pixels, path):
+def create_hex_float_image(pixels, path, zero_mean = False):
 	fixed_pixels = []
 	pixels = pixels * 256
+	if zero_mean:
+		pixels = pixels - np.mean(pixels)	
 	for i in pixels:
-		fixed_pixels.append(SSIM.float_to_hex(i))
+		print str(SSIM.float_to_hex(i)[0:10])
+		fixed_pixels.append(str(SSIM.float_to_hex(i))[0:10])
 
 	with open(path, 'w') as f:
 		for i in fixed_pixels:
