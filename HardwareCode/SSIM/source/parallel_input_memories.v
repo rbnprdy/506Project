@@ -134,7 +134,7 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
     );
     
         
-    input_mem #(.FILE_NAME("row_9_X.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x9(
+    input_mem #(.FILE_NAME("row_9_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x9(
         .clk(clk),
         .rst(rst),
         .next_image(next_image),
