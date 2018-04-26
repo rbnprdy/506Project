@@ -24,7 +24,7 @@ def create_noisy_data(data, amplitude):
 
 	for count, i in enumerate(data):						# Adding noise to all data
 		pixels = i[0] * 256
-		noisy_pixels = np.clip(noise + pixels, 0, 256)
+		noisy_pixels = np.clip(noise + pixels, 0, 255)
 		noisy_pixels = noisy_pixels / 256
 		noisy_testing_data[count] = [noisy_pixels.astype(i[0].dtype), i[1]]
 
@@ -37,7 +37,7 @@ def create_noisy_fixed_point_data(data, amplitude):
 
 	for count, i in enumerate(data):						# Adding noise to all data
 		pixels = i[0] * 256
-		noisy_pixels = np.clip(noise + pixels, 0, 256)
+		noisy_pixels = np.clip(noise + pixels, 0, 255)
 		noisy_pixels = noisy_pixels / 256
 		noisy_testing_data[count] = [noisy_pixels.astype(i[0].dtype), i[1]]
 
@@ -52,7 +52,7 @@ def create_lighter_data(data, amplitude):
 
 	for count, i in enumerate(data):						# Adding noise to all data
 		pixels = i[0] * 256
-		noisy_pixels = np.clip(amplitude + pixels, 0, 256)
+		noisy_pixels = np.clip(amplitude + pixels, 0, 255)
 		noisy_pixels = noisy_pixels / 256
 		noisy_testing_data[count] = [noisy_pixels.astype(i[0].dtype), i[1]]
 
@@ -67,13 +67,13 @@ def create_two_noisy_data(data1, data2, amplitude):
 
 	for count, i in enumerate(data1):						# Adding noise to all data
 		pixels = i[0] * 256
-		noisy_pixels = np.clip(noise + pixels, 0, 256)
+		noisy_pixels = np.clip(noise + pixels, 0, 255)
 		noisy_pixels = noisy_pixels / 256
 		noisy_data1[count] = [noisy_pixels.astype(i[0].dtype), i[1]]
 
 	for count, i in enumerate(data2):						# Adding noise to all data
 		pixels = i[0] * 256
-		noisy_pixels = np.clip(noise + pixels, 0, 256)
+		noisy_pixels = np.clip(noise + pixels, 0, 255)
 		noisy_pixels = noisy_pixels / 256
 		noisy_data2[count] = [noisy_pixels.astype(i[0].dtype), i[1]]
 

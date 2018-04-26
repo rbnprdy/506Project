@@ -179,7 +179,7 @@ u, clk, clr, in_valid, u_valid, result_ready, in_ready, out, out_valid);
     );
     
     parallel_subtractors subs(
-        .clk(clk), .in_b(u), .in_b_valid(u_valid),
+        .clk(clk), .rst(clr), .in_b(u), .in_b_valid(u_valid),
         //
         .in_a1(in_float1), .in_a2(in_float2), .in_a3(in_float3), .in_a4(in_float4), .in_a5(in_float5), .in_a6(in_float6), .in_a7(in_float7),
         .in_a8(in_float8), .in_a9(in_float9), .in_a10(in_float10), .in_a11(in_float11), .in_a12(in_float12), .in_a13(in_float13), .in_a14(in_float14),
@@ -215,7 +215,7 @@ u, clk, clr, in_valid, u_valid, result_ready, in_ready, out, out_valid);
     );
     
     parallel_data_counters data_counters(
-        .clk(clk), .clr(clr),
+        .clk(clk), .clr(clr || !sub_out1_valid),
         // in
         .in1(sub_out1), .in2(sub_out2), .in3(sub_out3), .in4(sub_out4), .in5(sub_out5), .in6(sub_out6), .in7(sub_out7),
         .in8(sub_out8), .in9(sub_out9), .in10(sub_out10), .in11(sub_out11), .in12(sub_out12), .in13(sub_out13), .in14(sub_out14),
@@ -239,7 +239,7 @@ u, clk, clr, in_valid, u_valid, result_ready, in_ready, out, out_valid);
     );
     
     parallel_multipliers mults (
-        .clk(clk),
+        .clk(clk), .rst(clr),
         // in_a
         .in_a1(data_counter_out1), .in_a2(data_counter_out2), .in_a3(data_counter_out3), .in_a4(data_counter_out4), .in_a5(data_counter_out5), .in_a6(data_counter_out6), .in_a7(data_counter_out7),
         .in_a8(data_counter_out8), .in_a9(data_counter_out9), .in_a10(data_counter_out10), .in_a11(data_counter_out11), .in_a12(data_counter_out12), .in_a13(data_counter_out13), .in_a14(data_counter_out14),
@@ -322,7 +322,8 @@ u, clk, clr, in_valid, u_valid, result_ready, in_ready, out, out_valid);
     );
     
     parallel_accumulators accum (
-        .clk(clk), .clr(clr), .bypass(!multiplier_fixed_out1_valid), //FIXME
+        //.clk(clk), .clr(clr), .bypass(!multiplier_fixed_out1_valid), //FIXME
+        .clk(clk), .clr(!multiplier_fixed_out1_valid), .bypass(0), //FIXME
         // in
         .in1(multiplier_fixed_out1), .in2(multiplier_fixed_out2), .in3(multiplier_fixed_out3), .in4(multiplier_fixed_out4), .in5(multiplier_fixed_out5), .in6(multiplier_fixed_out6), .in7(multiplier_fixed_out7),
         .in8(multiplier_fixed_out8), .in9(multiplier_fixed_out9), .in10(multiplier_fixed_out10), .in11(multiplier_fixed_out11), .in12(multiplier_fixed_out12), .in13(multiplier_fixed_out13), .in14(multiplier_fixed_out14),
@@ -386,9 +387,9 @@ u, clk, clr, in_valid, u_valid, result_ready, in_ready, out, out_valid);
       .m_axis_result_tdata(out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    counter #(.NUM(NUM_INPUTS - 1)) c(
+    counter #(.NUM(NUM_INPUTS)) c(
         .clk(clk),
-        .rst(clr),
+        .rst(clr || !square_root_valid),
         .start(square_root_valid),
         .done(out_valid)
     );

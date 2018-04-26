@@ -6,68 +6,84 @@ import struct
 def main():
     training_data, _, _ = mnist_loader.load_data_wrapper()
 
-     # Setup Data
+    # create averages
+    count = [0] * 10
+    running_average = [np.zeros((784, 1), dtype='float32')] * 10
+    for i in training_data:
+            label = np.argmax(i[1])
+            count[label] = count[label] + 1
+            running_average[label] = running_average[label] + i[0]
+
+    for index, i in enumerate(count):
+            running_average[index] = running_average[index] / count[index]
+            running_average[index] = running_average[index] * 256
+
+    # create noisy data - this is a "5"
     pixels = training_data[0][0]*256
 
     noisy_data = post_processing.create_noisy_data(training_data, 80)
     noisy_pixels = noisy_data[0][0]*256
 
-    generate_input_mem_x(pixels, 28)
-    generate_input_mem_y(noisy_pixels, 28)
+    generate_input_mem_x(noisy_pixels, 28)
+    generate_input_mem_average(running_average[5], 5, 28)
 
-    SSIM(pixels, noisy_pixels, file_name="stats.txt")
+    SSIM(noisy_pixels, running_average[5], file_name="stats.txt")
     
 def generate_input_mem_x(data, num_mems):
 
     for i in range(0, num_mems):
-        f = open("row_{}.txt".format(i+1), "w+")
+        f = open("row_{}_x.txt".format(i+1), "w+")
         it = 0
         if i == 0:
-            for j in range(0, len(data)/num_mems):
-                h = hex(data[j][0])
-                if len(h) == 3:
-                    f.write(h[0:2] + "0" + h[2:])
-                else:
-                    f.write(h)
-                f.write("\n")
-                it = it + 1
+            #added
+            for _ in range(0, 3):
+                for j in range(0, len(data)/num_mems):
+                    h = hex(int(data[j][0]))
+                    if len(h) == 3:
+                        f.write(h[0:2] + "0" + h[2:])
+                    else:
+                        f.write(h)
+                    f.write("\n")
+                    it = it + 1
         else:
-            for j in range(i*len(data)/num_mems, (i+1)*len(data)/num_mems):
-                h = hex(data[j][0])
-                if len(h) == 3:
-                    f.write(h[0:2] + "0" + h[2:])
-                else:
-                    f.write(h)
-                f.write("\n")
-                it = it + 1
+            #added
+            for _ in range(0, 3):
+                for j in range(i*len(data)/num_mems, (i+1)*len(data)/num_mems):
+                    h = hex(int(data[j][0]))
+                    if len(h) == 3:
+                        f.write(h[0:2] + "0" + h[2:])
+                    else:
+                        f.write(h)
+                    f.write("\n")
+                    it = it + 1
         print("Length of x memory file {}: {}".format(i+1, it))
         f.close()
 
-def generate_input_mem_y(data, num_mems):
+def generate_input_mem_average(data, num, num_mems):
 
     m = mean(data)
 
     for i in range(0, num_mems):
-        f = open("row_{}_noisy.txt".format(i+1), "w+")
+        f = open("row_{}_average_{}.txt".format(i+1, num), "w+")
         it = 0
         if i == 0:
             for j in range(0, len(data)/num_mems):
                 d = data[j]
-                f.write(str(float_to_hex(d[0] - m[0]))[0:10])
+                f.write(str(float_to_hex(d[0] - m))[0:10])
                 f.write("\n")
                 it = it + 1
         else:
             for j in range(i*len(data)/num_mems, (i+1)*len(data)/num_mems):
                 d = data[j]
-                f.write(str(float_to_hex(d[0] - m[0]))[0:10])
+                f.write(str(float_to_hex(d[0] - m))[0:10])
                 f.write("\n")
                 it = it + 1
-        print("Length of y memory file {}: {}".format(i+1, it))
+        print("Length of average memory file {}: {}".format(i+1, it))
         f.close()
 
 def SSIM(x, y, verbose = False, use_c = False, file_name=None):
     # Calculate Means
-    mean_x = mean(x)
+    mean_x = mean(x, output=True)
     mean_y = mean(y)
     
     # Calculate Stdevs
@@ -93,22 +109,22 @@ def SSIM(x, y, verbose = False, use_c = False, file_name=None):
         print("c: {}".format(c(stdev_x, stdev_y)))
         print("s: {}".format(s(cov_xy, stdev_x, stdev_y)))
         print("SSIM: {}".format(SSIM))
-        print("\nNoisy mean in hex: {}".format(str(float_to_hex(mean_y))[0:10]))
-        print("Noisy dev in hex: {}".format(str(float_to_hex(stdev_y))[0:10]))
+        print("\ny mean in hex: {}".format(str(float_to_hex(mean_y))[0:10]))
+        print("y dev in hex: {}".format(str(float_to_hex(stdev_y))[0:10]))
 
     if file_name:
         f = open(file_name, "w+")
-        f.write("mean_normal: {}\n".format(mean_x))
-        f.write("mean_noisy: {}\n".format(mean_y))
-        f.write("standard_deviation_normal: {}\n".format(stdev_x))
-        f.write("standard_deviation_noisy: {}\n".format(stdev_y))
+        f.write("mean_x: {}\n".format(mean_x))
+        f.write("mean_y: {}\n".format(mean_y))
+        f.write("standard_deviation_x: {}\n".format(stdev_x))
+        f.write("standard_deviation_y: {}\n".format(stdev_y))
         f.write("covaraince: {}\n".format(cov_xy))
         f.write("l: {}\n".format(l(mean_x, mean_y)))
         f.write("c: {}\n".format(c(stdev_x, stdev_y)))
         f.write("s: {}\n".format(s(cov_xy, stdev_x, stdev_y)))
         f.write("SSIM: {}\n".format(SSIM))
-        f.write("\nNoisy mean in hex: {}\n".format(str(float_to_hex(mean_y))[0:10]))
-        f.write("Noisy standard deviation in hex: {}\n".format(str(float_to_hex(stdev_y))[0:10]))
+        f.write("\ny mean in hex: {}\n".format(str(float_to_hex(mean_y))[0:10]))
+        f.write("y standard deviation in hex: {}\n".format(str(float_to_hex(stdev_y))[0:10]))
 
     return SSIM
 
@@ -123,12 +139,12 @@ def cov(x, y, u_x, u_y):
         it = 0
         if i == 0:
             for j in range(0, 28):
-                s = s + np.round((x[j] - u_x)*(y[j] - u_y))
-                f.write("Time Step {}: x_val-u_x = {}. y_val = {}. Multiplier Fixed = {}. Partial Sum = {}\n".format(j, x[j]-u_x, y[j]-u_y, np.round((x[j] - u_x)*(y[j] - u_y)), s))
+                s = s + np.round((int(x[j]) - u_x)*(y[j] - u_y))
+                f.write("Time Step {}: x = {}. x_val-u_x = {}. y_val = {}. Multiplier Fixed = {}. Partial Sum = {}\n".format(j, int(x[j]), int(x[j])-u_x, y[j]-u_y, np.round((int(x[j]) - u_x)*(y[j] - u_y)), s))
         else:
             for j in range(i*28, (i+1)*28):
-                s = s + np.round((x[j] - u_x)*(y[j] - u_y))
-                f.write("Time Step {}: x_val-u_x = {}. y_val = {}. Multiplier Fixed = {}. Partial Sum = {}\n".format(it, x[j]-u_x, y[j]-u_y, np.round((x[j] - u_x)*(y[j] - u_y)), s))
+                s = s + np.round((int(x[j]) - u_x)*(y[j] - u_y))
+                f.write("Time Step {}: x = {}. x_val-u_x = {}. y_val = {}. Multiplier Fixed = {}. Partial Sum = {}\n".format(it, int(x[j]), int(x[j])-u_x, y[j]-u_y, np.round((int(x[j]) - u_x)*(y[j] - u_y)), s))
                 it = it + 1
         total_sum = total_sum + s
         f.write("\n")
@@ -139,7 +155,7 @@ def cov(x, y, u_x, u_y):
 
     sum = 0
     for i in range(0, len(x)):
-        sum = sum + np.round((x[i]-u_x)*(y[i]-u_y))
+        sum = sum + np.round((int(x[i])-u_x)*(y[i]-u_y))
     sum = sum / (len(x) - 1)
 
     f.write("Covar Old Way: {}\n".format(sum))
@@ -147,18 +163,49 @@ def cov(x, y, u_x, u_y):
     return sum
 
 
-def mean(x):
-    sum = 0
-    for i in range(0, len(x)):
-        sum = sum + x[i]
-    return sum / len(x)
+def mean(x, output=False):
+    if not output:
+        sum = 0
+        for i in range(0, len(x)):
+            sum = sum + int(x[i])
+        return sum / float(len(x))
+    else:
+        f = open("mean.txt", "w+")
+        total_sum = 0
+        for i in range(0, 28):
+            f.write("Summer {}\n".format(i))
+            s = 0
+            it = 0
+            if i == 0:
+                for j in range(0, 28):
+                    s = s + int(x[j])
+                    f.write("Time Step {}: x = {}. Parital Sum = {}\n".format(j, int(x[j]), s))
+            else:
+                for j in range(i*28, (i+1)*28):
+                    s = s + int(x[j])
+                    f.write("Time Step {}: x = {}. Partial Sum = {}\n".format(it, int(x[j]), s))
+                    it = it + 1
+            total_sum = total_sum + s
+            f.write("\n")
+
+        f.write("\nTotal Sum: {}\n".format(total_sum))
+        f.write("len(x): {}\n".format(len(x)))
+        f.write("mean: {}\n".format(total_sum / float(len(x))))
+        h = float_to_hex(total_sum / float(len(x)))
+        f.write("hex mean: {}\n".format(h))
+        h_cut = h[2:]
+        f.write("hex cut: {}\n".format(h_cut))
+        f_cut = struct.unpack('!f', h_cut.decode('hex'))[0]
+        f.write("hex cut float: {}\n".format(f_cut))
+        f.close()
+        return float(f_cut)
 
 def dev(x, u_x, output=False):
 
     if (not output):
         sum = 0
         for i in range(0, len(x)):
-            sum = sum + np.round((x[i] - u_x)*(x[i] - u_x))
+            sum = sum + np.round((int(x[i]) - u_x)*(int(x[i]) - u_x))
         sum = sum / (len(x) - 1)
         return np.sqrt(sum)
     
@@ -171,12 +218,12 @@ def dev(x, u_x, output=False):
             it = 0
             if i == 0:
                 for j in range(0, 28):
-                    s = s + np.round((x[j] - u_x)*(x[j] - u_x))
-                    f.write("Time Step {}: Multiplier Fixed = {}. Partial Sum = {}\n".format(j, np.round((x[j] - u_x)*(x[j] - u_x)), s))
+                    s = s + np.round((int(x[j]) - u_x)*(int(x[j]) - u_x))
+                    f.write("Time Step {}: x = {}. u_x = {}. x - u_x = {}. Multiplier = {}. Multiplier Fixed = {}. Partial Sum = {}\n".format(j, int(x[j]), u_x, x[j] - u_x, (int(x[j])-u_x)*(int(x[j])-u_x), np.round((int(x[j]) - u_x)*(int(x[j]) - u_x)), s))
             else:
                 for j in range(i*28, (i+1)*28):
-                    s = s + np.round((x[j] - u_x)*(x[j] - u_x))
-                    f.write("Time Step {}: Multiplier Fixed = {}. Partial Sum = {}\n".format(it, np.round((x[j] - u_x)*(x[j] - u_x)), s))
+                    s = s + np.round((int(x[j]) - u_x)*(int(x[j]) - u_x))
+                    f.write("Time Step {}: x = {}. u_x = {}. x - u_x = {}. Multiplier = {}. Multiplier Fixed = {}. Partial Sum = {}\n".format(it, int(x[j]), u_x, x[j] - u_x, (int(x[j])-u_x)*(int(x[j])-u_x), np.round((int(x[j]) - u_x)*(int(x[j]) - u_x)), s))
                     it = it + 1
             total_sum = total_sum + s
             f.write("\n")
@@ -188,7 +235,7 @@ def dev(x, u_x, output=False):
 
         sum = 0
         for i in range(0, len(x)):
-            sum = sum + np.round((x[i] - u_x)*(x[i] - u_x))
+            sum = sum + np.round((int(x[i]) - u_x)*(int(x[i]) - u_x))
         sum = sum / (len(x) - 1)
 
         f.write("St. Dv. Old Way: {}\n".format(np.sqrt(sum)))

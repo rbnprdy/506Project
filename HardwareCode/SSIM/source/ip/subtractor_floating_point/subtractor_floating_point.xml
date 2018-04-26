@@ -958,11 +958,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 19 05:23:26 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 26 06:36:43 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:c16a2d95</spirit:value>
+            <spirit:value>7:e4a57725</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1001,11 +1001,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 19 05:23:26 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 26 06:36:43 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:c16a2d95</spirit:value>
+            <spirit:value>7:e4a57725</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1019,11 +1019,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 19 05:23:26 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 26 06:36:43 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:c16a2d95</spirit:value>
+            <spirit:value>7:e4a57725</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1038,11 +1038,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 19 05:23:26 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 26 06:36:43 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:c16a2d95</spirit:value>
+            <spirit:value>7:e4a57725</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1081,11 +1081,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 19 05:23:26 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 26 06:36:43 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:7bd28bfb</spirit:value>
+            <spirit:value>7:ddc4ca17</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1100,11 +1100,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 19 05:23:26 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 26 06:36:43 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:7bd28bfb</spirit:value>
+            <spirit:value>7:ddc4ca17</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1119,11 +1119,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 19 05:23:26 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 26 06:36:43 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:c16a2d95</spirit:value>
+            <spirit:value>7:e4a57725</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1138,11 +1138,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 19 05:23:27 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 26 06:36:44 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:c16a2d95</spirit:value>
+            <spirit:value>7:e4a57725</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1156,11 +1156,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 19 05:23:27 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 26 06:36:44 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:c16a2d95</spirit:value>
+            <spirit:value>7:e4a57725</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1174,11 +1174,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 19 05:24:29 UTC 2018</spirit:value>
+            <spirit:value>Thu Apr 26 06:37:45 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:c16a2d95</spirit:value>
+            <spirit:value>7:e4a57725</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1248,7 +1248,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.aresetn" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_ARESETN&apos;)) = 1)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.aresetn" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_ARESETN&apos;)) = 1)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -2016,7 +2016,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_HAS_ARESETN</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_ARESETN">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_ARESETN">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_THROTTLE_SCHEME</spirit:name>
@@ -2660,7 +2660,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Has_ARESETn</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.Has_ARESETn" spirit:order="24">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.Has_ARESETn" spirit:order="24">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_Has_UNDERFLOW</spirit:name>
@@ -2773,6 +2773,7 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_OPERATION.TID_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Add_Sub_Value" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_Latency" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Has_ARESETn" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Maximum_Latency" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>

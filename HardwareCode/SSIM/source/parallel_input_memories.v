@@ -5,7 +5,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module parallel_input_memories #(parameter NUM_ENTRIES = 784, ADDRESS_BIT_WIDTH = 10)(
-clk, rst, start_a, start_b, valid_a, valid_b, 
+clk, rst, next_image, start_a, start_b, valid_a, valid_b, 
 out_a1, out_a2, out_a3, out_a4, out_a5, out_a6, out_a7, 
 out_a8, out_a9, out_a10, out_a11, out_a12, out_a13, out_a14, 
 out_a15, out_a16, out_a17, out_a18, out_a19, out_a20, out_a21, 
@@ -16,7 +16,7 @@ out_b15, out_b16, out_b17, out_b18, out_b19, out_b20, out_b21,
 out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
 );
 
-    input clk, rst, start_a, start_b;
+    input clk, rst, next_image, start_a, start_b;
     
     output valid_a, valid_b;
     output [7:0] out_a1, out_a2, out_a3, out_a4, out_a5, out_a6, out_a7;
@@ -37,9 +37,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
     wire out_b15_valid, out_b16_valid, out_b17_valid, out_b18_valid, out_b19_valid, out_b20_valid, out_b21_valid;
     wire out_b22_valid, out_b23_valid, out_b24_valid, out_b25_valid, out_b26_valid, out_b27_valid, out_b28_valid;
     
-    input_mem #(.FILE_NAME("row_1.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x1(
+    input_mem #(.FILE_NAME("row_1_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x1(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a1_valid),
@@ -48,9 +49,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b1)
     );    
     
-    input_mem #(.FILE_NAME("row_2.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x2(
+    input_mem #(.FILE_NAME("row_2_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x2(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a2_valid),
@@ -59,9 +61,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b2)
     );    
     
-    input_mem #(.FILE_NAME("row_3.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x3(
+    input_mem #(.FILE_NAME("row_3_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x3(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a3_valid),
@@ -70,9 +73,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b3)
     );    
     
-    input_mem #(.FILE_NAME("row_4.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x4(
+    input_mem #(.FILE_NAME("row_4_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x4(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a4_valid),
@@ -81,19 +85,22 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b4)
     );
         
-    input_mem #(.FILE_NAME("row_5.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x5(
+    input_mem #(.FILE_NAME("row_5_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x5(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
+        .start_b(start_b),
         .valid_a(out_a5_valid),
         .valid_b(out_b5_valid),
         .out_a(out_a5),
         .out_b(out_b5)
     );    
     
-    input_mem #(.FILE_NAME("row_6.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x6(
+    input_mem #(.FILE_NAME("row_6_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x6(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a6_valid),
@@ -102,9 +109,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b6)
     );    
     
-    input_mem #(.FILE_NAME("row_7.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x7(
+    input_mem #(.FILE_NAME("row_7_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x7(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a7_valid),
@@ -113,9 +121,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b7)
     );    
     
-    input_mem #(.FILE_NAME("row_8.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x8(
+    input_mem #(.FILE_NAME("row_8_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x8(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a8_valid),
@@ -125,9 +134,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
     );
     
         
-    input_mem #(.FILE_NAME("row_9.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x9(
+    input_mem #(.FILE_NAME("row_9_X.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x9(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a9_valid),
@@ -136,9 +146,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b9)
     );    
     
-    input_mem #(.FILE_NAME("row_10.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x10(
+    input_mem #(.FILE_NAME("row_10_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x10(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a10_valid),
@@ -147,9 +158,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b10)
     );    
     
-    input_mem #(.FILE_NAME("row_11.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x11(
+    input_mem #(.FILE_NAME("row_11_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x11(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a11_valid),
@@ -158,9 +170,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b11)
     );    
     
-    input_mem #(.FILE_NAME("row_12.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x12(
+    input_mem #(.FILE_NAME("row_12_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x12(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a12_valid),
@@ -169,9 +182,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b12)
     );
         
-    input_mem #(.FILE_NAME("row_13.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x13(
+    input_mem #(.FILE_NAME("row_13_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x13(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a13_valid),
@@ -180,9 +194,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b13)
     );    
     
-    input_mem #(.FILE_NAME("row_14.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x14(
+    input_mem #(.FILE_NAME("row_14_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x14(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a14_valid),
@@ -191,9 +206,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b14)
     );    
         
-    input_mem #(.FILE_NAME("row_15.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x15(
+    input_mem #(.FILE_NAME("row_15_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x15(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a15_valid),
@@ -202,9 +218,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b15)
     );    
     
-    input_mem #(.FILE_NAME("row_16.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x16(
+    input_mem #(.FILE_NAME("row_16_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x16(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a16_valid),
@@ -213,9 +230,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b16)
     );    
     
-    input_mem #(.FILE_NAME("row_17.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x17(
+    input_mem #(.FILE_NAME("row_17_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x17(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a17_valid),
@@ -224,9 +242,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b17)
     );    
     
-    input_mem #(.FILE_NAME("row_18.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x18(
+    input_mem #(.FILE_NAME("row_18_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x18(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a18_valid),
@@ -235,9 +254,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b18)
     );
         
-    input_mem #(.FILE_NAME("row_19.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x19(
+    input_mem #(.FILE_NAME("row_19_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x19(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a19_valid),
@@ -246,9 +266,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b19)
     );    
     
-    input_mem #(.FILE_NAME("row_20.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x20(
+    input_mem #(.FILE_NAME("row_20_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x20(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a20_valid),
@@ -257,9 +278,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b20)
     );    
     
-    input_mem #(.FILE_NAME("row_21.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x21(
+    input_mem #(.FILE_NAME("row_21_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x21(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a21_valid),
@@ -268,9 +290,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b21)
     );    
     
-    input_mem #(.FILE_NAME("row_22.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x22(
+    input_mem #(.FILE_NAME("row_22_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x22(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a22_valid),
@@ -280,9 +303,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
     );
     
         
-    input_mem #(.FILE_NAME("row_23.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x23(
+    input_mem #(.FILE_NAME("row_23_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x23(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a23_valid),
@@ -291,9 +315,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b23)
     );    
     
-    input_mem #(.FILE_NAME("row_24.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x24(
+    input_mem #(.FILE_NAME("row_24_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x24(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a24_valid),
@@ -302,9 +327,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b24)
     );    
     
-    input_mem #(.FILE_NAME("row_25.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x25(
+    input_mem #(.FILE_NAME("row_25_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x25(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a25_valid),
@@ -313,9 +339,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b25)
     );    
     
-    input_mem #(.FILE_NAME("row_26.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x26(
+    input_mem #(.FILE_NAME("row_26_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x26(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a26_valid),
@@ -324,9 +351,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b26)
     );
         
-    input_mem #(.FILE_NAME("row_27.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x27(
+    input_mem #(.FILE_NAME("row_27_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x27(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a27_valid),
@@ -335,9 +363,10 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .out_b(out_b27)
     );    
     
-    input_mem #(.FILE_NAME("row_28.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x28(
+    input_mem #(.FILE_NAME("row_28_x.txt"), .DATA_BIT_WIDTH(8), .NUM_ENTRIES(NUM_ENTRIES), .ADDRESS_BIT_WIDTH(ADDRESS_BIT_WIDTH)) x28(
         .clk(clk),
         .rst(rst),
+        .next_image(next_image),
         .start_a(start_a),
         .start_b(start_b),
         .valid_a(out_a28_valid),
@@ -353,5 +382,13 @@ out_b22, out_b23, out_b24, out_b25, out_b26, out_b27, out_b28
         .in22(out_a22_valid), .in23(out_a23_valid), .in24(out_a24_valid), .in25(out_a25_valid), .in26(out_a26_valid), .in27(out_a27_valid), .in28(out_a28_valid),
         .out(valid_a)
     );   
+    
+    and_gate and_b(
+        .in1(out_b1_valid), .in2(out_b2_valid), .in3(out_b3_valid), .in4(out_b4_valid), .in5(out_b5_valid), .in6(out_b6_valid), .in7(out_b7_valid),
+        .in8(out_b8_valid), .in9(out_b9_valid), .in10(out_b10_valid), .in11(out_b11_valid), .in12(out_b12_valid), .in13(out_b13_valid), .in14(out_b14_valid),        
+        .in15(out_b15_valid), .in16(out_b16_valid), .in17(out_b17_valid), .in18(out_b18_valid), .in19(out_b19_valid), .in20(out_b20_valid), .in21(out_b21_valid),
+        .in22(out_b22_valid), .in23(out_b23_valid), .in24(out_b24_valid), .in25(out_b25_valid), .in26(out_b26_valid), .in27(out_b27_valid), .in28(out_b28_valid),
+        .out(valid_b)
+    );
 
 endmodule

@@ -22,10 +22,10 @@
         - [31:0] out: The output value, in floating point.
         - out_valid: Indicates whether the output value is valid.
 */
-module luminance_comp(clk, mean_x, mean_y, mean_x_valid, mean_y_valid, out_ready, mean_x_ready, mean_y_ready, out, out_valid);
+module luminance_comp(clk, clr, mean_x, mean_y, mean_x_valid, mean_y_valid, out_ready, mean_x_ready, mean_y_ready, out, out_valid);
 
     input [31:0] mean_x, mean_y;
-    input clk, mean_x_valid, mean_y_valid, out_ready;
+    input clk, clr, mean_x_valid, mean_y_valid, out_ready;
     
     output [31:0] out;
     output out_valid, mean_x_ready, mean_y_ready;
@@ -36,6 +36,7 @@ module luminance_comp(clk, mean_x, mean_y, mean_x_valid, mean_y_valid, out_ready
     
     multiplier_floating_point mean_x_times_mean_y (
       .aclk(clk),                                  // input wire aclk
+      .aresetn(!clr), 
       .s_axis_a_tvalid(mean_x_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(mean_x_ready),            // output wire s_axis_a_tready
       .s_axis_a_tdata(mean_x),              // input wire [31 : 0] 
@@ -49,6 +50,7 @@ module luminance_comp(clk, mean_x, mean_y, mean_x_valid, mean_y_valid, out_ready
     
     multiplier_floating_point times_two (
       .aclk(clk),                                  // input wire aclk
+      .aresetn(!clr), 
       .s_axis_a_tvalid(mean_x_times_mean_y_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(times_two_a_ready),            // output wire s_axis_a_tready
       .s_axis_a_tdata(mean_x_times_mean_y_out),              // input wire [31 : 0] 
@@ -62,6 +64,7 @@ module luminance_comp(clk, mean_x, mean_y, mean_x_valid, mean_y_valid, out_ready
     
     multiplier_floating_point mean_x_squarer (
       .aclk(clk),                                  // input wire aclk
+      .aresetn(!clr), 
       .s_axis_a_tvalid(mean_x_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(mean_x_squared_a_ready),            // output wire s_axis_a_tready
       .s_axis_a_tdata(mean_x),              // input wire [31 : 0] 
@@ -75,6 +78,7 @@ module luminance_comp(clk, mean_x, mean_y, mean_x_valid, mean_y_valid, out_ready
       
     multiplier_floating_point mean_y_squarer (
       .aclk(clk),                                  // input wire aclk
+      .aresetn(!clr), 
       .s_axis_a_tvalid(mean_y_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(mean_y_squared_a_ready),            // output wire s_axis_a_tready
       .s_axis_a_tdata(mean_y),              // input wire [31 : 0] 

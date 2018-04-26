@@ -23,10 +23,10 @@
         - [31:0] out: The output value, in floating point.
         - out_valid: Indicates whether the output value is valid.
 */
-module contrast_comp(clk, std_x, std_y, std_x_valid, std_y_valid, out_ready, std_x_ready, std_y_ready, out, out_valid);
+module contrast_comp(clk, clr, std_x, std_y, std_x_valid, std_y_valid, out_ready, std_x_ready, std_y_ready, out, out_valid);
 
     input [31:0] std_x, std_y;
-    input clk, std_x_valid, std_y_valid, out_ready;
+    input clk, clr, std_x_valid, std_y_valid, out_ready;
     
     output [31:0] out;
     output out_valid, std_x_ready, std_y_ready;
@@ -37,6 +37,7 @@ module contrast_comp(clk, std_x, std_y, std_x_valid, std_y_valid, out_ready, std
     
     multiplier_floating_point std_x_times_std_y (
       .aclk(clk),                                  // input wire aclk
+      .aresetn(!clr), 
       .s_axis_a_tvalid(std_x_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(std_x_ready),            // output wire s_axis_a_tready
       .s_axis_a_tdata(std_x),              // input wire [31 : 0] 
@@ -50,6 +51,7 @@ module contrast_comp(clk, std_x, std_y, std_x_valid, std_y_valid, out_ready, std
     
     multiplier_floating_point times_two (
       .aclk(clk),                                  // input wire aclk
+      .aresetn(!clr), 
       .s_axis_a_tvalid(std_x_times_std_y_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(times_two_a_ready),            // output wire s_axis_a_tready
       .s_axis_a_tdata(std_x_times_std_y_out),              // input wire [31 : 0] 
@@ -63,6 +65,7 @@ module contrast_comp(clk, std_x, std_y, std_x_valid, std_y_valid, out_ready, std
     
     multiplier_floating_point std_x_squarer (
       .aclk(clk),                                  // input wire aclk
+      .aresetn(!clr), 
       .s_axis_a_tvalid(std_x_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(std_x_squared_a_ready),            // output wire s_axis_a_tready
       .s_axis_a_tdata(std_x),              // input wire [31 : 0] 
@@ -76,6 +79,7 @@ module contrast_comp(clk, std_x, std_y, std_x_valid, std_y_valid, out_ready, std
       
     multiplier_floating_point std_y_squarer (
       .aclk(clk),                                  // input wire aclk
+      .aresetn(!clr), 
       .s_axis_a_tvalid(std_y_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(std_y_squared_a_ready),            // output wire s_axis_a_tready
       .s_axis_a_tdata(std_y),              // input wire [31 : 0] 

@@ -96,6 +96,7 @@ architecture tb of tb_multiplier_floating_point is
                        phase_single,         -- run a single operation, and wait for the result
                        phase_consecutive,    -- run a consecutive series of 100 operations with incrementing data
                        phase_axi_handshake,  -- demonstrate the use and effect of AXI handshaking signals
+                       phase_aresetn,        -- demonstrate the use of synchronous reset
                        phase_special         -- demonstrate the use of special floating-point values
                        );
   signal sim_phase : sim_phase_t := phase_init;
@@ -324,6 +325,7 @@ architecture tb of tb_multiplier_floating_point is
 
   -- Global signals
   signal aclk                    : std_logic := '0';  -- the master clock
+  signal aresetn                 : std_logic := '1';  -- synchronous active low reset
 
   -- A operand slave channel signals
   signal s_axis_a_tvalid         : std_logic := '0';  -- payload is valid
@@ -380,6 +382,7 @@ begin
     port map (
       -- Global signals
       aclk                    => aclk,
+      aresetn                 => aresetn,
     -- AXI4-Stream slave channel for operand A
       s_axis_a_tvalid         => s_axis_a_tvalid,
       s_axis_a_tready         => s_axis_a_tready,
@@ -437,6 +440,10 @@ begin
     sim_phase <= phase_axi_handshake;
     wait for 137 * CLOCK_PERIOD;
 
+    -- Start a consecutive series of operations, aborting it partway through using reset
+    sim_phase <= phase_aresetn;
+    wait for 12 * CLOCK_PERIOD;
+
 
     -- Run operations that demonstrate the use of special floating-point values (+/- zero, +/- infinity, Not a Number)
     sim_phase <= phase_special;
@@ -454,6 +461,7 @@ begin
   -----------------------------------------------------------------------
   -- Generate inputs on the A operand slave channel
   -- This process also drives:
+  -- + global synchronous reset input
   -- + RESULT master channel TREADY input
   -----------------------------------------------------------------------
 
@@ -469,6 +477,10 @@ begin
       abort := false;
       loop
         wait until rising_edge(aclk);
+        if aresetn = '0' then
+          abort := true;
+          exit;
+        end if;
         exit when s_axis_a_tready = '1';
       end loop;
       wait for T_HOLD;
@@ -499,6 +511,7 @@ begin
         drive_a_single(tdata => tdata,
                        abort => abort);
 
+        exit count_loop when abort;  -- abort all transactions if reset occurred
         ip_count := ip_count + 1;
         exit count_loop when ip_count >= count;
         -- Increment data for next iteration
@@ -552,6 +565,15 @@ begin
   drive_a(5.1, normal, 50, 0.1);
 
     -- Wait for simulation control to signal the next phase
+    wait until sim_phase = phase_aresetn;
+    wait for T_HOLD;  -- drive inputs T_HOLD after the rising edge of the clock
+
+
+    -- Start 10 normal consecutive transactions, but abort them partway through by asserting aresetn (active low)
+    -- Note that aresetn must be asserted for at least 2 clock cycles (see core datasheet for details).
+    aresetn <= '0' after 6 * CLOCK_PERIOD, '1' after 8 * CLOCK_PERIOD;
+    drive_a(0.1, normal, 10, 0.1);
+    -- Wait for simulation control to signal the next phase
     wait until sim_phase = phase_special;
     wait for T_HOLD;  -- drive inputs T_HOLD after the rising edge of the clock
 
@@ -604,6 +626,10 @@ begin
       abort := false;
       loop
         wait until rising_edge(aclk);
+        if aresetn = '0' then
+          abort := true;
+          exit;
+        end if;
         exit when s_axis_b_tready = '1';
       end loop;
       wait for T_HOLD;
@@ -633,6 +659,7 @@ begin
         -- Drive AXI transaction
         drive_b_single(tdata => tdata,
                        abort => abort);
+        exit count_loop when abort;  -- abort all transactions if reset occurred
         ip_count := ip_count + 1;
         exit count_loop when ip_count >= count;
         -- Increment data for next iteration
@@ -679,6 +706,14 @@ begin
     -- 50 normal consecutive transactions
     drive_b( 0.0, zero_pos);
     drive_b(-0.05, normal, 49, -0.05);
+
+    -- Wait for simulation control to signal the next phase
+    wait until sim_phase = phase_aresetn;
+    wait for T_HOLD;  -- drive inputs T_HOLD after the rising edge of the clock
+
+    -- Start 10 normal consecutive transactions, but abort them partway through by asserting aresetn (active low)
+    -- Reset is driven by the stimuli_a process
+    drive_b( 2.5, normal, 10, -0.05);
 
     -- Wait for simulation control to signal the next phase
     wait until sim_phase = phase_special;
@@ -744,7 +779,7 @@ begin
     -- check that the payload is valid (not X) when TVALID is high
     -- and check that the payload does not change while TVALID is high until TREADY goes high
 
-    if m_axis_result_tvalid = '1' then
+    if m_axis_result_tvalid = '1' and aresetn = '1' then
       if is_x(m_axis_result_tdata) then
         report "ERROR: m_axis_result_tdata is invalid when m_axis_result_tvalid is high" severity error;
         check_ok := false;

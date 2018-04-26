@@ -21,7 +21,7 @@
 
 
 module parallel_subtractors(
-clk, in_b, in_b_valid,
+clk, rst, in_b, in_b_valid,
 in_a1, in_a2, in_a3, in_a4, in_a5, in_a6, in_a7,
 in_a8, in_a9, in_a10, in_a11, in_a12, in_a13, in_a14,
 in_a15, in_a16, in_a17, in_a18, in_a19, in_a20, in_a21,
@@ -54,7 +54,7 @@ in_a22_ready, in_a23_ready, in_a24_ready, in_a25_ready, in_a26_ready, in_a27_rea
 in_b_ready
 );
     
-    input clk;
+    input clk, rst;
     input [31:0] in_b;
     input in_b_valid;
     input [31:0] in_a1, in_a2, in_a3, in_a4, in_a5, in_a6, in_a7;
@@ -91,6 +91,7 @@ in_b_ready
     
     subtractor_floating_point sub1 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a1_valid),
         .s_axis_a_tready(in_a1_ready),
         .s_axis_a_tdata(in_a1),
@@ -104,6 +105,7 @@ in_b_ready
      
     subtractor_floating_point sub2 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a2_valid),
         .s_axis_a_tready(in_a2_ready),
         .s_axis_a_tdata(in_a2),
@@ -117,6 +119,7 @@ in_b_ready
      
     subtractor_floating_point sub3 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a3_valid),
         .s_axis_a_tready(in_a3_ready),
         .s_axis_a_tdata(in_a3),
@@ -130,6 +133,7 @@ in_b_ready
      
     subtractor_floating_point sub4 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a4_valid),
         .s_axis_a_tready(in_a4_ready),
         .s_axis_a_tdata(in_a4),
@@ -143,6 +147,7 @@ in_b_ready
      
     subtractor_floating_point sub5 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a5_valid),
         .s_axis_a_tready(in_a5_ready),
         .s_axis_a_tdata(in_a5),
@@ -156,6 +161,7 @@ in_b_ready
      
     subtractor_floating_point sub6 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a6_valid),
         .s_axis_a_tready(in_a6_ready),
         .s_axis_a_tdata(in_a6),
@@ -169,6 +175,7 @@ in_b_ready
      
     subtractor_floating_point sub7 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a7_valid),
         .s_axis_a_tready(in_a7_ready),
         .s_axis_a_tdata(in_a7),
@@ -182,6 +189,7 @@ in_b_ready
      
     subtractor_floating_point sub8 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a8_valid),
         .s_axis_a_tready(in_a8_ready),
         .s_axis_a_tdata(in_a8),
@@ -195,6 +203,7 @@ in_b_ready
      
     subtractor_floating_point sub9 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a9_valid),
         .s_axis_a_tready(in_a9_ready),
         .s_axis_a_tdata(in_a9),
@@ -208,6 +217,7 @@ in_b_ready
      
     subtractor_floating_point sub10 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a10_valid),
         .s_axis_a_tready(in_a10_ready),
         .s_axis_a_tdata(in_a10),
@@ -221,6 +231,7 @@ in_b_ready
      
     subtractor_floating_point sub11 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a11_valid),
         .s_axis_a_tready(in_a11_ready),
         .s_axis_a_tdata(in_a11),
@@ -234,6 +245,7 @@ in_b_ready
      
     subtractor_floating_point sub12 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a12_valid),
         .s_axis_a_tready(in_a12_ready),
         .s_axis_a_tdata(in_a12),
@@ -247,6 +259,7 @@ in_b_ready
      
     subtractor_floating_point sub13 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a13_valid),
         .s_axis_a_tready(in_a13_ready),
         .s_axis_a_tdata(in_a13),
@@ -260,6 +273,7 @@ in_b_ready
      
     subtractor_floating_point sub14 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a14_valid),
         .s_axis_a_tready(in_a14_ready),
         .s_axis_a_tdata(in_a14),
@@ -273,6 +287,7 @@ in_b_ready
      
     subtractor_floating_point sub15 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a15_valid),
         .s_axis_a_tready(in_a15_ready),
         .s_axis_a_tdata(in_a15),
@@ -286,6 +301,7 @@ in_b_ready
      
     subtractor_floating_point sub16 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a16_valid),
         .s_axis_a_tready(in_a16_ready),
         .s_axis_a_tdata(in_a16),
@@ -299,6 +315,7 @@ in_b_ready
      
     subtractor_floating_point sub17 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a17_valid),
         .s_axis_a_tready(in_a17_ready),
         .s_axis_a_tdata(in_a17),
@@ -312,6 +329,7 @@ in_b_ready
      
     subtractor_floating_point sub18 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a18_valid),
         .s_axis_a_tready(in_a18_ready),
         .s_axis_a_tdata(in_a18),
@@ -325,6 +343,7 @@ in_b_ready
      
     subtractor_floating_point sub19 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a19_valid),
         .s_axis_a_tready(in_a19_ready),
         .s_axis_a_tdata(in_a19),
@@ -338,6 +357,7 @@ in_b_ready
      
     subtractor_floating_point sub20 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a20_valid),
         .s_axis_a_tready(in_a20_ready),
         .s_axis_a_tdata(in_a20),
@@ -351,6 +371,7 @@ in_b_ready
      
     subtractor_floating_point sub21 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a21_valid),
         .s_axis_a_tready(in_a21_ready),
         .s_axis_a_tdata(in_a21),
@@ -364,6 +385,7 @@ in_b_ready
      
     subtractor_floating_point sub22 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a22_valid),
         .s_axis_a_tready(in_a22_ready),
         .s_axis_a_tdata(in_a22),
@@ -377,6 +399,7 @@ in_b_ready
      
     subtractor_floating_point sub23 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a23_valid),
         .s_axis_a_tready(in_a23_ready),
         .s_axis_a_tdata(in_a23),
@@ -390,6 +413,7 @@ in_b_ready
      
     subtractor_floating_point sub24 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a24_valid),
         .s_axis_a_tready(in_a24_ready),
         .s_axis_a_tdata(in_a24),
@@ -403,6 +427,7 @@ in_b_ready
      
     subtractor_floating_point sub25 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a25_valid),
         .s_axis_a_tready(in_a25_ready),
         .s_axis_a_tdata(in_a25),
@@ -416,6 +441,7 @@ in_b_ready
      
     subtractor_floating_point sub26 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a26_valid),
         .s_axis_a_tready(in_a26_ready),
         .s_axis_a_tdata(in_a26),
@@ -429,6 +455,7 @@ in_b_ready
      
     subtractor_floating_point sub27 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a27_valid),
         .s_axis_a_tready(in_a27_ready),
         .s_axis_a_tdata(in_a27),
@@ -442,6 +469,7 @@ in_b_ready
      
     subtractor_floating_point sub28 (
         .aclk(clk),
+        .aresetn(!rst), 
         .s_axis_a_tvalid(in_a28_valid),
         .s_axis_a_tready(in_a28_ready),
         .s_axis_a_tdata(in_a28),

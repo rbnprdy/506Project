@@ -21,7 +21,7 @@
 
 
 module parallel_multipliers(
-clk,
+clk, rst,
 // in_a
 in_a1, in_a2, in_a3, in_a4, in_a5, in_a6, in_a7,
 in_a8, in_a9, in_a10, in_a11, in_a12, in_a13, in_a14,
@@ -69,7 +69,7 @@ out15_valid, out16_valid, out17_valid, out18_valid, out19_valid, out20_valid, ou
 out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, out28_valid
 );
 
-    input clk;
+    input clk, rst;
     
     input [31:0] in_a1, in_a2, in_a3, in_a4, in_a5, in_a6, in_a7;
     input [31:0] in_a8, in_a9, in_a10, in_a11, in_a12, in_a13, in_a14;
@@ -118,6 +118,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
     
     multiplier_floating_point mult1 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a1_valid),
         .s_axis_a_tready(in_a1_ready),
         .s_axis_a_tdata(in_a1),
@@ -131,6 +132,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult2 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a2_valid),
         .s_axis_a_tready(in_a2_ready),
         .s_axis_a_tdata(in_a2),
@@ -144,6 +146,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult3 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a3_valid),
         .s_axis_a_tready(in_a3_ready),
         .s_axis_a_tdata(in_a3),
@@ -157,6 +160,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult4 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a4_valid),
         .s_axis_a_tready(in_a4_ready),
         .s_axis_a_tdata(in_a4),
@@ -170,6 +174,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult5 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a5_valid),
         .s_axis_a_tready(in_a5_ready),
         .s_axis_a_tdata(in_a5),
@@ -183,6 +188,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult6 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a6_valid),
         .s_axis_a_tready(in_a6_ready),
         .s_axis_a_tdata(in_a6),
@@ -196,6 +202,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult7 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a7_valid),
         .s_axis_a_tready(in_a7_ready),
         .s_axis_a_tdata(in_a7),
@@ -209,6 +216,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult8 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a8_valid),
         .s_axis_a_tready(in_a8_ready),
         .s_axis_a_tdata(in_a8),
@@ -222,6 +230,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult9 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a9_valid),
         .s_axis_a_tready(in_a9_ready),
         .s_axis_a_tdata(in_a9),
@@ -235,6 +244,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult10 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a10_valid),
         .s_axis_a_tready(in_a10_ready),
         .s_axis_a_tdata(in_a10),
@@ -248,6 +258,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult11 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a11_valid),
         .s_axis_a_tready(in_a11_ready),
         .s_axis_a_tdata(in_a11),
@@ -261,6 +272,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult12 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a12_valid),
         .s_axis_a_tready(in_a12_ready),
         .s_axis_a_tdata(in_a12),
@@ -274,6 +286,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult13 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a13_valid),
         .s_axis_a_tready(in_a13_ready),
         .s_axis_a_tdata(in_a13),
@@ -287,6 +300,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult14 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a14_valid),
         .s_axis_a_tready(in_a14_ready),
         .s_axis_a_tdata(in_a14),
@@ -300,6 +314,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult15 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a15_valid),
         .s_axis_a_tready(in_a15_ready),
         .s_axis_a_tdata(in_a15),
@@ -313,6 +328,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult16 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a16_valid),
         .s_axis_a_tready(in_a16_ready),
         .s_axis_a_tdata(in_a16),
@@ -326,6 +342,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult17 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a17_valid),
         .s_axis_a_tready(in_a17_ready),
         .s_axis_a_tdata(in_a17),
@@ -339,6 +356,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult18 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a18_valid),
         .s_axis_a_tready(in_a18_ready),
         .s_axis_a_tdata(in_a18),
@@ -352,6 +370,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult19 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a19_valid),
         .s_axis_a_tready(in_a19_ready),
         .s_axis_a_tdata(in_a19),
@@ -365,6 +384,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult20 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a20_valid),
         .s_axis_a_tready(in_a20_ready),
         .s_axis_a_tdata(in_a20),
@@ -378,6 +398,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult21 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a21_valid),
         .s_axis_a_tready(in_a21_ready),
         .s_axis_a_tdata(in_a21),
@@ -391,6 +412,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult22 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a22_valid),
         .s_axis_a_tready(in_a22_ready),
         .s_axis_a_tdata(in_a22),
@@ -404,6 +426,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult23 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a23_valid),
         .s_axis_a_tready(in_a23_ready),
         .s_axis_a_tdata(in_a23),
@@ -417,6 +440,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult24 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a24_valid),
         .s_axis_a_tready(in_a24_ready),
         .s_axis_a_tdata(in_a24),
@@ -430,6 +454,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult25 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a25_valid),
         .s_axis_a_tready(in_a25_ready),
         .s_axis_a_tdata(in_a25),
@@ -443,6 +468,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult26 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a26_valid),
         .s_axis_a_tready(in_a26_ready),
         .s_axis_a_tdata(in_a26),
@@ -456,6 +482,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult27 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a27_valid),
         .s_axis_a_tready(in_a27_ready),
         .s_axis_a_tdata(in_a27),
@@ -469,6 +496,7 @@ out22_valid, out23_valid, out24_valid, out25_valid, out26_valid, out27_valid, ou
      
     multiplier_floating_point mult28 (
         .aclk(clk),
+        .aresetn(!rst),
         .s_axis_a_tvalid(in_a28_valid),
         .s_axis_a_tready(in_a28_ready),
         .s_axis_a_tdata(in_a28),

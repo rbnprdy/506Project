@@ -26,10 +26,10 @@
         - [31:0] out: The output value, in floating point.
         - out_valid: Indicates whether the output value is valid.
 */
-module structure_comp(clk, std_x, std_y, covariance, std_x_valid, std_y_valid, covariance_valid, out_ready, std_x_ready, std_y_ready, covariance_ready, out, out_valid);
+module structure_comp(clk, clr, std_x, std_y, covariance, std_x_valid, std_y_valid, covariance_valid, out_ready, std_x_ready, std_y_ready, covariance_ready, out, out_valid);
 
     input [31:0] std_x, std_y, covariance;
-    input clk, std_x_valid, std_y_valid, covariance_valid, out_ready;
+    input clk, clr, std_x_valid, std_y_valid, covariance_valid, out_ready;
     
     output [31:0] out;
     output out_valid, std_x_ready, std_y_ready, covariance_ready;
@@ -40,6 +40,7 @@ module structure_comp(clk, std_x, std_y, covariance, std_x_valid, std_y_valid, c
     
     multiplier_floating_point std_x_times_std_y (
       .aclk(clk),                                  // input wire aclk
+      .aresetn(!clr), 
       .s_axis_a_tvalid(std_x_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(std_x_ready),            // output wire s_axis_a_tready
       .s_axis_a_tdata(std_x),              // input wire [31 : 0] 

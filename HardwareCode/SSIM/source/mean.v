@@ -5,10 +5,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 /*
-    Takes in one pixel at a time and finds the running mean
+    Takes in 28 pixels at a time and finds the running mean
     
     - inputs:
-        - [7:0] in: An 8 bit integer pixel value (grayscale between 0 and 255).
+        - [7:0] in1...28: 8 bit integer pixel values (grayscale between 0 and 255).
         - clr: Clears the buffer and registers. Set to 1 when done with image calculations.
         - clk: The clock.
         - in_valid: Indicates whether the input data is valid.
@@ -43,8 +43,8 @@ clr, clk, in_valid, result_ready, in_ready, out, out_valid);
     
     parallel_accumulators #(.BIT_WIDTH(8)) acc(
         .clk(clk),
-        .clr(clr),
-        .bypass(!in_valid),
+        .clr(!in_valid || clr),
+        .bypass(0),
         .in1(in1),
         .in2(in2),
         .in3(in3),

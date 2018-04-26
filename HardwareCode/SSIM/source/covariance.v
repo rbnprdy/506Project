@@ -159,7 +159,8 @@ u, in_valid, u_valid, in_y_valid, result_ready, in_ready, in_y_ready, out, out_v
     wire divider_valid;
      
     assign in_ready = in1_ready;
-    assign in_y_ready = sub_out1_valid;
+    //assign in_y_ready = sub_out1_valid;
+    assign in_y_ready = in_float1_valid;
 
     parallel_fixed_to_float in_to_float(
         .clk(clk), .in_valid(in_valid),
@@ -191,7 +192,7 @@ u, in_valid, u_valid, in_y_valid, result_ready, in_ready, in_y_ready, out, out_v
     );
     
     parallel_subtractors subs(
-        .clk(clk), .in_b(u), .in_b_valid(u_valid),
+        .clk(clk), .rst(clr), .in_b(u), .in_b_valid(u_valid),
         //
         .in_a1(in_float1), .in_a2(in_float2), .in_a3(in_float3), .in_a4(in_float4), .in_a5(in_float5), .in_a6(in_float6), .in_a7(in_float7),
         .in_a8(in_float8), .in_a9(in_float9), .in_a10(in_float10), .in_a11(in_float11), .in_a12(in_float12), .in_a13(in_float13), .in_a14(in_float14),
@@ -203,15 +204,15 @@ u, in_valid, u_valid, in_y_valid, result_ready, in_ready, in_y_ready, out, out_v
         .in_a15_valid(in_float15_valid), .in_a16_valid(in_float16_valid), .in_a17_valid(in_float17_valid), .in_a18_valid(in_float18_valid), .in_a19_valid(in_float19_valid), .in_a20_valid(in_float20_valid), .in_a21_valid(in_float21_valid),
         .in_a22_valid(in_float22_valid), .in_a23_valid(in_float23_valid), .in_a24_valid(in_float24_valid), .in_a25_valid(in_float25_valid), .in_a26_valid(in_float26_valid), .in_a27_valid(in_float27_valid), .in_a28_valid(in_float28_valid),
         //
-//        .out1_ready(multiplier_a1_ready), .out2_ready(multiplier_a2_ready), .out3_ready(multiplier_a3_ready), .out4_ready(multiplier_a4_ready), .out5_ready(multiplier_a5_ready), .out6_ready(multiplier_a6_ready), .out7_ready(multiplier_a7_ready),
-//        .out8_ready(multiplier_a8_ready), .out9_ready(multiplier_a9_ready), .out10_ready(multiplier_a10_ready), .out11_ready(multiplier_a11_ready), .out12_ready(multiplier_a12_ready), .out13_ready(multiplier_a13_ready), .out14_ready(multiplier_a14_ready),
-//        .out15_ready(multiplier_a15_ready), .out16_ready(multiplier_a16_ready), .out17_ready(multiplier_a17_ready), .out18_ready(multiplier_a18_ready), .out19_ready(multiplier_a19_ready), .out20_ready(multiplier_a20_ready), .out21_ready(multiplier_a21_ready),
-//        .out22_ready(multiplier_a22_ready), .out23_ready(multiplier_a23_ready), .out24_ready(multiplier_a24_ready), .out25_ready(multiplier_a25_ready), .out26_ready(multiplier_a26_ready), .out27_ready(multiplier_a27_ready), .out28_ready(multiplier_a28_ready),
+        .out1_ready(multiplier_a1_ready), .out2_ready(multiplier_a2_ready), .out3_ready(multiplier_a3_ready), .out4_ready(multiplier_a4_ready), .out5_ready(multiplier_a5_ready), .out6_ready(multiplier_a6_ready), .out7_ready(multiplier_a7_ready),
+        .out8_ready(multiplier_a8_ready), .out9_ready(multiplier_a9_ready), .out10_ready(multiplier_a10_ready), .out11_ready(multiplier_a11_ready), .out12_ready(multiplier_a12_ready), .out13_ready(multiplier_a13_ready), .out14_ready(multiplier_a14_ready),
+        .out15_ready(multiplier_a15_ready), .out16_ready(multiplier_a16_ready), .out17_ready(multiplier_a17_ready), .out18_ready(multiplier_a18_ready), .out19_ready(multiplier_a19_ready), .out20_ready(multiplier_a20_ready), .out21_ready(multiplier_a21_ready),
+        .out22_ready(multiplier_a22_ready), .out23_ready(multiplier_a23_ready), .out24_ready(multiplier_a24_ready), .out25_ready(multiplier_a25_ready), .out26_ready(multiplier_a26_ready), .out27_ready(multiplier_a27_ready), .out28_ready(multiplier_a28_ready),
         // test
-        .out1_ready(1'b1), .out2_ready(1'b1), .out3_ready(1'b1), .out4_ready(1'b1), .out5_ready(1'b1), .out6_ready(1'b1), .out7_ready(1'b1),
-        .out8_ready(1'b1), .out9_ready(1'b1), .out10_ready(1'b1), .out11_ready(1'b1), .out12_ready(1'b1), .out13_ready(1'b1), .out14_ready(1'b1),
-        .out15_ready(1'b1), .out16_ready(1'b1), .out17_ready(1'b1), .out18_ready(1'b1), .out19_ready(1'b1), .out20_ready(1'b1), .out21_ready(1'b1),
-        .out22_ready(1'b1), .out23_ready(1'b1), .out24_ready(1'b1), .out25_ready(1'b1), .out26_ready(1'b1), .out27_ready(1'b1), .out28_ready(1'b1),
+//        .out1_ready(1'b1), .out2_ready(1'b1), .out3_ready(1'b1), .out4_ready(1'b1), .out5_ready(1'b1), .out6_ready(1'b1), .out7_ready(1'b1),
+//        .out8_ready(1'b1), .out9_ready(1'b1), .out10_ready(1'b1), .out11_ready(1'b1), .out12_ready(1'b1), .out13_ready(1'b1), .out14_ready(1'b1),
+//        .out15_ready(1'b1), .out16_ready(1'b1), .out17_ready(1'b1), .out18_ready(1'b1), .out19_ready(1'b1), .out20_ready(1'b1), .out21_ready(1'b1),
+//        .out22_ready(1'b1), .out23_ready(1'b1), .out24_ready(1'b1), .out25_ready(1'b1), .out26_ready(1'b1), .out27_ready(1'b1), .out28_ready(1'b1),
         //
         .out1(sub_out1), .out2(sub_out2), .out3(sub_out3), .out4(sub_out4), .out5(sub_out5), .out6(sub_out6), .out7(sub_out7),
         .out8(sub_out8), .out9(sub_out9), .out10(sub_out10), .out11(sub_out11), .out12(sub_out12), .out13(sub_out13), .out14(sub_out14),
@@ -231,8 +232,8 @@ u, in_valid, u_valid, in_y_valid, result_ready, in_ready, in_y_ready, out, out_v
         .in_b_ready(u_ready)
     );
     
-    parallel_data_counters #(.NUM_INPUTS(28 + 1))data_counters (
-        .clk(clk), .clr(clr),
+    parallel_data_counters data_counters (
+        .clk(clk), .clr(clr || !sub_out1_valid),
         // in
         .in1(sub_out1), .in2(sub_out2), .in3(sub_out3), .in4(sub_out4), .in5(sub_out5), .in6(sub_out6), .in7(sub_out7),
         .in8(sub_out8), .in9(sub_out9), .in10(sub_out10), .in11(sub_out11), .in12(sub_out12), .in13(sub_out13), .in14(sub_out14),
@@ -256,7 +257,7 @@ u, in_valid, u_valid, in_y_valid, result_ready, in_ready, in_y_ready, out, out_v
     );
     
     parallel_multipliers mults (
-        .clk(clk),
+        .clk(clk), .rst(clr),
         // in_a
         .in_a1(data_counter_out1), .in_a2(data_counter_out2), .in_a3(data_counter_out3), .in_a4(data_counter_out4), .in_a5(data_counter_out5), .in_a6(data_counter_out6), .in_a7(data_counter_out7),
         .in_a8(data_counter_out8), .in_a9(data_counter_out9), .in_a10(data_counter_out10), .in_a11(data_counter_out11), .in_a12(data_counter_out12), .in_a13(data_counter_out13), .in_a14(data_counter_out14),
@@ -267,6 +268,10 @@ u, in_valid, u_valid, in_y_valid, result_ready, in_ready, in_y_ready, out, out_v
         .in_a8_valid(sub_out8_valid), .in_a9_valid(sub_out9_valid), .in_a10_valid(sub_out10_valid), .in_a11_valid(sub_out11_valid), .in_a12_valid(sub_out12_valid), .in_a13_valid(sub_out13_valid), .in_a14_valid(sub_out14_valid),
         .in_a15_valid(sub_out15_valid), .in_a16_valid(sub_out16_valid), .in_a17_valid(sub_out17_valid), .in_a18_valid(sub_out18_valid), .in_a19_valid(sub_out19_valid), .in_a20_valid(sub_out20_valid), .in_a21_valid(sub_out21_valid),
         .in_a22_valid(sub_out22_valid), .in_a23_valid(sub_out23_valid), .in_a24_valid(sub_out24_valid), .in_a25_valid(sub_out25_valid), .in_a26_valid(sub_out26_valid), .in_a27_valid(sub_out27_valid), .in_a28_valid(sub_out28_valid),
+//        .in_a1_valid(1), .in_a2_valid(1), .in_a3_valid(1), .in_a4_valid(1), .in_a5_valid(1), .in_a6_valid(1), .in_a7_valid(1),
+//        .in_a8_valid(1), .in_a9_valid(1), .in_a10_valid(1), .in_a11_valid(1), .in_a12_valid(1), .in_a13_valid(1), .in_a14_valid(1),
+//        .in_a15_valid(1), .in_a16_valid(1), .in_a17_valid(1), .in_a18_valid(1), .in_a19_valid(1), .in_a20_valid(1), .in_a21_valid(1),
+//        .in_a22_valid(1), .in_a23_valid(1), .in_a24_valid(1), .in_a25_valid(1), .in_a26_valid(1), .in_a27_valid(1), .in_a28_valid(1),
         // in_b
         .in_b1(in_y1), .in_b2(in_y2), .in_b3(in_y3), .in_b4(in_y4), .in_b5(in_y5), .in_b6(in_y6), .in_b7(in_y7),
         .in_b8(in_y8), .in_b9(in_y9), .in_b10(in_y10), .in_b11(in_y11), .in_b12(in_y12), .in_b13(in_y13), .in_b14(in_y14),
@@ -276,12 +281,20 @@ u, in_valid, u_valid, in_y_valid, result_ready, in_ready, in_y_ready, out, out_v
         .in_b1_valid(in_y_valid), .in_b2_valid(in_y_valid), .in_b3_valid(in_y_valid), .in_b4_valid(in_y_valid), .in_b5_valid(in_y_valid), .in_b6_valid(in_y_valid), .in_b7_valid(in_y_valid),
         .in_b8_valid(in_y_valid), .in_b9_valid(in_y_valid), .in_b10_valid(in_y_valid), .in_b11_valid(in_y_valid), .in_b12_valid(in_y_valid), .in_b13_valid(in_y_valid), .in_b14_valid(in_y_valid),
         .in_b15_valid(in_y_valid), .in_b16_valid(in_y_valid), .in_b17_valid(in_y_valid), .in_b18_valid(in_y_valid), .in_b19_valid(in_y_valid), .in_b20_valid(in_y_valid), .in_b21_valid(in_y_valid),
-        .in_b22_valid(in_y_valid), .in_b23_valid(in_y_valid), .in_b24_valid(in_y_valid), .in_b25_valid(in_y_valid), .in_b26_valid(in_y_valid), .in_b27_valid(in_y_valid), .in_b28_valid(in_y_valid),
-         // result_ready
-        .result_1_ready(multiplier_to_fixed1_ready), .result_2_ready(multiplier_to_fixed2_ready), .result_3_ready(multiplier_to_fixed3_ready), .result_4_ready(multiplier_to_fixed4_ready), .result_5_ready(multiplier_to_fixed5_ready), .result_6_ready(multiplier_to_fixed6_ready), .result_7_ready(multiplier_to_fixed7_ready),
-        .result_8_ready(multiplier_to_fixed8_ready), .result_9_ready(multiplier_to_fixed9_ready), .result_10_ready(multiplier_to_fixed10_ready), .result_11_ready(multiplier_to_fixed11_ready), .result_12_ready(multiplier_to_fixed12_ready), .result_13_ready(multiplier_to_fixed13_ready), .result_14_ready(multiplier_to_fixed14_ready),
-        .result_15_ready(multiplier_to_fixed15_ready), .result_16_ready(multiplier_to_fixed16_ready), .result_17_ready(multiplier_to_fixed17_ready), .result_18_ready(multiplier_to_fixed18_ready), .result_19_ready(multiplier_to_fixed19_ready), .result_20_ready(multiplier_to_fixed20_ready), .result_21_ready(multiplier_to_fixed21_ready),
-        .result_22_ready(multiplier_to_fixed22_ready), .result_23_ready(multiplier_to_fixed23_ready), .result_24_ready(multiplier_to_fixed24_ready), .result_25_ready(multiplier_to_fixed25_ready), .result_26_ready(multiplier_to_fixed26_ready), .result_27_ready(multiplier_to_fixed27_ready), .result_28_ready(multiplier_to_fixed28_ready),
+        .in_b22_valid(in_y_valid), .in_b23_valid(in_y_valid), .in_b24_valid(in_y_valid), .in_b25_valid(in_y_valid), .in_b26_valid(in_y_valid), .in_b27_valid(in_y_valid), .in_b28_valid(in_y_valid),        
+//        .in_b1_valid(1), .in_b2_valid(1), .in_b3_valid(1), .in_b4_valid(1), .in_b5_valid(1), .in_b6_valid(1), .in_b7_valid(1),
+//        .in_b8_valid(1), .in_b9_valid(1), .in_b10_valid(1), .in_b11_valid(1), .in_b12_valid(1), .in_b13_valid(1), .in_b14_valid(1),
+//        .in_b15_valid(1), .in_b16_valid(1), .in_b17_valid(1), .in_b18_valid(1), .in_b19_valid(1), .in_b20_valid(1), .in_b21_valid(1),
+//        .in_b22_valid(1), .in_b23_valid(1), .in_b24_valid(1), .in_b25_valid(1), .in_b26_valid(1), .in_b27_valid(1), .in_b28_valid(1),
+        // result_ready
+//        .result_1_ready(multiplier_to_fixed1_ready), .result_2_ready(multiplier_to_fixed2_ready), .result_3_ready(multiplier_to_fixed3_ready), .result_4_ready(multiplier_to_fixed4_ready), .result_5_ready(multiplier_to_fixed5_ready), .result_6_ready(multiplier_to_fixed6_ready), .result_7_ready(multiplier_to_fixed7_ready),
+//        .result_8_ready(multiplier_to_fixed8_ready), .result_9_ready(multiplier_to_fixed9_ready), .result_10_ready(multiplier_to_fixed10_ready), .result_11_ready(multiplier_to_fixed11_ready), .result_12_ready(multiplier_to_fixed12_ready), .result_13_ready(multiplier_to_fixed13_ready), .result_14_ready(multiplier_to_fixed14_ready),
+//        .result_15_ready(multiplier_to_fixed15_ready), .result_16_ready(multiplier_to_fixed16_ready), .result_17_ready(multiplier_to_fixed17_ready), .result_18_ready(multiplier_to_fixed18_ready), .result_19_ready(multiplier_to_fixed19_ready), .result_20_ready(multiplier_to_fixed20_ready), .result_21_ready(multiplier_to_fixed21_ready),
+//        .result_22_ready(multiplier_to_fixed22_ready), .result_23_ready(multiplier_to_fixed23_ready), .result_24_ready(multiplier_to_fixed24_ready), .result_25_ready(multiplier_to_fixed25_ready), .result_26_ready(multiplier_to_fixed26_ready), .result_27_ready(multiplier_to_fixed27_ready), .result_28_ready(multiplier_to_fixed28_ready),
+        .result_1_ready(1), .result_2_ready(1), .result_3_ready(1), .result_4_ready(1), .result_5_ready(1), .result_6_ready(1), .result_7_ready(1),
+        .result_8_ready(1), .result_9_ready(1), .result_10_ready(1), .result_11_ready(1), .result_12_ready(1), .result_13_ready(1), .result_14_ready(1),
+        .result_15_ready(1), .result_16_ready(1), .result_17_ready(1), .result_18_ready(1), .result_19_ready(1), .result_20_ready(1), .result_21_ready(1),
+        .result_22_ready(1), .result_23_ready(1), .result_24_ready(1), .result_25_ready(1), .result_26_ready(1), .result_27_ready(1), .result_28_ready(1),
         // in_a_ready
         .in_a1_ready(multiplier_a1_ready), .in_a2_ready(multiplier_a2_ready), .in_a3_ready(multiplier_a3_ready), .in_a4_ready(multiplier_a4_ready), .in_a5_ready(multiplier_a5_ready), .in_a6_ready(multiplier_a6_ready), .in_a7_ready(multiplier_a7_ready),
         .in_a8_ready(multiplier_a8_ready), .in_a9_ready(multiplier_a9_ready), .in_a10_ready(multiplier_a10_ready), .in_a11_ready(multiplier_a11_ready), .in_a12_ready(multiplier_a12_ready), .in_a13_ready(multiplier_a13_ready), .in_a14_ready(multiplier_a14_ready),
@@ -339,7 +352,8 @@ u, in_valid, u_valid, in_y_valid, result_ready, in_ready, in_y_ready, out, out_v
     );
     
     parallel_accumulators accum (
-        .clk(clk), .clr(clr), .bypass(!multiplier_fixed_out1_valid), //FIXME
+        //.clk(clk), .clr(clr), .bypass(!multiplier_fixed_out1_valid), //FIXME
+        .clk(clk), .clr(!multiplier_fixed_out1_valid), .bypass(0), //FIXME
         // in
         .in1(multiplier_fixed_out1), .in2(multiplier_fixed_out2), .in3(multiplier_fixed_out3), .in4(multiplier_fixed_out4), .in5(multiplier_fixed_out5), .in6(multiplier_fixed_out6), .in7(multiplier_fixed_out7),
         .in8(multiplier_fixed_out8), .in9(multiplier_fixed_out9), .in10(multiplier_fixed_out10), .in11(multiplier_fixed_out11), .in12(multiplier_fixed_out12), .in13(multiplier_fixed_out13), .in14(multiplier_fixed_out14),
@@ -393,9 +407,9 @@ u, in_valid, u_valid, in_y_valid, result_ready, in_ready, in_y_ready, out, out_v
        .m_axis_result_tdata(out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
-    counter #(.NUM(NUM_INPUTS - 1)) c(
+    counter #(.NUM(NUM_INPUTS)) c(
         .clk(clk),
-        .rst(clr),
+        .rst(clr || !divider_valid),
         .start(divider_valid),
         .done(out_valid)
     );
