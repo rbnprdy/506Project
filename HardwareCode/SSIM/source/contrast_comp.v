@@ -55,7 +55,7 @@ module contrast_comp(clk, clr, std_x, std_y, std_x_valid, std_y_valid, out_ready
       .s_axis_a_tvalid(std_x_times_std_y_valid),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(times_two_a_ready),            // output wire s_axis_a_tready
       .s_axis_a_tdata(std_x_times_std_y_out),              // input wire [31 : 0] 
-      .s_axis_b_tvalid(1),            // input wire s_axis_b_tvalid
+      .s_axis_b_tvalid(1'b1),            // input wire s_axis_b_tvalid
       .s_axis_b_tready(times_two_b_ready),            // output wire s_axis_b_tready
       .s_axis_b_tdata(32'h40000000),              // input wire [31 : 0] s_axis_b_tdata
       .m_axis_result_tvalid(times_two_valid),  // output wire m_axis_result_tvalid

@@ -9,7 +9,21 @@ def main():
     #dec("output","out","_valid")
     #dec("output","in_a","_ready")
     #dec("output","in_b","_ready")
-    define1("in_y","","y","")
+    #for i in range(0, 10):
+    #    print("{}: begin".format(i))
+    #    for n in range(1, 29):
+    #        print("\tout{} <= in{}_{};".format(n, n, i))
+    #    print("\tout_valid <= in_valid_{};".format(i))
+    #    print("end")
+    #print("default: begin")
+    #for n in range(1, 29):
+    #    print("\tout{} <= 0;".format(n))
+    #print("\tout_valid <= 0;")
+    #print("end")
+    for i in range(0, 10):
+        dec("wire [31:0]", "out_a","_{}".format(i))
+    
+    
 
 def dec(typ, name1, name2):
     print("{} ".format(typ), end='')
@@ -109,6 +123,16 @@ def define_mult():
     define1("in_b","_ready","multiplier_b","_ready")
     define1("out","","multiplier_out","")
     define1("out","_valid","multiplier_out","_valid")
+    print(");")
+
+def define_mem_y(num):
+    print("parallel_input_memories #(.NUM(\"{}\"), .NUM_ENTRIES(28), .ADDRESS_BIT_WIDTH(5)) mems_y_{}(".format(num, num))
+    print("\t.clk(clk),")
+    print("\t.rst(clr),")
+    print("\t.start_a(start_a),")
+    print("\t.start_b(0),")
+    print("\t.valid_a(valid_a_{}),".format(num))
+    define1("out_a","","out_a","_{}".format(num))
     print(");")
 
 def mult():

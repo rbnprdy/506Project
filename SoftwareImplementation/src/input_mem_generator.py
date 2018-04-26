@@ -18,27 +18,35 @@ def main():
             running_average[index] = running_average[index] / count[index]
             running_average[index] = running_average[index] * 256
 
-    # create noisy data - this is a "5"
-    pixels = training_data[0][0]*256
-
+    # create noisy data    
     noisy_data = post_processing.create_noisy_data(training_data, 80)
-    noisy_pixels = noisy_data[0][0]*256
+    # this is a "5"
+    noisy_pixels1 = noisy_data[0][0]*256
+    # this is a "0"
+    noisy_pixels2 = noisy_data[1][0]*256
+    # this is a "4"
+    noisy_pixels3 = noisy_data[3][0]*256
 
-    generate_input_mem_x(noisy_pixels, 28)
-    generate_input_mem_average(running_average[5], 5, 28)
-
-    SSIM(noisy_pixels, running_average[5], file_name="stats.txt")
+    noisy_images = [noisy_pixels1, noisy_pixels2, noisy_pixels3]
     
-def generate_input_mem_x(data, num_mems):
+    generate_input_mem_x(noisy_images, 28)
+    for i in range(0, 10):
+        generate_input_mem_average(running_average[i], i, 28)
+
+    SSIM(noisy_pixels1, running_average[5], file_name="stats_1.txt")
+    SSIM(noisy_pixels2, running_average[0], file_name="stats_2.txt")
+    SSIM(noisy_pixels3, running_average[4], file_name="stats_3.txt")
+    
+def generate_input_mem_x(images, num_mems):
 
     for i in range(0, num_mems):
         f = open("row_{}_x.txt".format(i+1), "w+")
         it = 0
         if i == 0:
             #added
-            for _ in range(0, 3):
-                for j in range(0, len(data)/num_mems):
-                    h = hex(int(data[j][0]))
+            for image in images:
+                for j in range(0, len(image)/num_mems):
+                    h = hex(int(image[j][0]))
                     if len(h) == 3:
                         f.write(h[0:2] + "0" + h[2:])
                     else:
@@ -47,9 +55,9 @@ def generate_input_mem_x(data, num_mems):
                     it = it + 1
         else:
             #added
-            for _ in range(0, 3):
-                for j in range(i*len(data)/num_mems, (i+1)*len(data)/num_mems):
-                    h = hex(int(data[j][0]))
+            for image in images:
+                for j in range(i*len(image)/num_mems, (i+1)*len(image)/num_mems):
+                    h = hex(int(image[j][0]))
                     if len(h) == 3:
                         f.write(h[0:2] + "0" + h[2:])
                     else:

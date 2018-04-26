@@ -322,8 +322,7 @@ u, clk, clr, in_valid, u_valid, result_ready, in_ready, out, out_valid);
     );
     
     parallel_accumulators accum (
-        //.clk(clk), .clr(clr), .bypass(!multiplier_fixed_out1_valid), //FIXME
-        .clk(clk), .clr(!multiplier_fixed_out1_valid), .bypass(0), //FIXME
+        .clk(clk), .clr(!multiplier_fixed_out1_valid), .bypass(1'b0),
         // in
         .in1(multiplier_fixed_out1), .in2(multiplier_fixed_out2), .in3(multiplier_fixed_out3), .in4(multiplier_fixed_out4), .in5(multiplier_fixed_out5), .in6(multiplier_fixed_out6), .in7(multiplier_fixed_out7),
         .in8(multiplier_fixed_out8), .in9(multiplier_fixed_out9), .in10(multiplier_fixed_out10), .in11(multiplier_fixed_out11), .in12(multiplier_fixed_out12), .in13(multiplier_fixed_out13), .in14(multiplier_fixed_out14),
@@ -356,7 +355,7 @@ u, clk, clr, in_valid, u_valid, result_ready, in_ready, out, out_valid);
     
     fixed_to_float_converter div_b_to_float (
         .aclk(clk),                                  // input wire aclk
-        .s_axis_a_tvalid(1),            // input wire s_axis_a_tvalid
+        .s_axis_a_tvalid(1'b1),            // input wire s_axis_a_tvalid
         .s_axis_a_tready(div_b_to_float_ready),            // output wire s_axis_a_tready
         .s_axis_a_tdata(32'd784 - 32'd1),              // input wire [31 : 0] s_axis_a_tdata
         .m_axis_result_tvalid(div_b_to_float_out_valid),  // output wire m_axis_result_tvalid

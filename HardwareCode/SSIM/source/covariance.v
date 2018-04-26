@@ -291,10 +291,10 @@ u, in_valid, u_valid, in_y_valid, result_ready, in_ready, in_y_ready, out, out_v
 //        .result_8_ready(multiplier_to_fixed8_ready), .result_9_ready(multiplier_to_fixed9_ready), .result_10_ready(multiplier_to_fixed10_ready), .result_11_ready(multiplier_to_fixed11_ready), .result_12_ready(multiplier_to_fixed12_ready), .result_13_ready(multiplier_to_fixed13_ready), .result_14_ready(multiplier_to_fixed14_ready),
 //        .result_15_ready(multiplier_to_fixed15_ready), .result_16_ready(multiplier_to_fixed16_ready), .result_17_ready(multiplier_to_fixed17_ready), .result_18_ready(multiplier_to_fixed18_ready), .result_19_ready(multiplier_to_fixed19_ready), .result_20_ready(multiplier_to_fixed20_ready), .result_21_ready(multiplier_to_fixed21_ready),
 //        .result_22_ready(multiplier_to_fixed22_ready), .result_23_ready(multiplier_to_fixed23_ready), .result_24_ready(multiplier_to_fixed24_ready), .result_25_ready(multiplier_to_fixed25_ready), .result_26_ready(multiplier_to_fixed26_ready), .result_27_ready(multiplier_to_fixed27_ready), .result_28_ready(multiplier_to_fixed28_ready),
-        .result_1_ready(1), .result_2_ready(1), .result_3_ready(1), .result_4_ready(1), .result_5_ready(1), .result_6_ready(1), .result_7_ready(1),
-        .result_8_ready(1), .result_9_ready(1), .result_10_ready(1), .result_11_ready(1), .result_12_ready(1), .result_13_ready(1), .result_14_ready(1),
-        .result_15_ready(1), .result_16_ready(1), .result_17_ready(1), .result_18_ready(1), .result_19_ready(1), .result_20_ready(1), .result_21_ready(1),
-        .result_22_ready(1), .result_23_ready(1), .result_24_ready(1), .result_25_ready(1), .result_26_ready(1), .result_27_ready(1), .result_28_ready(1),
+        .result_1_ready(1'b1), .result_2_ready(1'b1), .result_3_ready(1'b1), .result_4_ready(1'b1), .result_5_ready(1'b1), .result_6_ready(1'b1), .result_7_ready(1'b1),
+        .result_8_ready(1'b1), .result_9_ready(1'b1), .result_10_ready(1'b1), .result_11_ready(1'b1), .result_12_ready(1'b1), .result_13_ready(1'b1), .result_14_ready(1'b1),
+        .result_15_ready(1'b1), .result_16_ready(1'b1), .result_17_ready(1'b1), .result_18_ready(1'b1), .result_19_ready(1'b1), .result_20_ready(1'b1), .result_21_ready(1'b1),
+        .result_22_ready(1'b1), .result_23_ready(1'b1), .result_24_ready(1'b1), .result_25_ready(1'b1), .result_26_ready(1'b1), .result_27_ready(1'b1), .result_28_ready(1'b1),
         // in_a_ready
         .in_a1_ready(multiplier_a1_ready), .in_a2_ready(multiplier_a2_ready), .in_a3_ready(multiplier_a3_ready), .in_a4_ready(multiplier_a4_ready), .in_a5_ready(multiplier_a5_ready), .in_a6_ready(multiplier_a6_ready), .in_a7_ready(multiplier_a7_ready),
         .in_a8_ready(multiplier_a8_ready), .in_a9_ready(multiplier_a9_ready), .in_a10_ready(multiplier_a10_ready), .in_a11_ready(multiplier_a11_ready), .in_a12_ready(multiplier_a12_ready), .in_a13_ready(multiplier_a13_ready), .in_a14_ready(multiplier_a14_ready),
@@ -353,7 +353,7 @@ u, in_valid, u_valid, in_y_valid, result_ready, in_ready, in_y_ready, out, out_v
     
     parallel_accumulators accum (
         //.clk(clk), .clr(clr), .bypass(!multiplier_fixed_out1_valid), //FIXME
-        .clk(clk), .clr(!multiplier_fixed_out1_valid), .bypass(0), //FIXME
+        .clk(clk), .clr(!multiplier_fixed_out1_valid), .bypass(1'b0), //FIXME
         // in
         .in1(multiplier_fixed_out1), .in2(multiplier_fixed_out2), .in3(multiplier_fixed_out3), .in4(multiplier_fixed_out4), .in5(multiplier_fixed_out5), .in6(multiplier_fixed_out6), .in7(multiplier_fixed_out7),
         .in8(multiplier_fixed_out8), .in9(multiplier_fixed_out9), .in10(multiplier_fixed_out10), .in11(multiplier_fixed_out11), .in12(multiplier_fixed_out12), .in13(multiplier_fixed_out13), .in14(multiplier_fixed_out14),
@@ -386,7 +386,7 @@ u, in_valid, u_valid, in_y_valid, result_ready, in_ready, in_y_ready, out, out_v
     
     fixed_to_float_converter div_b_to_float (
         .aclk(clk),                                  // input wire aclk
-        .s_axis_a_tvalid(1),            // input wire s_axis_a_tvalid
+        .s_axis_a_tvalid(1'b1),            // input wire s_axis_a_tvalid
         .s_axis_a_tready(div_b_to_float_ready),            // output wire s_axis_a_tready
         .s_axis_a_tdata(32'd784 - 32'd1),              // input wire [31 : 0] s_axis_a_tdata
         .m_axis_result_tvalid(div_b_to_float_out_valid),  // output wire m_axis_result_tvalid

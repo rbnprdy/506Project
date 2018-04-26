@@ -22,10 +22,10 @@
         - NUM_INPUTS: The number of pixels in each image. Defaults to 784.
 */
 
-module ssim #(parameter NUM_INPUTS = 784, NUM_ENTRIES = 784 / 28, ADDRESS_WIDTH = 5)(mean_y, mean_y_valid, std_y, std_y_valid, clk, rst, clr, next_image, out, out_valid);
+module ssim #(parameter NUM_INPUTS = 784, NUM_ENTRIES = 784 / 28, ADDRESS_WIDTH = 5)(clk, rst, clr, num, next_image, out, out_valid);
     
-    input [31:0] mean_y, std_y;
-    input clk, rst, clr, next_image, mean_y_valid, std_y_valid;
+    input clk, rst, clr, next_image;
+    input [3:0] num;
     output [31:0] out;
     output out_valid;
    
@@ -49,6 +49,8 @@ module ssim #(parameter NUM_INPUTS = 784, NUM_ENTRIES = 784 / 28, ADDRESS_WIDTH 
     wire [31:0] y22, y23, y24, y25, y26, y27, y28;
     
     wire y_valid;
+    
+    wire [31:0] mean_y, std_y;
     
     // mean outputs
     wire mean_in_ready, mean_x_valid;
@@ -99,16 +101,29 @@ module ssim #(parameter NUM_INPUTS = 784, NUM_ENTRIES = 784 / 28, ADDRESS_WIDTH 
         .out_b22(b22), .out_b23(b23), .out_b24(b24), .out_b25(b25), .out_b26(b26), .out_b27(b27), .out_b28(b28)
     );
     
-    parallel_input_memories_y #(.NUM_ENTRIES(28), .ADDRESS_BIT_WIDTH(5)) mems_y(
+//    parallel_input_memories_y #(.NUM("5"), .NUM_ENTRIES(28), .ADDRESS_BIT_WIDTH(5)) mems_y(
+//        .clk(clk),
+//        .rst(clr),
+//        .start_a(covar_y_ready),
+//        .start_b(0),
+//        .valid_a(y_valid),
+//        .out_a1(y1), .out_a2(y2), .out_a3(y3), .out_a4(y4), .out_a5(y5), .out_a6(y6), .out_a7(y7),
+//        .out_a8(y8), .out_a9(y9), .out_a10(y10), .out_a11(y11), .out_a12(y12), .out_a13(y13), .out_a14(y14),
+//        .out_a15(y15), .out_a16(y16), .out_a17(y17), .out_a18(y18), .out_a19(y19), .out_a20(y20), .out_a21(y21),
+//        .out_a22(y22), .out_a23(y23), .out_a24(y24), .out_a25(y25), .out_a26(y26), .out_a27(y27), .out_a28(y28)
+//    );
+    
+    average_memories mems_y(
         .clk(clk),
-        .rst(clr),
+        .clr(clr),
+        .num(num),
         .start_a(covar_y_ready),
-        .start_b(0),
-        .valid_a(y_valid),
+        .out_valid(y_valid),
         .out_a1(y1), .out_a2(y2), .out_a3(y3), .out_a4(y4), .out_a5(y5), .out_a6(y6), .out_a7(y7),
         .out_a8(y8), .out_a9(y9), .out_a10(y10), .out_a11(y11), .out_a12(y12), .out_a13(y13), .out_a14(y14),
         .out_a15(y15), .out_a16(y16), .out_a17(y17), .out_a18(y18), .out_a19(y19), .out_a20(y20), .out_a21(y21),
-        .out_a22(y22), .out_a23(y23), .out_a24(y24), .out_a25(y25), .out_a26(y26), .out_a27(y27), .out_a28(y28)
+        .out_a22(y22), .out_a23(y23), .out_a24(y24), .out_a25(y25), .out_a26(y26), .out_a27(y27), .out_a28(y28),
+        .mean(mean_y), .stdev(std_y)
     );
     
     mean #(.NUM_INPUTS(NUM_INPUTS)) m(
@@ -119,7 +134,7 @@ module ssim #(parameter NUM_INPUTS = 784, NUM_ENTRIES = 784 / 28, ADDRESS_WIDTH 
         .clr(clr), 
         .clk(clk), 
         .in_valid(x_valid),
-        .result_ready(1),
+        .result_ready(1'b1),
         //.result_ready(stdev_in_ready),
         .in_ready(mean_in_ready),
         .out(mean_x), 
@@ -137,7 +152,7 @@ module ssim #(parameter NUM_INPUTS = 784, NUM_ENTRIES = 784 / 28, ADDRESS_WIDTH 
         //.in_valid(mean_x_valid), 
         .in_valid(b_valid), 
         .u_valid(mean_x_valid), 
-        .result_ready(1),
+        .result_ready(1'b1),
         .in_ready(stdev_in_ready),
         .out(std_x), 
         .out_valid(std_x_valid)
@@ -158,7 +173,7 @@ module ssim #(parameter NUM_INPUTS = 784, NUM_ENTRIES = 784 / 28, ADDRESS_WIDTH 
         .in_valid(b_valid), 
         .u_valid(mean_x_valid), 
         .in_y_valid(y_valid),
-        .result_ready(1),
+        .result_ready(1'b1),
         .in_ready(covar_in_ready),
         .in_y_ready(covar_y_ready),
         .out(covar), 
@@ -171,8 +186,8 @@ module ssim #(parameter NUM_INPUTS = 784, NUM_ENTRIES = 784 / 28, ADDRESS_WIDTH 
         .mean_x(mean_x), 
         .mean_y(mean_y), 
         .mean_x_valid(mean_x_valid), 
-        .mean_y_valid(mean_y_valid), 
-        .out_ready(1), 
+        .mean_y_valid(1'b1), 
+        .out_ready(1'b1), 
         .mean_x_ready(mean_x_ready), 
         .mean_y_ready(mean_y_ready), 
         .out(l_out), 
@@ -185,8 +200,8 @@ module ssim #(parameter NUM_INPUTS = 784, NUM_ENTRIES = 784 / 28, ADDRESS_WIDTH 
         .std_x(std_x), 
         .std_y(std_y), 
         .std_x_valid(std_x_valid), 
-        .std_y_valid(std_y_valid), 
-        .out_ready(1), 
+        .std_y_valid(1'b1), 
+        .out_ready(1'b1), 
         .std_x_ready(std_x_ready_contrast), 
         .std_y_ready(std_y_ready_contrast), 
         .out(c_out), 
@@ -200,9 +215,9 @@ module ssim #(parameter NUM_INPUTS = 784, NUM_ENTRIES = 784 / 28, ADDRESS_WIDTH 
         .std_y(std_y), 
         .covariance(covar),
         .std_x_valid(std_x_valid), 
-        .std_y_valid(std_y_valid), 
+        .std_y_valid(1'b1), 
         .covariance_valid(covar_valid),
-        .out_ready(1), 
+        .out_ready(1'b1), 
         .std_x_ready(std_x_ready_structure), 
         .std_y_ready(std_y_ready_structure), 
         .covariance_ready(covar_ready),
@@ -220,7 +235,7 @@ module ssim #(parameter NUM_INPUTS = 784, NUM_ENTRIES = 784 / 28, ADDRESS_WIDTH 
       .s_axis_b_tready(l_times_c_b_ready),            // output wire s_axis_b_tready
       .s_axis_b_tdata(c_out),              // input wire [31 : 0] s_axis_b_tdata
       .m_axis_result_tvalid(l_times_c_valid),  // output wire m_axis_result_tvalid
-      .m_axis_result_tready(1),  // input wire m_axis_result_tready
+      .m_axis_result_tready(1'b1),  // input wire m_axis_result_tready
       .m_axis_result_tdata(l_times_c_out)    // output wire [31 : 0] m_axis_result_tdata
     );
     
@@ -235,7 +250,7 @@ module ssim #(parameter NUM_INPUTS = 784, NUM_ENTRIES = 784 / 28, ADDRESS_WIDTH 
       .s_axis_b_tdata(s_out),              // input wire [31 : 0] s_axis_b_tdata
       //.m_axis_result_tvalid(l_times_c_times_s_valid),  // output wire m_axis_result_tvalid
       .m_axis_result_tvalid(out_valid),  // output wire m_axis_result_tvalid
-      .m_axis_result_tready(1),  // input wire m_axis_result_tready
+      .m_axis_result_tready(1'b1),  // input wire m_axis_result_tready
       .m_axis_result_tdata(out)    // output wire [31 : 0] m_axis_result_tdata
     );
     

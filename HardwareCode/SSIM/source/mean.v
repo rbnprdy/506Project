@@ -44,7 +44,7 @@ clr, clk, in_valid, result_ready, in_ready, out, out_valid);
     parallel_accumulators #(.BIT_WIDTH(8)) acc(
         .clk(clk),
         .clr(!in_valid || clr),
-        .bypass(0),
+        .bypass(1'b0),
         .in1(in1),
         .in2(in2),
         .in3(in3),
@@ -147,7 +147,7 @@ clr, clk, in_valid, result_ready, in_ready, out, out_valid);
     
     fixed_to_float_converter div_to_float (
         .aclk(clk),                                  // input wire aclk
-        .s_axis_a_tvalid(1),            // input wire s_axis_a_tvalid
+        .s_axis_a_tvalid(1'b1),            // input wire s_axis_a_tvalid
         .s_axis_a_tready(b_ready),            // output wire s_axis_a_tready
         .s_axis_a_tdata(NUM_INPUTS),              // input wire [31 : 0] s_axis_a_tdata
         .m_axis_result_tvalid(b_valid),  // output wire m_axis_result_tvalid
