@@ -5,24 +5,30 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 /*
-    Calculates the SSIM between two images. The first image is stored in input_mem x. The second image should
-    be stored as the pixel values subtracted by the mean in input_mem_y y.
+    Calculates the SSIM between input images and average a set of "average" images. The input images are stored in `mems_x` and the averages are stored in `mems_y`.
+    In order to calculate correctly, the "average" image that should be used to compare the current input image must be known. In use, this information should be received
+    from the guess of the ANN processing the same images. Because of this, the ANN should be processing one image ahead of this module.
     
     - inputs:
-        - [31:0] mean_y: The mean value for the y image, in floating point.
-        - mean_y_valid: Indicates whether the mean y value is valid.
-        - [31:0] std_y: The std value for the y image, in floating point.
-        - std_y_valid: Indicates whether the std y value is valid.
         - clk: The clock.
-        - clr: A clear signal.
+        - rst: A reset signal. This should be set to 1 for at least one clock cycle at the very beginning of operation of this module, NOT between images.
+        - clr: A clear signal. This should be set to 1 for at least THREE clock cycles when moving on to the next image. Should be set to 1 only after out_valid is raised high.
+               This should not be used to reset the whole module, instead use `rst`.
+        - [3:0] num: The number of the current image being processed. Can be hardcoded for testing or come from the output of the ANN. Between 0 and 9. 
+                     This should be set while transitioning between images, while both `clr` and `next_image` are high.
+        - next_image: Raising this flags tells the module to move on to the next image in the input memory. This should be set to 1 alongside `clr`, following the same timing restrictions
+                      for clear mentioned above. After lowering this flag, the calculations for the next image will begin.
     - outputs:
-        - [31:0] The SSIM between the two images, in floating point.
-        - out_valid: Indicates whether the output is valid.
+        - [31:0] out: The SSIM between the two images, in floating point.
+        - out_valid: Indicates whether the output is valid. Note that because of some irregularities with this flag, `out` should not be read until at least two full clock cycles and a fourth of a cycle of delay. 
+                     Ideally it should be okay to wait this clock cycles while you are asserting the `clr` and `next_image` signals because the output should not be set back to 0 until after 3 clock cycles of `clr`
+                     and `rst` being high. However, if issues are arising, seperate these wait times.
     - parameters:
-        - NUM_INPUTS: The number of pixels in each image. Defaults to 784.
+        - NUM_INPUTS: The number of pixels in each image. Defaults to 784. NOTE: This should not be set for current applicable applications.
+                      In order for everything to function properly, leave this as its default value. 
 */
 
-module ssim #(parameter NUM_INPUTS = 784, NUM_ENTRIES = 784 / 28, ADDRESS_WIDTH = 5)(clk, rst, clr, num, next_image, out, out_valid);
+module ssim #(parameter NUM_INPUTS = 784)(clk, rst, clr, num, next_image, out, out_valid);
     
     input clk, rst, clr, next_image;
     input [3:0] num;
@@ -100,18 +106,6 @@ module ssim #(parameter NUM_INPUTS = 784, NUM_ENTRIES = 784 / 28, ADDRESS_WIDTH 
         .out_b15(b15), .out_b16(b16), .out_b17(b17), .out_b18(b18), .out_b19(b19), .out_b20(b20), .out_b21(b21), 
         .out_b22(b22), .out_b23(b23), .out_b24(b24), .out_b25(b25), .out_b26(b26), .out_b27(b27), .out_b28(b28)
     );
-    
-//    parallel_input_memories_y #(.NUM("5"), .NUM_ENTRIES(28), .ADDRESS_BIT_WIDTH(5)) mems_y(
-//        .clk(clk),
-//        .rst(clr),
-//        .start_a(covar_y_ready),
-//        .start_b(0),
-//        .valid_a(y_valid),
-//        .out_a1(y1), .out_a2(y2), .out_a3(y3), .out_a4(y4), .out_a5(y5), .out_a6(y6), .out_a7(y7),
-//        .out_a8(y8), .out_a9(y9), .out_a10(y10), .out_a11(y11), .out_a12(y12), .out_a13(y13), .out_a14(y14),
-//        .out_a15(y15), .out_a16(y16), .out_a17(y17), .out_a18(y18), .out_a19(y19), .out_a20(y20), .out_a21(y21),
-//        .out_a22(y22), .out_a23(y23), .out_a24(y24), .out_a25(y25), .out_a26(y26), .out_a27(y27), .out_a28(y28)
-//    );
     
     average_memories mems_y(
         .clk(clk),

@@ -73,11 +73,9 @@ module ssim_tb();
         clr <= 1;
         next_image <= 1;
         num <= 3'd0;
-        for (i = 0; i < 10; i = i + 1) begin
+        for (i = 0; i < 3; i = i + 1) begin
             @(posedge clk);
         end
-        @(posedge clk);
-        @(posedge clk);
         #2 clr <= 0;
         next_image <= 0;        
         for (i = 0; i < 80; i = i + 1) begin
@@ -86,11 +84,9 @@ module ssim_tb();
         clr <= 1;
         next_image <= 1;
         num <= 3'd4;
-        for (i = 0; i < 10; i = i + 1) begin
+        for (i = 0; i < 3; i = i + 1) begin
             @(posedge clk);
         end
-        @(posedge clk);
-        @(posedge clk);
         #2 clr <= 0;
         next_image <= 0;
     end
