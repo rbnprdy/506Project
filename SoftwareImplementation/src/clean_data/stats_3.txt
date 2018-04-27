@@ -1,0 +1,12 @@
+mean_x: 48.5357131958
+mean_y: 30.7716836735
+standard_deviation_x: 69.1339603233
+standard_deviation_y: 48.6196960126
+covaraince: [ 672.02429199]
+l: 0.904451159388
+c: 0.941087401085
+s: [ 0.19993153]
+SSIM: [ 0.17017524]
+
+y mean in hex: 0x41f62c68
+y standard deviation in hex: 0x42427a92

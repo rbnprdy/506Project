@@ -1,0 +1,845 @@
+Summer 0
+Time Step 0: x = 1. u_x = 48.5357131958. x - u_x = [-47.21918488]. Multiplier = 2259.64402903. Multiplier Fixed = 2260.0. Partial Sum = 2260.0
+Time Step 1: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 4616.0
+Time Step 2: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 6972.0
+Time Step 3: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 9328.0
+Time Step 4: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 11684.0
+Time Step 5: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 14040.0
+Time Step 6: x = 62. u_x = 48.5357131958. x - u_x = [ 13.51332855]. Multiplier = 181.287019146. Multiplier Fixed = 181.0. Partial Sum = 14221.0
+Time Step 7: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 16577.0
+Time Step 8: x = 18. u_x = 48.5357131958. x - u_x = [-30.26878166]. Multiplier = 932.429780376. Multiplier Fixed = 932.0. Partial Sum = 17509.0
+Time Step 9: x = 43. u_x = 48.5357131958. x - u_x = [-5.47137833]. Multiplier = 30.6441205862. Multiplier Fixed = 31.0. Partial Sum = 17540.0
+Time Step 10: x = 74. u_x = 48.5357131958. x - u_x = [ 25.75444794]. Multiplier = 648.429902447. Multiplier Fixed = 648.0. Partial Sum = 18188.0
+Time Step 11: x = 16. u_x = 48.5357131958. x - u_x = [-31.7019577]. Multiplier = 1058.57263316. Multiplier Fixed = 1059.0. Partial Sum = 19247.0
+Time Step 12: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 21603.0
+Time Step 13: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 23959.0
+Time Step 14: x = 56. u_x = 48.5357131958. x - u_x = [ 8.36143112]. Multiplier = 55.7155774953. Multiplier Fixed = 56.0. Partial Sum = 24015.0
+Time Step 15: x = 162. u_x = 48.5357131958. x - u_x = [ 113.69399261]. Multiplier = 12874.14438. Multiplier Fixed = 12874.0. Partial Sum = 36889.0
+Time Step 16: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 39245.0
+Time Step 17: x = 48. u_x = 48.5357131958. x - u_x = [-0.29684067]. Multiplier = 0.286988628155. Multiplier Fixed = 0.0. Partial Sum = 39245.0
+Time Step 18: x = 79. u_x = 48.5357131958. x - u_x = [ 31.1098938]. Multiplier = 928.072770489. Multiplier Fixed = 928.0. Partial Sum = 40173.0
+Time Step 19: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 42529.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 44885.0
+Time Step 21: x = 53. u_x = 48.5357131958. x - u_x = [ 5.26342392]. Multiplier = 19.9298566701. Multiplier Fixed = 20.0. Partial Sum = 44905.0
+Time Step 22: x = 11. u_x = 48.5357131958. x - u_x = [-36.65013885]. Multiplier = 1408.92976512. Multiplier Fixed = 1409.0. Partial Sum = 46314.0
+Time Step 23: x = 5. u_x = 48.5357131958. x - u_x = [-42.557724]. Multiplier = 1895.35832347. Multiplier Fixed = 1895.0. Partial Sum = 48209.0
+Time Step 24: x = 102. u_x = 48.5357131958. x - u_x = [ 53.55371857]. Multiplier = 2858.42996348. Multiplier Fixed = 2858.0. Partial Sum = 51067.0
+Time Step 25: x = 3. u_x = 48.5357131958. x - u_x = [-44.76786804]. Multiplier = 2073.50117625. Multiplier Fixed = 2074.0. Partial Sum = 53141.0
+Time Step 26: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 55497.0
+Time Step 27: x = 95. u_x = 48.5357131958. x - u_x = [ 46.80280304]. Multiplier = 2158.92994822. Multiplier Fixed = 2159.0. Partial Sum = 57656.0
+
+Summer 1
+Time Step 0: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2356.0
+Time Step 1: x = 70. u_x = 48.5357131958. x - u_x = [ 21.84137726]. Multiplier = 460.715608013. Multiplier Fixed = 461.0. Partial Sum = 2817.0
+Time Step 2: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 5173.0
+Time Step 3: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 7529.0
+Time Step 4: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 9885.0
+Time Step 5: x = 54. u_x = 48.5357131958. x - u_x = [ 5.64057922]. Multiplier = 29.8584302785. Multiplier Fixed = 30.0. Partial Sum = 9915.0
+Time Step 6: x = 12. u_x = 48.5357131958. x - u_x = [-35.85090256]. Multiplier = 1334.85833873. Multiplier Fixed = 1335.0. Partial Sum = 11250.0
+Time Step 7: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 13606.0
+Time Step 8: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 15962.0
+Time Step 9: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 18318.0
+Time Step 10: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 20674.0
+Time Step 11: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 23030.0
+Time Step 12: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 25386.0
+Time Step 13: x = 53. u_x = 48.5357131958. x - u_x = [ 4.9104805]. Multiplier = 19.9298566701. Multiplier Fixed = 20.0. Partial Sum = 25406.0
+Time Step 14: x = 120. u_x = 48.5357131958. x - u_x = [ 72.3394165]. Multiplier = 5107.14428843. Multiplier Fixed = 5107.0. Partial Sum = 30513.0
+Time Step 15: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 32869.0
+Time Step 16: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 35225.0
+Time Step 17: x = 89. u_x = 48.5357131958. x - u_x = [ 40.83271027]. Multiplier = 1637.35850657. Multiplier Fixed = 1637.0. Partial Sum = 36862.0
+Time Step 18: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 39218.0
+Time Step 19: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 41574.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 43930.0
+Time Step 21: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 46286.0
+Time Step 22: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 48642.0
+Time Step 23: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 50998.0
+Time Step 24: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 53354.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 55710.0
+Time Step 26: x = 145. u_x = 48.5357131958. x - u_x = [ 97.21486664]. Multiplier = 9305.35862864. Multiplier Fixed = 9305.0. Partial Sum = 65015.0
+Time Step 27: x = 109. u_x = 48.5357131958. x - u_x = [ 60.59069061]. Multiplier = 3655.92997874. Multiplier Fixed = 3656.0. Partial Sum = 68671.0
+
+Summer 2
+Time Step 0: x = 58. u_x = 48.5357131958. x - u_x = [ 9.79074478]. Multiplier = 89.5727247121. Multiplier Fixed = 90.0. Partial Sum = 90.0
+Time Step 1: x = 59. u_x = 48.5357131958. x - u_x = [ 10.6696434]. Multiplier = 109.501298321. Multiplier Fixed = 110.0. Partial Sum = 200.0
+Time Step 2: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2556.0
+Time Step 3: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 4912.0
+Time Step 4: x = 22. u_x = 48.5357131958. x - u_x = [-25.73570251]. Multiplier = 704.14407481. Multiplier Fixed = 704.0. Partial Sum = 5616.0
+Time Step 5: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 7972.0
+Time Step 6: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 10328.0
+Time Step 7: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 12684.0
+Time Step 8: x = 24. u_x = 48.5357131958. x - u_x = [-23.96368217]. Multiplier = 602.001222027. Multiplier Fixed = 602.0. Partial Sum = 13286.0
+Time Step 9: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 15642.0
+Time Step 10: x = 83. u_x = 48.5357131958. x - u_x = [ 34.69454956]. Multiplier = 1187.78706492. Multiplier Fixed = 1188.0. Partial Sum = 16830.0
+Time Step 11: x = 38. u_x = 48.5357131958. x - u_x = [-9.64504242]. Multiplier = 111.001252544. Multiplier Fixed = 111.0. Partial Sum = 16941.0
+Time Step 12: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 19297.0
+Time Step 13: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 21653.0
+Time Step 14: x = 90. u_x = 48.5357131958. x - u_x = [ 41.8910141]. Multiplier = 1719.28708018. Multiplier Fixed = 1719.0. Partial Sum = 23372.0
+Time Step 15: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 25728.0
+Time Step 16: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 28084.0
+Time Step 17: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 30440.0
+Time Step 18: x = 89. u_x = 48.5357131958. x - u_x = [ 40.86975098]. Multiplier = 1637.35850657. Multiplier Fixed = 1637.0. Partial Sum = 32077.0
+Time Step 19: x = 10. u_x = 48.5357131958. x - u_x = [-37.85634613]. Multiplier = 1485.00119151. Multiplier Fixed = 1485.0. Partial Sum = 33562.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 35918.0
+Time Step 21: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 38274.0
+Time Step 22: x = 11. u_x = 48.5357131958. x - u_x = [-37.49918747]. Multiplier = 1408.92976512. Multiplier Fixed = 1409.0. Partial Sum = 39683.0
+Time Step 23: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 42039.0
+Time Step 24: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 44395.0
+Time Step 25: x = 95. u_x = 48.5357131958. x - u_x = [ 47.26003265]. Multiplier = 2158.92994822. Multiplier Fixed = 2159.0. Partial Sum = 46554.0
+Time Step 26: x = 29. u_x = 48.5357131958. x - u_x = [-18.69155312]. Multiplier = 381.644090069. Multiplier Fixed = 382.0. Partial Sum = 46936.0
+Time Step 27: x = 29. u_x = 48.5357131958. x - u_x = [-18.64302254]. Multiplier = 381.644090069. Multiplier Fixed = 382.0. Partial Sum = 47318.0
+
+Summer 3
+Time Step 0: x = 62. u_x = 48.5357131958. x - u_x = [ 14.22599792]. Multiplier = 181.287019146. Multiplier Fixed = 181.0. Partial Sum = 181.0
+Time Step 1: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2537.0
+Time Step 2: x = 11. u_x = 48.5357131958. x - u_x = [-37.46891785]. Multiplier = 1408.92976512. Multiplier Fixed = 1409.0. Partial Sum = 3946.0
+Time Step 3: x = 38. u_x = 48.5357131958. x - u_x = [-9.89857483]. Multiplier = 111.001252544. Multiplier Fixed = 111.0. Partial Sum = 4057.0
+Time Step 4: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 6413.0
+Time Step 5: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 8769.0
+Time Step 6: x = 9. u_x = 48.5357131958. x - u_x = [-39.4825325]. Multiplier = 1563.0726179. Multiplier Fixed = 1563.0. Partial Sum = 10332.0
+Time Step 7: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 12688.0
+Time Step 8: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 15044.0
+Time Step 9: x = 32. u_x = 48.5357131958. x - u_x = [-16.22323608]. Multiplier = 273.429810894. Multiplier Fixed = 273.0. Partial Sum = 15317.0
+Time Step 10: x = 11. u_x = 48.5357131958. x - u_x = [-36.75892639]. Multiplier = 1408.92976512. Multiplier Fixed = 1409.0. Partial Sum = 16726.0
+Time Step 11: x = 22. u_x = 48.5357131958. x - u_x = [-26.16113663]. Multiplier = 704.14407481. Multiplier Fixed = 704.0. Partial Sum = 17430.0
+Time Step 12: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 19786.0
+Time Step 13: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 22142.0
+Time Step 14: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 24498.0
+Time Step 15: x = 90. u_x = 48.5357131958. x - u_x = [ 41.56717682]. Multiplier = 1719.28708018. Multiplier Fixed = 1719.0. Partial Sum = 26217.0
+Time Step 16: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 28573.0
+Time Step 17: x = 50. u_x = 48.5357131958. x - u_x = [ 2.12757111]. Multiplier = 2.14413584495. Multiplier Fixed = 2.0. Partial Sum = 28575.0
+Time Step 18: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 30931.0
+Time Step 19: x = 25. u_x = 48.5357131958. x - u_x = [-22.88090134]. Multiplier = 553.929795635. Multiplier Fixed = 554.0. Partial Sum = 31485.0
+Time Step 20: x = 102. u_x = 48.5357131958. x - u_x = [ 53.49494171]. Multiplier = 2858.42996348. Multiplier Fixed = 2858.0. Partial Sum = 34343.0
+Time Step 21: x = 62. u_x = 48.5357131958. x - u_x = [ 13.48105621]. Multiplier = 181.287019146. Multiplier Fixed = 181.0. Partial Sum = 34524.0
+Time Step 22: x = 191. u_x = 48.5357131958. x - u_x = [ 143.42648315]. Multiplier = 20296.0730146. Multiplier Fixed = 20296.0. Partial Sum = 54820.0
+Time Step 23: x = 21. u_x = 48.5357131958. x - u_x = [-27.08543396]. Multiplier = 758.215501201. Multiplier Fixed = 758.0. Partial Sum = 55578.0
+Time Step 24: x = 47. u_x = 48.5357131958. x - u_x = [-1.24042892]. Multiplier = 2.35841501976. Multiplier Fixed = 2.0. Partial Sum = 55580.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 57936.0
+Time Step 26: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 60292.0
+Time Step 27: x = 24. u_x = 48.5357131958. x - u_x = [-24.15945053]. Multiplier = 602.001222027. Multiplier Fixed = 602.0. Partial Sum = 60894.0
+
+Summer 4
+Time Step 0: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2356.0
+Time Step 1: x = 81. u_x = 48.5357131958. x - u_x = [ 33.27734375]. Multiplier = 1053.92991771. Multiplier Fixed = 1054.0. Partial Sum = 3410.0
+Time Step 2: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 5766.0
+Time Step 3: x = 66. u_x = 48.5357131958. x - u_x = [ 18.02635956]. Multiplier = 305.001313579. Multiplier Fixed = 305.0. Partial Sum = 6071.0
+Time Step 4: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 8427.0
+Time Step 5: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 10783.0
+Time Step 6: x = 39. u_x = 48.5357131958. x - u_x = [-9.50215149]. Multiplier = 90.9298261526. Multiplier Fixed = 91.0. Partial Sum = 10874.0
+Time Step 7: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 13230.0
+Time Step 8: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 15586.0
+Time Step 9: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 17942.0
+Time Step 10: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 20298.0
+Time Step 11: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 22654.0
+Time Step 12: x = 14. u_x = 48.5357131958. x - u_x = [-34.06750488]. Multiplier = 1192.71548594. Multiplier Fixed = 1193.0. Partial Sum = 23847.0
+Time Step 13: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 26203.0
+Time Step 14: x = 60. u_x = 48.5357131958. x - u_x = [ 12.22210693]. Multiplier = 131.429871929. Multiplier Fixed = 131.0. Partial Sum = 26334.0
+Time Step 15: x = 40. u_x = 48.5357131958. x - u_x = [-8.35770035]. Multiplier = 72.858399761. Multiplier Fixed = 73.0. Partial Sum = 26407.0
+Time Step 16: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 28763.0
+Time Step 17: x = 59. u_x = 48.5357131958. x - u_x = [ 10.96326065]. Multiplier = 109.501298321. Multiplier Fixed = 110.0. Partial Sum = 28873.0
+Time Step 18: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 31229.0
+Time Step 19: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 33585.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 35941.0
+Time Step 21: x = 26. u_x = 48.5357131958. x - u_x = [-22.3523407]. Multiplier = 507.858369243. Multiplier Fixed = 508.0. Partial Sum = 36449.0
+Time Step 22: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 38805.0
+Time Step 23: x = 0. u_x = 48.5357131958. x - u_x = [-48.25983047]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 41161.0
+Time Step 24: x = 85. u_x = 48.5357131958. x - u_x = [ 36.65126038]. Multiplier = 1329.64421214. Multiplier Fixed = 1330.0. Partial Sum = 42491.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 44847.0
+Time Step 26: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 47203.0
+Time Step 27: x = 20. u_x = 48.5357131958. x - u_x = [-27.85232925]. Multiplier = 814.286927593. Multiplier Fixed = 814.0. Partial Sum = 48017.0
+
+Summer 5
+Time Step 0: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2356.0
+Time Step 1: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 4712.0
+Time Step 2: x = 33. u_x = 48.5357131958. x - u_x = [-14.98728943]. Multiplier = 241.358384502. Multiplier Fixed = 241.0. Partial Sum = 4953.0
+Time Step 3: x = 67. u_x = 48.5357131958. x - u_x = [ 18.49797821]. Multiplier = 340.929887188. Multiplier Fixed = 341.0. Partial Sum = 5294.0
+Time Step 4: x = 42. u_x = 48.5357131958. x - u_x = [-6.26228714]. Multiplier = 42.7155469778. Multiplier Fixed = 43.0. Partial Sum = 5337.0
+Time Step 5: x = 10. u_x = 48.5357131958. x - u_x = [-38.49906158]. Multiplier = 1485.00119151. Multiplier Fixed = 1485.0. Partial Sum = 6822.0
+Time Step 6: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 9178.0
+Time Step 7: x = 18. u_x = 48.5357131958. x - u_x = [-30.36694908]. Multiplier = 932.429780376. Multiplier Fixed = 932.0. Partial Sum = 10110.0
+Time Step 8: x = 0. u_x = 48.5357131958. x - u_x = [-48.1724472]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 12466.0
+Time Step 9: x = 58. u_x = 48.5357131958. x - u_x = [ 10.06377792]. Multiplier = 89.5727247121. Multiplier Fixed = 90.0. Partial Sum = 12556.0
+Time Step 10: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 14912.0
+Time Step 11: x = 107. u_x = 48.5357131958. x - u_x = [ 58.81266022]. Multiplier = 3418.07283152. Multiplier Fixed = 3418.0. Partial Sum = 18330.0
+Time Step 12: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 20686.0
+Time Step 13: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 23042.0
+Time Step 14: x = 130. u_x = 48.5357131958. x - u_x = [ 82.32949066]. Multiplier = 6636.43002452. Multiplier Fixed = 6636.0. Partial Sum = 29678.0
+Time Step 15: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 32034.0
+Time Step 16: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 34390.0
+Time Step 17: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 36746.0
+Time Step 18: x = 147. u_x = 48.5357131958. x - u_x = [ 98.57604218]. Multiplier = 9695.21577586. Multiplier Fixed = 9695.0. Partial Sum = 46441.0
+Time Step 19: x = 230. u_x = 48.5357131958. x - u_x = [ 181.53540039]. Multiplier = 32929.2873854. Multiplier Fixed = 32929.0. Partial Sum = 79370.0
+Time Step 20: x = 201. u_x = 48.5357131958. x - u_x = [ 153.08935547]. Multiplier = 23245.3587507. Multiplier Fixed = 23245.0. Partial Sum = 102615.0
+Time Step 21: x = 30. u_x = 48.5357131958. x - u_x = [-17.61130905]. Multiplier = 343.572663677. Multiplier Fixed = 344.0. Partial Sum = 102959.0
+Time Step 22: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 105315.0
+Time Step 23: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 107671.0
+Time Step 24: x = 101. u_x = 48.5357131958. x - u_x = [ 53.35657501]. Multiplier = 2752.50138987. Multiplier Fixed = 2753.0. Partial Sum = 110424.0
+Time Step 25: x = 92. u_x = 48.5357131958. x - u_x = [ 44.08384705]. Multiplier = 1889.1442274. Multiplier Fixed = 1889.0. Partial Sum = 112313.0
+Time Step 26: x = 67. u_x = 48.5357131958. x - u_x = [ 19.40104675]. Multiplier = 340.929887188. Multiplier Fixed = 341.0. Partial Sum = 112654.0
+Time Step 27: x = 117. u_x = 48.5357131958. x - u_x = [ 69.44710541]. Multiplier = 4687.35856761. Multiplier Fixed = 4687.0. Partial Sum = 117341.0
+
+Summer 6
+Time Step 0: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2356.0
+Time Step 1: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 4712.0
+Time Step 2: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 7068.0
+Time Step 3: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 9424.0
+Time Step 4: x = 75. u_x = 48.5357131958. x - u_x = [ 26.89041901]. Multiplier = 700.358476055. Multiplier Fixed = 700.0. Partial Sum = 10124.0
+Time Step 5: x = 171. u_x = 48.5357131958. x - u_x = [ 123.41353607]. Multiplier = 14997.5015425. Multiplier Fixed = 14998.0. Partial Sum = 25122.0
+Time Step 6: x = 240. u_x = 48.5357131958. x - u_x = [ 192.34884644]. Multiplier = 36658.5731214. Multiplier Fixed = 36659.0. Partial Sum = 61781.0
+Time Step 7: x = 94. u_x = 48.5357131958. x - u_x = [ 46.19973755]. Multiplier = 2067.00137461. Multiplier Fixed = 2067.0. Partial Sum = 63848.0
+Time Step 8: x = 13. u_x = 48.5357131958. x - u_x = [-34.56164932]. Multiplier = 1262.78691233. Multiplier Fixed = 1263.0. Partial Sum = 65111.0
+Time Step 9: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 67467.0
+Time Step 10: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 69823.0
+Time Step 11: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 72179.0
+Time Step 12: x = 74. u_x = 48.5357131958. x - u_x = [ 26.41014862]. Multiplier = 648.429902447. Multiplier Fixed = 648.0. Partial Sum = 72827.0
+Time Step 13: x = 55. u_x = 48.5357131958. x - u_x = [ 6.99934006]. Multiplier = 41.7870038869. Multiplier Fixed = 42.0. Partial Sum = 72869.0
+Time Step 14: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 75225.0
+Time Step 15: x = 132. u_x = 48.5357131958. x - u_x = [ 83.6233139]. Multiplier = 6966.28717173. Multiplier Fixed = 6966.0. Partial Sum = 82191.0
+Time Step 16: x = 70. u_x = 48.5357131958. x - u_x = [ 22.20709229]. Multiplier = 460.715608013. Multiplier Fixed = 461.0. Partial Sum = 82652.0
+Time Step 17: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 85008.0
+Time Step 18: x = 217. u_x = 48.5357131958. x - u_x = [ 169.06274414]. Multiplier = 28380.2159284. Multiplier Fixed = 28380.0. Partial Sum = 113388.0
+Time Step 19: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 156016.0
+Time Step 20: x = 187. u_x = 48.5357131958. x - u_x = [ 138.89257812]. Multiplier = 19172.3587202. Multiplier Fixed = 19172.0. Partial Sum = 175188.0
+Time Step 21: x = 167. u_x = 48.5357131958. x - u_x = [ 119.22574615]. Multiplier = 14033.787248. Multiplier Fixed = 14034.0. Partial Sum = 189222.0
+Time Step 22: x = 113. u_x = 48.5357131958. x - u_x = [ 64.82070923]. Multiplier = 4155.64427317. Multiplier Fixed = 4156.0. Partial Sum = 193378.0
+Time Step 23: x = 134. u_x = 48.5357131958. x - u_x = [ 86.02762604]. Multiplier = 7304.14431895. Multiplier Fixed = 7304.0. Partial Sum = 200682.0
+Time Step 24: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 203038.0
+Time Step 25: x = 56. u_x = 48.5357131958. x - u_x = [ 7.8977356]. Multiplier = 55.7155774953. Multiplier Fixed = 56.0. Partial Sum = 203094.0
+Time Step 26: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 205450.0
+Time Step 27: x = 60. u_x = 48.5357131958. x - u_x = [ 12.05314255]. Multiplier = 131.429871929. Multiplier Fixed = 131.0. Partial Sum = 205581.0
+
+Summer 7
+Time Step 0: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2356.0
+Time Step 1: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 4712.0
+Time Step 2: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 7068.0
+Time Step 3: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 9424.0
+Time Step 4: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 11780.0
+Time Step 5: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 14136.0
+Time Step 6: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 16492.0
+Time Step 7: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 18848.0
+Time Step 8: x = 96. u_x = 48.5357131958. x - u_x = [ 47.4709549]. Multiplier = 2252.85852183. Multiplier Fixed = 2253.0. Partial Sum = 21101.0
+Time Step 9: x = 21. u_x = 48.5357131958. x - u_x = [-26.6568985]. Multiplier = 758.215501201. Multiplier Fixed = 758.0. Partial Sum = 21859.0
+Time Step 10: x = 92. u_x = 48.5357131958. x - u_x = [ 44.17195129]. Multiplier = 1889.1442274. Multiplier Fixed = 1889.0. Partial Sum = 23748.0
+Time Step 11: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 26104.0
+Time Step 12: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 28460.0
+Time Step 13: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 30816.0
+Time Step 14: x = 135. u_x = 48.5357131958. x - u_x = [ 87.41083527]. Multiplier = 7476.07289256. Multiplier Fixed = 7476.0. Partial Sum = 38292.0
+Time Step 15: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 40648.0
+Time Step 16: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 43004.0
+Time Step 17: x = 61. u_x = 48.5357131958. x - u_x = [ 13.43917465]. Multiplier = 155.358445537. Multiplier Fixed = 155.0. Partial Sum = 43159.0
+Time Step 18: x = 169. u_x = 48.5357131958. x - u_x = [ 121.17221832]. Multiplier = 14511.6443952. Multiplier Fixed = 14512.0. Partial Sum = 57671.0
+Time Step 19: x = 55. u_x = 48.5357131958. x - u_x = [ 7.18041992]. Multiplier = 41.7870038869. Multiplier Fixed = 42.0. Partial Sum = 57713.0
+Time Step 20: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 100341.0
+Time Step 21: x = 54. u_x = 48.5357131958. x - u_x = [ 6.09247589]. Multiplier = 29.8584302785. Multiplier Fixed = 30.0. Partial Sum = 100371.0
+Time Step 22: x = 41. u_x = 48.5357131958. x - u_x = [-6.68819427]. Multiplier = 56.7869733694. Multiplier Fixed = 57.0. Partial Sum = 100428.0
+Time Step 23: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 102784.0
+Time Step 24: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 105140.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 107496.0
+Time Step 26: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 109852.0
+Time Step 27: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 112208.0
+
+Summer 8
+Time Step 0: x = 48. u_x = 48.5357131958. x - u_x = [-0.40602493]. Multiplier = 0.286988628155. Multiplier Fixed = 0.0. Partial Sum = 0.0
+Time Step 1: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2356.0
+Time Step 2: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 4712.0
+Time Step 3: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 7068.0
+Time Step 4: x = 55. u_x = 48.5357131958. x - u_x = [ 6.87668228]. Multiplier = 41.7870038869. Multiplier Fixed = 42.0. Partial Sum = 7110.0
+Time Step 5: x = 108. u_x = 48.5357131958. x - u_x = [ 60.2384491]. Multiplier = 3536.00140513. Multiplier Fixed = 3536.0. Partial Sum = 10646.0
+Time Step 6: x = 51. u_x = 48.5357131958. x - u_x = [ 3.2995491]. Multiplier = 6.07270945335. Multiplier Fixed = 6.0. Partial Sum = 10652.0
+Time Step 7: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 13008.0
+Time Step 8: x = 152. u_x = 48.5357131958. x - u_x = [ 103.88956451]. Multiplier = 10704.8586439. Multiplier Fixed = 10705.0. Partial Sum = 23713.0
+Time Step 9: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 26069.0
+Time Step 10: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 28425.0
+Time Step 11: x = 4. u_x = 48.5357131958. x - u_x = [-43.63739777]. Multiplier = 1983.42974986. Multiplier Fixed = 1983.0. Partial Sum = 30408.0
+Time Step 12: x = 72. u_x = 48.5357131958. x - u_x = [ 24.21012115]. Multiplier = 550.57275523. Multiplier Fixed = 551.0. Partial Sum = 30959.0
+Time Step 13: x = 113. u_x = 48.5357131958. x - u_x = [ 65.06354523]. Multiplier = 4155.64427317. Multiplier Fixed = 4156.0. Partial Sum = 35115.0
+Time Step 14: x = 12. u_x = 48.5357131958. x - u_x = [-36.41416168]. Multiplier = 1334.85833873. Multiplier Fixed = 1335.0. Partial Sum = 36450.0
+Time Step 15: x = 29. u_x = 48.5357131958. x - u_x = [-18.88895988]. Multiplier = 381.644090069. Multiplier Fixed = 382.0. Partial Sum = 36832.0
+Time Step 16: x = 8. u_x = 48.5357131958. x - u_x = [-40.01416779]. Multiplier = 1643.14404429. Multiplier Fixed = 1643.0. Partial Sum = 38475.0
+Time Step 17: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 81103.0
+Time Step 18: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 123731.0
+Time Step 19: x = 179. u_x = 48.5357131958. x - u_x = [ 131.14059448]. Multiplier = 17020.9301313. Multiplier Fixed = 17021.0. Partial Sum = 140752.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 143108.0
+Time Step 21: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 145464.0
+Time Step 22: x = 5. u_x = 48.5357131958. x - u_x = [-42.70742798]. Multiplier = 1895.35832347. Multiplier Fixed = 1895.0. Partial Sum = 147359.0
+Time Step 23: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 149715.0
+Time Step 24: x = 69. u_x = 48.5357131958. x - u_x = [ 21.11138153]. Multiplier = 418.787034405. Multiplier Fixed = 419.0. Partial Sum = 150134.0
+Time Step 25: x = 96. u_x = 48.5357131958. x - u_x = [ 48.13259888]. Multiplier = 2252.85852183. Multiplier Fixed = 2253.0. Partial Sum = 152387.0
+Time Step 26: x = 117. u_x = 48.5357131958. x - u_x = [ 69.31700134]. Multiplier = 4687.35856761. Multiplier Fixed = 4687.0. Partial Sum = 157074.0
+Time Step 27: x = 58. u_x = 48.5357131958. x - u_x = [ 10.40200424]. Multiplier = 89.5727247121. Multiplier Fixed = 90.0. Partial Sum = 157164.0
+
+Summer 9
+Time Step 0: x = 85. u_x = 48.5357131958. x - u_x = [ 36.58150482]. Multiplier = 1329.64421214. Multiplier Fixed = 1330.0. Partial Sum = 1330.0
+Time Step 1: x = 53. u_x = 48.5357131958. x - u_x = [ 5.46059418]. Multiplier = 19.9298566701. Multiplier Fixed = 20.0. Partial Sum = 1350.0
+Time Step 2: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 3706.0
+Time Step 3: x = 80. u_x = 48.5357131958. x - u_x = [ 32.03826141]. Multiplier = 990.001344097. Multiplier Fixed = 990.0. Partial Sum = 4696.0
+Time Step 4: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 7052.0
+Time Step 5: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 9408.0
+Time Step 6: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 11764.0
+Time Step 7: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 14120.0
+Time Step 8: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 16476.0
+Time Step 9: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 18832.0
+Time Step 10: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 21188.0
+Time Step 11: x = 21. u_x = 48.5357131958. x - u_x = [-27.10478973]. Multiplier = 758.215501201. Multiplier Fixed = 758.0. Partial Sum = 21946.0
+Time Step 12: x = 64. u_x = 48.5357131958. x - u_x = [ 15.84923553]. Multiplier = 239.144166363. Multiplier Fixed = 239.0. Partial Sum = 22185.0
+Time Step 13: x = 142. u_x = 48.5357131958. x - u_x = [ 93.7256546]. Multiplier = 8735.57290782. Multiplier Fixed = 8736.0. Partial Sum = 30921.0
+Time Step 14: x = 234. u_x = 48.5357131958. x - u_x = [ 186.11242676]. Multiplier = 34397.0016798. Multiplier Fixed = 34397.0. Partial Sum = 65318.0
+Time Step 15: x = 57. u_x = 48.5357131958. x - u_x = [ 9.05789566]. Multiplier = 71.6441511037. Multiplier Fixed = 72.0. Partial Sum = 65390.0
+Time Step 16: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 108018.0
+Time Step 17: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 150646.0
+Time Step 18: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 193274.0
+Time Step 19: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 195630.0
+Time Step 20: x = 12. u_x = 48.5357131958. x - u_x = [-35.93642807]. Multiplier = 1334.85833873. Multiplier Fixed = 1335.0. Partial Sum = 196965.0
+Time Step 21: x = 25. u_x = 48.5357131958. x - u_x = [-23.52042198]. Multiplier = 553.929795635. Multiplier Fixed = 554.0. Partial Sum = 197519.0
+Time Step 22: x = 22. u_x = 48.5357131958. x - u_x = [-26.1419754]. Multiplier = 704.14407481. Multiplier Fixed = 704.0. Partial Sum = 198223.0
+Time Step 23: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 200579.0
+Time Step 24: x = 116. u_x = 48.5357131958. x - u_x = [ 67.92256927]. Multiplier = 4551.429994. Multiplier Fixed = 4551.0. Partial Sum = 205130.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 207486.0
+Time Step 26: x = 4. u_x = 48.5357131958. x - u_x = [-44.26725769]. Multiplier = 1983.42974986. Multiplier Fixed = 1983.0. Partial Sum = 209469.0
+Time Step 27: x = 71. u_x = 48.5357131958. x - u_x = [ 23.34287262]. Multiplier = 504.644181621. Multiplier Fixed = 505.0. Partial Sum = 209974.0
+
+Summer 10
+Time Step 0: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2356.0
+Time Step 1: x = 24. u_x = 48.5357131958. x - u_x = [-24.11232185]. Multiplier = 602.001222027. Multiplier Fixed = 602.0. Partial Sum = 2958.0
+Time Step 2: x = 58. u_x = 48.5357131958. x - u_x = [ 9.7544136]. Multiplier = 89.5727247121. Multiplier Fixed = 90.0. Partial Sum = 3048.0
+Time Step 3: x = 66. u_x = 48.5357131958. x - u_x = [ 17.56778717]. Multiplier = 305.001313579. Multiplier Fixed = 305.0. Partial Sum = 3353.0
+Time Step 4: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 5709.0
+Time Step 5: x = 92. u_x = 48.5357131958. x - u_x = [ 44.12135315]. Multiplier = 1889.1442274. Multiplier Fixed = 1889.0. Partial Sum = 7598.0
+Time Step 6: x = 152. u_x = 48.5357131958. x - u_x = [ 103.53353119]. Multiplier = 10704.8586439. Multiplier Fixed = 10705.0. Partial Sum = 18303.0
+Time Step 7: x = 29. u_x = 48.5357131958. x - u_x = [-18.64078522]. Multiplier = 381.644090069. Multiplier Fixed = 382.0. Partial Sum = 18685.0
+Time Step 8: x = 101. u_x = 48.5357131958. x - u_x = [ 52.53396606]. Multiplier = 2752.50138987. Multiplier Fixed = 2753.0. Partial Sum = 21438.0
+Time Step 9: x = 95. u_x = 48.5357131958. x - u_x = [ 46.65390778]. Multiplier = 2158.92994822. Multiplier Fixed = 2159.0. Partial Sum = 23597.0
+Time Step 10: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 25953.0
+Time Step 11: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 28309.0
+Time Step 12: x = 1. u_x = 48.5357131958. x - u_x = [-47.01536179]. Multiplier = 2259.64402903. Multiplier Fixed = 2260.0. Partial Sum = 30569.0
+Time Step 13: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 32925.0
+Time Step 14: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 35281.0
+Time Step 15: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 77909.0
+Time Step 16: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 120537.0
+Time Step 17: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 163165.0
+Time Step 18: x = 228. u_x = 48.5357131958. x - u_x = [ 180.18438721]. Multiplier = 32207.4302381. Multiplier Fixed = 32207.0. Partial Sum = 195372.0
+Time Step 19: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 197728.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 200084.0
+Time Step 21: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 202440.0
+Time Step 22: x = 16. u_x = 48.5357131958. x - u_x = [-31.8383503]. Multiplier = 1058.57263316. Multiplier Fixed = 1059.0. Partial Sum = 203499.0
+Time Step 23: x = 29. u_x = 48.5357131958. x - u_x = [-19.48060417]. Multiplier = 381.644090069. Multiplier Fixed = 382.0. Partial Sum = 203881.0
+Time Step 24: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 206237.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 208593.0
+Time Step 26: x = 34. u_x = 48.5357131958. x - u_x = [-13.6663475]. Multiplier = 211.286958111. Multiplier Fixed = 211.0. Partial Sum = 208804.0
+Time Step 27: x = 60. u_x = 48.5357131958. x - u_x = [ 12.13415146]. Multiplier = 131.429871929. Multiplier Fixed = 131.0. Partial Sum = 208935.0
+
+Summer 11
+Time Step 0: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2356.0
+Time Step 1: x = 11. u_x = 48.5357131958. x - u_x = [-37.06097412]. Multiplier = 1408.92976512. Multiplier Fixed = 1409.0. Partial Sum = 3765.0
+Time Step 2: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 6121.0
+Time Step 3: x = 25. u_x = 48.5357131958. x - u_x = [-22.69394684]. Multiplier = 553.929795635. Multiplier Fixed = 554.0. Partial Sum = 6675.0
+Time Step 4: x = 2. u_x = 48.5357131958. x - u_x = [-45.86050415]. Multiplier = 2165.57260264. Multiplier Fixed = 2166.0. Partial Sum = 8841.0
+Time Step 5: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 11197.0
+Time Step 6: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 13553.0
+Time Step 7: x = 0. u_x = 48.5357131958. x - u_x = [-47.55311584]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 15909.0
+Time Step 8: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 18265.0
+Time Step 9: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 20621.0
+Time Step 10: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 22977.0
+Time Step 11: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 25333.0
+Time Step 12: x = 94. u_x = 48.5357131958. x - u_x = [ 46.15747833]. Multiplier = 2067.00137461. Multiplier Fixed = 2067.0. Partial Sum = 27400.0
+Time Step 13: x = 194. u_x = 48.5357131958. x - u_x = [ 146.42449951]. Multiplier = 21159.8587355. Multiplier Fixed = 21160.0. Partial Sum = 48560.0
+Time Step 14: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 50916.0
+Time Step 15: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 93544.0
+Time Step 16: x = 236. u_x = 48.5357131958. x - u_x = [ 188.07003784]. Multiplier = 35142.858827. Multiplier Fixed = 35143.0. Partial Sum = 128687.0
+Time Step 17: x = 184. u_x = 48.5357131958. x - u_x = [ 135.59866333]. Multiplier = 18350.5729994. Multiplier Fixed = 18351.0. Partial Sum = 147038.0
+Time Step 18: x = 170. u_x = 48.5357131958. x - u_x = [ 121.96483612]. Multiplier = 14753.5729689. Multiplier Fixed = 14754.0. Partial Sum = 161792.0
+Time Step 19: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 164148.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 166504.0
+Time Step 21: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 168860.0
+Time Step 22: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 171216.0
+Time Step 23: x = 75. u_x = 48.5357131958. x - u_x = [ 26.89570618]. Multiplier = 700.358476055. Multiplier Fixed = 700.0. Partial Sum = 171916.0
+Time Step 24: x = 88. u_x = 48.5357131958. x - u_x = [ 39.77984619]. Multiplier = 1557.42993296. Multiplier Fixed = 1557.0. Partial Sum = 173473.0
+Time Step 25: x = 147. u_x = 48.5357131958. x - u_x = [ 98.86476898]. Multiplier = 9695.21577586. Multiplier Fixed = 9695.0. Partial Sum = 183168.0
+Time Step 26: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 185524.0
+Time Step 27: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 187880.0
+
+Summer 12
+Time Step 0: x = 143. u_x = 48.5357131958. x - u_x = [ 94.59975433]. Multiplier = 8923.50148143. Multiplier Fixed = 8924.0. Partial Sum = 8924.0
+Time Step 1: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 11280.0
+Time Step 2: x = 3. u_x = 48.5357131958. x - u_x = [-45.05047989]. Multiplier = 2073.50117625. Multiplier Fixed = 2074.0. Partial Sum = 13354.0
+Time Step 3: x = 47. u_x = 48.5357131958. x - u_x = [-1.29774475]. Multiplier = 2.35841501976. Multiplier Fixed = 2.0. Partial Sum = 13356.0
+Time Step 4: x = 74. u_x = 48.5357131958. x - u_x = [ 26.35456085]. Multiplier = 648.429902447. Multiplier Fixed = 648.0. Partial Sum = 14004.0
+Time Step 5: x = 10. u_x = 48.5357131958. x - u_x = [-37.79243469]. Multiplier = 1485.00119151. Multiplier Fixed = 1485.0. Partial Sum = 15489.0
+Time Step 6: x = 22. u_x = 48.5357131958. x - u_x = [-25.65287399]. Multiplier = 704.14407481. Multiplier Fixed = 704.0. Partial Sum = 16193.0
+Time Step 7: x = 43. u_x = 48.5357131958. x - u_x = [-4.98163223]. Multiplier = 30.6441205862. Multiplier Fixed = 31.0. Partial Sum = 16224.0
+Time Step 8: x = 82. u_x = 48.5357131958. x - u_x = [ 33.46659851]. Multiplier = 1119.85849131. Multiplier Fixed = 1120.0. Partial Sum = 17344.0
+Time Step 9: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 19700.0
+Time Step 10: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 22056.0
+Time Step 11: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 24412.0
+Time Step 12: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 26768.0
+Time Step 13: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 29124.0
+Time Step 14: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 71752.0
+Time Step 15: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 114380.0
+Time Step 16: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 157008.0
+Time Step 17: x = 234. u_x = 48.5357131958. x - u_x = [ 185.480896]. Multiplier = 34397.0016798. Multiplier Fixed = 34397.0. Partial Sum = 191405.0
+Time Step 18: x = 22. u_x = 48.5357131958. x - u_x = [-25.79246712]. Multiplier = 704.14407481. Multiplier Fixed = 704.0. Partial Sum = 192109.0
+Time Step 19: x = 32. u_x = 48.5357131958. x - u_x = [-15.72438431]. Multiplier = 273.429810894. Multiplier Fixed = 273.0. Partial Sum = 192382.0
+Time Step 20: x = 57. u_x = 48.5357131958. x - u_x = [ 8.60864258]. Multiplier = 71.6441511037. Multiplier Fixed = 72.0. Partial Sum = 192454.0
+Time Step 21: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 194810.0
+Time Step 22: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 197166.0
+Time Step 23: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 199522.0
+Time Step 24: x = 16. u_x = 48.5357131958. x - u_x = [-31.96413994]. Multiplier = 1058.57263316. Multiplier Fixed = 1059.0. Partial Sum = 200581.0
+Time Step 25: x = 1. u_x = 48.5357131958. x - u_x = [-46.80277634]. Multiplier = 2259.64402903. Multiplier Fixed = 2260.0. Partial Sum = 202841.0
+Time Step 26: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 205197.0
+Time Step 27: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 207553.0
+
+Summer 13
+Time Step 0: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2356.0
+Time Step 1: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 4712.0
+Time Step 2: x = 9. u_x = 48.5357131958. x - u_x = [-39.31310654]. Multiplier = 1563.0726179. Multiplier Fixed = 1563.0. Partial Sum = 6275.0
+Time Step 3: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 8631.0
+Time Step 4: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 10987.0
+Time Step 5: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 13343.0
+Time Step 6: x = 22. u_x = 48.5357131958. x - u_x = [-25.9874115]. Multiplier = 704.14407481. Multiplier Fixed = 704.0. Partial Sum = 14047.0
+Time Step 7: x = 113. u_x = 48.5357131958. x - u_x = [ 64.98203278]. Multiplier = 4155.64427317. Multiplier Fixed = 4156.0. Partial Sum = 18203.0
+Time Step 8: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 20559.0
+Time Step 9: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 22915.0
+Time Step 10: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 25271.0
+Time Step 11: x = 133. u_x = 48.5357131958. x - u_x = [ 85.10991669]. Multiplier = 7134.21574534. Multiplier Fixed = 7134.0. Partial Sum = 32405.0
+Time Step 12: x = 107. u_x = 48.5357131958. x - u_x = [ 59.17399597]. Multiplier = 3418.07283152. Multiplier Fixed = 3418.0. Partial Sum = 35823.0
+Time Step 13: x = 80. u_x = 48.5357131958. x - u_x = [ 31.69803619]. Multiplier = 990.001344097. Multiplier Fixed = 990.0. Partial Sum = 36813.0
+Time Step 14: x = 66. u_x = 48.5357131958. x - u_x = [ 18.27487946]. Multiplier = 305.001313579. Multiplier Fixed = 305.0. Partial Sum = 37118.0
+Time Step 15: x = 231. u_x = 48.5357131958. x - u_x = [ 182.90783691]. Multiplier = 33293.215959. Multiplier Fixed = 33293.0. Partial Sum = 70411.0
+Time Step 16: x = 107. u_x = 48.5357131958. x - u_x = [ 58.76596069]. Multiplier = 3418.07283152. Multiplier Fixed = 3418.0. Partial Sum = 73829.0
+Time Step 17: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 76185.0
+Time Step 18: x = 46. u_x = 48.5357131958. x - u_x = [-2.11500168]. Multiplier = 6.42984141136. Multiplier Fixed = 6.0. Partial Sum = 76191.0
+Time Step 19: x = 50. u_x = 48.5357131958. x - u_x = [ 1.51114273]. Multiplier = 2.14413584495. Multiplier Fixed = 2.0. Partial Sum = 76193.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 78549.0
+Time Step 21: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 80905.0
+Time Step 22: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 83261.0
+Time Step 23: x = 81. u_x = 48.5357131958. x - u_x = [ 32.52976227]. Multiplier = 1053.92991771. Multiplier Fixed = 1054.0. Partial Sum = 84315.0
+Time Step 24: x = 114. u_x = 48.5357131958. x - u_x = [ 66.18978882]. Multiplier = 4285.57284678. Multiplier Fixed = 4286.0. Partial Sum = 88601.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 90957.0
+Time Step 26: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 93313.0
+Time Step 27: x = 54. u_x = 48.5357131958. x - u_x = [ 5.82376099]. Multiplier = 29.8584302785. Multiplier Fixed = 30.0. Partial Sum = 93343.0
+
+Summer 14
+Time Step 0: x = 8. u_x = 48.5357131958. x - u_x = [-39.86714172]. Multiplier = 1643.14404429. Multiplier Fixed = 1643.0. Partial Sum = 1643.0
+Time Step 1: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 3999.0
+Time Step 2: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 6355.0
+Time Step 3: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 8711.0
+Time Step 4: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 11067.0
+Time Step 5: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 13423.0
+Time Step 6: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 15779.0
+Time Step 7: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 18135.0
+Time Step 8: x = 29. u_x = 48.5357131958. x - u_x = [-19.29237366]. Multiplier = 381.644090069. Multiplier Fixed = 382.0. Partial Sum = 18517.0
+Time Step 9: x = 67. u_x = 48.5357131958. x - u_x = [ 19.40457153]. Multiplier = 340.929887188. Multiplier Fixed = 341.0. Partial Sum = 18858.0
+Time Step 10: x = 48. u_x = 48.5357131958. x - u_x = [ 0.13353348]. Multiplier = 0.286988628155. Multiplier Fixed = 0.0. Partial Sum = 18858.0
+Time Step 11: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 21214.0
+Time Step 12: x = 80. u_x = 48.5357131958. x - u_x = [ 32.11599731]. Multiplier = 990.001344097. Multiplier Fixed = 990.0. Partial Sum = 22204.0
+Time Step 13: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 64832.0
+Time Step 14: x = 243. u_x = 48.5357131958. x - u_x = [ 195.33984375]. Multiplier = 37816.3588423. Multiplier Fixed = 37816.0. Partial Sum = 102648.0
+Time Step 15: x = 216. u_x = 48.5357131958. x - u_x = [ 167.70794678]. Multiplier = 28044.2873548. Multiplier Fixed = 28044.0. Partial Sum = 130692.0
+Time Step 16: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 133048.0
+Time Step 17: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 135404.0
+Time Step 18: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 137760.0
+Time Step 19: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 140116.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 142472.0
+Time Step 21: x = 54. u_x = 48.5357131958. x - u_x = [ 6.19161987]. Multiplier = 29.8584302785. Multiplier Fixed = 30.0. Partial Sum = 142502.0
+Time Step 22: x = 115. u_x = 48.5357131958. x - u_x = [ 66.87565613]. Multiplier = 4417.50142039. Multiplier Fixed = 4418.0. Partial Sum = 146920.0
+Time Step 23: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 149276.0
+Time Step 24: x = 109. u_x = 48.5357131958. x - u_x = [ 60.92297363]. Multiplier = 3655.92997874. Multiplier Fixed = 3656.0. Partial Sum = 152932.0
+Time Step 25: x = 95. u_x = 48.5357131958. x - u_x = [ 47.16615295]. Multiplier = 2158.92994822. Multiplier Fixed = 2159.0. Partial Sum = 155091.0
+Time Step 26: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 157447.0
+Time Step 27: x = 35. u_x = 48.5357131958. x - u_x = [-12.70940399]. Multiplier = 183.215531719. Multiplier Fixed = 183.0. Partial Sum = 157630.0
+
+Summer 15
+Time Step 0: x = 135. u_x = 48.5357131958. x - u_x = [ 87.42139435]. Multiplier = 7476.07289256. Multiplier Fixed = 7476.0. Partial Sum = 7476.0
+Time Step 1: x = 75. u_x = 48.5357131958. x - u_x = [ 26.7636261]. Multiplier = 700.358476055. Multiplier Fixed = 700.0. Partial Sum = 8176.0
+Time Step 2: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 10532.0
+Time Step 3: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 12888.0
+Time Step 4: x = 96. u_x = 48.5357131958. x - u_x = [ 47.67745209]. Multiplier = 2252.85852183. Multiplier Fixed = 2253.0. Partial Sum = 15141.0
+Time Step 5: x = 83. u_x = 48.5357131958. x - u_x = [ 34.7444458]. Multiplier = 1187.78706492. Multiplier Fixed = 1188.0. Partial Sum = 16329.0
+Time Step 6: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 18685.0
+Time Step 7: x = 82. u_x = 48.5357131958. x - u_x = [ 33.76439667]. Multiplier = 1119.85849131. Multiplier Fixed = 1120.0. Partial Sum = 19805.0
+Time Step 8: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 22161.0
+Time Step 9: x = 16. u_x = 48.5357131958. x - u_x = [-32.16251755]. Multiplier = 1058.57263316. Multiplier Fixed = 1059.0. Partial Sum = 23220.0
+Time Step 10: x = 127. u_x = 48.5357131958. x - u_x = [ 79.39441681]. Multiplier = 6156.64430369. Multiplier Fixed = 6157.0. Partial Sum = 29377.0
+Time Step 11: x = 10. u_x = 48.5357131958. x - u_x = [-38.37307358]. Multiplier = 1485.00119151. Multiplier Fixed = 1485.0. Partial Sum = 30862.0
+Time Step 12: x = 81. u_x = 48.5357131958. x - u_x = [ 33.01769257]. Multiplier = 1053.92991771. Multiplier Fixed = 1054.0. Partial Sum = 31916.0
+Time Step 13: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 74544.0
+Time Step 14: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 117172.0
+Time Step 15: x = 161. u_x = 48.5357131958. x - u_x = [ 113.39756012]. Multiplier = 12648.2158064. Multiplier Fixed = 12648.0. Partial Sum = 129820.0
+Time Step 16: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 132176.0
+Time Step 17: x = 28. u_x = 48.5357131958. x - u_x = [-20.41968536]. Multiplier = 421.71551646. Multiplier Fixed = 422.0. Partial Sum = 132598.0
+Time Step 18: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 134954.0
+Time Step 19: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 137310.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 139666.0
+Time Step 21: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 142022.0
+Time Step 22: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 144378.0
+Time Step 23: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 146734.0
+Time Step 24: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 149090.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 151446.0
+Time Step 26: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 153802.0
+Time Step 27: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 156158.0
+
+Summer 16
+Time Step 0: x = 11. u_x = 48.5357131958. x - u_x = [-37.3908577]. Multiplier = 1408.92976512. Multiplier Fixed = 1409.0. Partial Sum = 1409.0
+Time Step 1: x = 79. u_x = 48.5357131958. x - u_x = [ 31.01657104]. Multiplier = 928.072770489. Multiplier Fixed = 928.0. Partial Sum = 2337.0
+Time Step 2: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 4693.0
+Time Step 3: x = 71. u_x = 48.5357131958. x - u_x = [ 23.37880707]. Multiplier = 504.644181621. Multiplier Fixed = 505.0. Partial Sum = 5198.0
+Time Step 4: x = 65. u_x = 48.5357131958. x - u_x = [ 17.08154297]. Multiplier = 271.072739971. Multiplier Fixed = 271.0. Partial Sum = 5469.0
+Time Step 5: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 7825.0
+Time Step 6: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 10181.0
+Time Step 7: x = 93. u_x = 48.5357131958. x - u_x = [ 45.39546967]. Multiplier = 1977.07280101. Multiplier Fixed = 1977.0. Partial Sum = 12158.0
+Time Step 8: x = 45. u_x = 48.5357131958. x - u_x = [-2.58414078]. Multiplier = 12.501267803. Multiplier Fixed = 13.0. Partial Sum = 12171.0
+Time Step 9: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 14527.0
+Time Step 10: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 16883.0
+Time Step 11: x = 82. u_x = 48.5357131958. x - u_x = [ 34.22167969]. Multiplier = 1119.85849131. Multiplier Fixed = 1120.0. Partial Sum = 18003.0
+Time Step 12: x = 141. u_x = 48.5357131958. x - u_x = [ 92.58481598]. Multiplier = 8549.64433421. Multiplier Fixed = 8550.0. Partial Sum = 26553.0
+Time Step 13: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 69181.0
+Time Step 14: x = 98. u_x = 48.5357131958. x - u_x = [ 49.78787231]. Multiplier = 2446.71566905. Multiplier Fixed = 2447.0. Partial Sum = 71628.0
+Time Step 15: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 73984.0
+Time Step 16: x = 65. u_x = 48.5357131958. x - u_x = [ 16.80137634]. Multiplier = 271.072739971. Multiplier Fixed = 271.0. Partial Sum = 74255.0
+Time Step 17: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 76611.0
+Time Step 18: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 78967.0
+Time Step 19: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 81323.0
+Time Step 20: x = 1. u_x = 48.5357131958. x - u_x = [-46.84350967]. Multiplier = 2259.64402903. Multiplier Fixed = 2260.0. Partial Sum = 83583.0
+Time Step 21: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 85939.0
+Time Step 22: x = 8. u_x = 48.5357131958. x - u_x = [-39.96977234]. Multiplier = 1643.14404429. Multiplier Fixed = 1643.0. Partial Sum = 87582.0
+Time Step 23: x = 45. u_x = 48.5357131958. x - u_x = [-2.94910431]. Multiplier = 12.501267803. Multiplier Fixed = 13.0. Partial Sum = 87595.0
+Time Step 24: x = 77. u_x = 48.5357131958. x - u_x = [ 28.48200226]. Multiplier = 810.215623272. Multiplier Fixed = 810.0. Partial Sum = 88405.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 90761.0
+Time Step 26: x = 22. u_x = 48.5357131958. x - u_x = [-26.36517906]. Multiplier = 704.14407481. Multiplier Fixed = 704.0. Partial Sum = 91465.0
+Time Step 27: x = 43. u_x = 48.5357131958. x - u_x = [-5.03612137]. Multiplier = 30.6441205862. Multiplier Fixed = 31.0. Partial Sum = 91496.0
+
+Summer 17
+Time Step 0: x = 117. u_x = 48.5357131958. x - u_x = [ 68.6197052]. Multiplier = 4687.35856761. Multiplier Fixed = 4687.0. Partial Sum = 4687.0
+Time Step 1: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 7043.0
+Time Step 2: x = 20. u_x = 48.5357131958. x - u_x = [-28.02293777]. Multiplier = 814.286927593. Multiplier Fixed = 814.0. Partial Sum = 7857.0
+Time Step 3: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 10213.0
+Time Step 4: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 12569.0
+Time Step 5: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 14925.0
+Time Step 6: x = 33. u_x = 48.5357131958. x - u_x = [-14.87641525]. Multiplier = 241.358384502. Multiplier Fixed = 241.0. Partial Sum = 15166.0
+Time Step 7: x = 30. u_x = 48.5357131958. x - u_x = [-18.40236473]. Multiplier = 343.572663677. Multiplier Fixed = 344.0. Partial Sum = 15510.0
+Time Step 8: x = 47. u_x = 48.5357131958. x - u_x = [-0.89110947]. Multiplier = 2.35841501976. Multiplier Fixed = 2.0. Partial Sum = 15512.0
+Time Step 9: x = 85. u_x = 48.5357131958. x - u_x = [ 36.52762604]. Multiplier = 1329.64421214. Multiplier Fixed = 1330.0. Partial Sum = 16842.0
+Time Step 10: x = 144. u_x = 48.5357131958. x - u_x = [ 96.26436615]. Multiplier = 9113.43005503. Multiplier Fixed = 9113.0. Partial Sum = 25955.0
+Time Step 11: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 68583.0
+Time Step 12: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 111211.0
+Time Step 13: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 153839.0
+Time Step 14: x = 204. u_x = 48.5357131958. x - u_x = [ 155.81994629]. Multiplier = 24169.1444715. Multiplier Fixed = 24169.0. Partial Sum = 178008.0
+Time Step 15: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 180364.0
+Time Step 16: x = 26. u_x = 48.5357131958. x - u_x = [-22.13828087]. Multiplier = 507.858369243. Multiplier Fixed = 508.0. Partial Sum = 180872.0
+Time Step 17: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 183228.0
+Time Step 18: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 185584.0
+Time Step 19: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 187940.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 190296.0
+Time Step 21: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 192652.0
+Time Step 22: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 195008.0
+Time Step 23: x = 194. u_x = 48.5357131958. x - u_x = [ 146.12240601]. Multiplier = 21159.8587355. Multiplier Fixed = 21160.0. Partial Sum = 216168.0
+Time Step 24: x = 57. u_x = 48.5357131958. x - u_x = [ 9.24956512]. Multiplier = 71.6441511037. Multiplier Fixed = 72.0. Partial Sum = 216240.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 218596.0
+Time Step 26: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 220952.0
+Time Step 27: x = 164. u_x = 48.5357131958. x - u_x = [ 116.24871063]. Multiplier = 13332.0015272. Multiplier Fixed = 13332.0. Partial Sum = 234284.0
+
+Summer 18
+Time Step 0: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2356.0
+Time Step 1: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 4712.0
+Time Step 2: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 7068.0
+Time Step 3: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 9424.0
+Time Step 4: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 11780.0
+Time Step 5: x = 57. u_x = 48.5357131958. x - u_x = [ 8.60678864]. Multiplier = 71.6441511037. Multiplier Fixed = 72.0. Partial Sum = 11852.0
+Time Step 6: x = 116. u_x = 48.5357131958. x - u_x = [ 67.72035217]. Multiplier = 4551.429994. Multiplier Fixed = 4551.0. Partial Sum = 16403.0
+Time Step 7: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 18759.0
+Time Step 8: x = 43. u_x = 48.5357131958. x - u_x = [-4.94020081]. Multiplier = 30.6441205862. Multiplier Fixed = 31.0. Partial Sum = 18790.0
+Time Step 9: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 21146.0
+Time Step 10: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 63774.0
+Time Step 11: x = 216. u_x = 48.5357131958. x - u_x = [ 167.86734009]. Multiplier = 28044.2873548. Multiplier Fixed = 28044.0. Partial Sum = 91818.0
+Time Step 12: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 134446.0
+Time Step 13: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 177074.0
+Time Step 14: x = 55. u_x = 48.5357131958. x - u_x = [ 7.04231262]. Multiplier = 41.7870038869. Multiplier Fixed = 42.0. Partial Sum = 177116.0
+Time Step 15: x = 114. u_x = 48.5357131958. x - u_x = [ 66.17364502]. Multiplier = 4285.57284678. Multiplier Fixed = 4286.0. Partial Sum = 181402.0
+Time Step 16: x = 42. u_x = 48.5357131958. x - u_x = [-6.31706238]. Multiplier = 42.7155469778. Multiplier Fixed = 43.0. Partial Sum = 181445.0
+Time Step 17: x = 44. u_x = 48.5357131958. x - u_x = [-3.62755203]. Multiplier = 20.5726941946. Multiplier Fixed = 21.0. Partial Sum = 181466.0
+Time Step 18: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 183822.0
+Time Step 19: x = 19. u_x = 48.5357131958. x - u_x = [-29.32845306]. Multiplier = 872.358353985. Multiplier Fixed = 872.0. Partial Sum = 184694.0
+Time Step 20: x = 27. u_x = 48.5357131958. x - u_x = [-21.01959991]. Multiplier = 463.786942852. Multiplier Fixed = 464.0. Partial Sum = 185158.0
+Time Step 21: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 187514.0
+Time Step 22: x = 2. u_x = 48.5357131958. x - u_x = [-46.00398636]. Multiplier = 2165.57260264. Multiplier Fixed = 2166.0. Partial Sum = 189680.0
+Time Step 23: x = 135. u_x = 48.5357131958. x - u_x = [ 87.00362396]. Multiplier = 7476.07289256. Multiplier Fixed = 7476.0. Partial Sum = 197156.0
+Time Step 24: x = 76. u_x = 48.5357131958. x - u_x = [ 28.13510895]. Multiplier = 754.287049663. Multiplier Fixed = 754.0. Partial Sum = 197910.0
+Time Step 25: x = 19. u_x = 48.5357131958. x - u_x = [-29.32365227]. Multiplier = 872.358353985. Multiplier Fixed = 872.0. Partial Sum = 198782.0
+Time Step 26: x = 70. u_x = 48.5357131958. x - u_x = [ 22.04158783]. Multiplier = 460.715608013. Multiplier Fixed = 461.0. Partial Sum = 199243.0
+Time Step 27: x = 29. u_x = 48.5357131958. x - u_x = [-19.09636116]. Multiplier = 381.644090069. Multiplier Fixed = 382.0. Partial Sum = 199625.0
+
+Summer 19
+Time Step 0: x = 83. u_x = 48.5357131958. x - u_x = [ 35.10595703]. Multiplier = 1187.78706492. Multiplier Fixed = 1188.0. Partial Sum = 1188.0
+Time Step 1: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 3544.0
+Time Step 2: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 5900.0
+Time Step 3: x = 30. u_x = 48.5357131958. x - u_x = [-18.42737198]. Multiplier = 343.572663677. Multiplier Fixed = 344.0. Partial Sum = 6244.0
+Time Step 4: x = 64. u_x = 48.5357131958. x - u_x = [ 16.02297211]. Multiplier = 239.144166363. Multiplier Fixed = 239.0. Partial Sum = 6483.0
+Time Step 5: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 8839.0
+Time Step 6: x = 49. u_x = 48.5357131958. x - u_x = [ 0.74276352]. Multiplier = 0.215562236554. Multiplier Fixed = 0.0. Partial Sum = 8839.0
+Time Step 7: x = 70. u_x = 48.5357131958. x - u_x = [ 21.69708252]. Multiplier = 460.715608013. Multiplier Fixed = 461.0. Partial Sum = 9300.0
+Time Step 8: x = 57. u_x = 48.5357131958. x - u_x = [ 8.52811432]. Multiplier = 71.6441511037. Multiplier Fixed = 72.0. Partial Sum = 9372.0
+Time Step 9: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 11728.0
+Time Step 10: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 54356.0
+Time Step 11: x = 212. u_x = 48.5357131958. x - u_x = [ 164.05001831]. Multiplier = 26720.5730604. Multiplier Fixed = 26721.0. Partial Sum = 81077.0
+Time Step 12: x = 181. u_x = 48.5357131958. x - u_x = [ 132.62243652]. Multiplier = 17546.7872785. Multiplier Fixed = 17547.0. Partial Sum = 98624.0
+Time Step 13: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 100980.0
+Time Step 14: x = 9. u_x = 48.5357131958. x - u_x = [-39.15428543]. Multiplier = 1563.0726179. Multiplier Fixed = 1563.0. Partial Sum = 102543.0
+Time Step 15: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 104899.0
+Time Step 16: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 107255.0
+Time Step 17: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 109611.0
+Time Step 18: x = 23. u_x = 48.5357131958. x - u_x = [-25.29217339]. Multiplier = 652.072648418. Multiplier Fixed = 652.0. Partial Sum = 110263.0
+Time Step 19: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 112619.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 114975.0
+Time Step 21: x = 74. u_x = 48.5357131958. x - u_x = [ 26.06967163]. Multiplier = 648.429902447. Multiplier Fixed = 648.0. Partial Sum = 115623.0
+Time Step 22: x = 39. u_x = 48.5357131958. x - u_x = [-8.97993851]. Multiplier = 90.9298261526. Multiplier Fixed = 91.0. Partial Sum = 115714.0
+Time Step 23: x = 7. u_x = 48.5357131958. x - u_x = [-40.85616684]. Multiplier = 1725.21547068. Multiplier Fixed = 1725.0. Partial Sum = 117439.0
+Time Step 24: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 119795.0
+Time Step 25: x = 58. u_x = 48.5357131958. x - u_x = [ 9.92886353]. Multiplier = 89.5727247121. Multiplier Fixed = 90.0. Partial Sum = 119885.0
+Time Step 26: x = 86. u_x = 48.5357131958. x - u_x = [ 37.71579742]. Multiplier = 1403.57278575. Multiplier Fixed = 1404.0. Partial Sum = 121289.0
+Time Step 27: x = 48. u_x = 48.5357131958. x - u_x = [-0.43523407]. Multiplier = 0.286988628155. Multiplier Fixed = 0.0. Partial Sum = 121289.0
+
+Summer 20
+Time Step 0: x = 78. u_x = 48.5357131958. x - u_x = [ 30.30193329]. Multiplier = 868.14419688. Multiplier Fixed = 868.0. Partial Sum = 868.0
+Time Step 1: x = 31. u_x = 48.5357131958. x - u_x = [-16.81727409]. Multiplier = 307.501237285. Multiplier Fixed = 308.0. Partial Sum = 1176.0
+Time Step 2: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 3532.0
+Time Step 3: x = 29. u_x = 48.5357131958. x - u_x = [-18.81197548]. Multiplier = 381.644090069. Multiplier Fixed = 382.0. Partial Sum = 3914.0
+Time Step 4: x = 99. u_x = 48.5357131958. x - u_x = [ 51.22821808]. Multiplier = 2546.64424266. Multiplier Fixed = 2547.0. Partial Sum = 6461.0
+Time Step 5: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 8817.0
+Time Step 6: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 11173.0
+Time Step 7: x = 34. u_x = 48.5357131958. x - u_x = [-14.00148392]. Multiplier = 211.286958111. Multiplier Fixed = 211.0. Partial Sum = 11384.0
+Time Step 8: x = 77. u_x = 48.5357131958. x - u_x = [ 29.17076874]. Multiplier = 810.215623272. Multiplier Fixed = 810.0. Partial Sum = 12194.0
+Time Step 9: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 54822.0
+Time Step 10: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 97450.0
+Time Step 11: x = 161. u_x = 48.5357131958. x - u_x = [ 112.53232574]. Multiplier = 12648.2158064. Multiplier Fixed = 12648.0. Partial Sum = 110098.0
+Time Step 12: x = 217. u_x = 48.5357131958. x - u_x = [ 168.73126221]. Multiplier = 28380.2159284. Multiplier Fixed = 28380.0. Partial Sum = 138478.0
+Time Step 13: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 140834.0
+Time Step 14: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 143190.0
+Time Step 15: x = 74. u_x = 48.5357131958. x - u_x = [ 26.18582153]. Multiplier = 648.429902447. Multiplier Fixed = 648.0. Partial Sum = 143838.0
+Time Step 16: x = 52. u_x = 48.5357131958. x - u_x = [ 4.3397789]. Multiplier = 12.0012830617. Multiplier Fixed = 12.0. Partial Sum = 143850.0
+Time Step 17: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 146206.0
+Time Step 18: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 148562.0
+Time Step 19: x = 118. u_x = 48.5357131958. x - u_x = [ 69.73202515]. Multiplier = 4825.28714122. Multiplier Fixed = 4825.0. Partial Sum = 153387.0
+Time Step 20: x = 38. u_x = 48.5357131958. x - u_x = [-10.20971298]. Multiplier = 111.001252544. Multiplier Fixed = 111.0. Partial Sum = 153498.0
+Time Step 21: x = 20. u_x = 48.5357131958. x - u_x = [-28.31173134]. Multiplier = 814.286927593. Multiplier Fixed = 814.0. Partial Sum = 154312.0
+Time Step 22: x = 36. u_x = 48.5357131958. x - u_x = [-12.53020477]. Multiplier = 157.144105327. Multiplier Fixed = 157.0. Partial Sum = 154469.0
+Time Step 23: x = 7. u_x = 48.5357131958. x - u_x = [-41.26305389]. Multiplier = 1725.21547068. Multiplier Fixed = 1725.0. Partial Sum = 156194.0
+Time Step 24: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 158550.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 160906.0
+Time Step 26: x = 27. u_x = 48.5357131958. x - u_x = [-20.61666107]. Multiplier = 463.786942852. Multiplier Fixed = 464.0. Partial Sum = 161370.0
+Time Step 27: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 163726.0
+
+Summer 21
+Time Step 0: x = 61. u_x = 48.5357131958. x - u_x = [ 13.22747421]. Multiplier = 155.358445537. Multiplier Fixed = 155.0. Partial Sum = 155.0
+Time Step 1: x = 112. u_x = 48.5357131958. x - u_x = [ 63.74567413]. Multiplier = 4027.71569957. Multiplier Fixed = 4028.0. Partial Sum = 4183.0
+Time Step 2: x = 60. u_x = 48.5357131958. x - u_x = [ 11.5356369]. Multiplier = 131.429871929. Multiplier Fixed = 131.0. Partial Sum = 4314.0
+Time Step 3: x = 37. u_x = 48.5357131958. x - u_x = [-10.7231369]. Multiplier = 133.072678936. Multiplier Fixed = 133.0. Partial Sum = 4447.0
+Time Step 4: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 6803.0
+Time Step 5: x = 68. u_x = 48.5357131958. x - u_x = [ 20.35279846]. Multiplier = 378.858460796. Multiplier Fixed = 379.0. Partial Sum = 7182.0
+Time Step 6: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 9538.0
+Time Step 7: x = 88. u_x = 48.5357131958. x - u_x = [ 40.20206451]. Multiplier = 1557.42993296. Multiplier Fixed = 1557.0. Partial Sum = 11095.0
+Time Step 8: x = 127. u_x = 48.5357131958. x - u_x = [ 78.72257233]. Multiplier = 6156.64430369. Multiplier Fixed = 6157.0. Partial Sum = 17252.0
+Time Step 9: x = 225. u_x = 48.5357131958. x - u_x = [ 177.07177734]. Multiplier = 31139.6445173. Multiplier Fixed = 31140.0. Partial Sum = 48392.0
+Time Step 10: x = 218. u_x = 48.5357131958. x - u_x = [ 170.27044678]. Multiplier = 28718.1445021. Multiplier Fixed = 28718.0. Partial Sum = 77110.0
+Time Step 11: x = 205. u_x = 48.5357131958. x - u_x = [ 156.61218262]. Multiplier = 24481.0730451. Multiplier Fixed = 24481.0. Partial Sum = 101591.0
+Time Step 12: x = 230. u_x = 48.5357131958. x - u_x = [ 181.61853027]. Multiplier = 32929.2873854. Multiplier Fixed = 32929.0. Partial Sum = 134520.0
+Time Step 13: x = 10. u_x = 48.5357131958. x - u_x = [-38.29310226]. Multiplier = 1485.00119151. Multiplier Fixed = 1485.0. Partial Sum = 136005.0
+Time Step 14: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 138361.0
+Time Step 15: x = 47. u_x = 48.5357131958. x - u_x = [-1.47213745]. Multiplier = 2.35841501976. Multiplier Fixed = 2.0. Partial Sum = 138363.0
+Time Step 16: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 140719.0
+Time Step 17: x = 62. u_x = 48.5357131958. x - u_x = [ 13.72433472]. Multiplier = 181.287019146. Multiplier Fixed = 181.0. Partial Sum = 140900.0
+Time Step 18: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 143256.0
+Time Step 19: x = 53. u_x = 48.5357131958. x - u_x = [ 4.92970657]. Multiplier = 19.9298566701. Multiplier Fixed = 20.0. Partial Sum = 143276.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 145632.0
+Time Step 21: x = 51. u_x = 48.5357131958. x - u_x = [ 2.56946945]. Multiplier = 6.07270945335. Multiplier Fixed = 6.0. Partial Sum = 145638.0
+Time Step 22: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 147994.0
+Time Step 23: x = 156. u_x = 48.5357131958. x - u_x = [ 108.15352631]. Multiplier = 11548.5729383. Multiplier Fixed = 11549.0. Partial Sum = 159543.0
+Time Step 24: x = 41. u_x = 48.5357131958. x - u_x = [-7.05218887]. Multiplier = 56.7869733694. Multiplier Fixed = 57.0. Partial Sum = 159600.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 161956.0
+Time Step 26: x = 2. u_x = 48.5357131958. x - u_x = [-46.10459137]. Multiplier = 2165.57260264. Multiplier Fixed = 2166.0. Partial Sum = 164122.0
+Time Step 27: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 166478.0
+
+Summer 22
+Time Step 0: x = 72. u_x = 48.5357131958. x - u_x = [ 24.38018799]. Multiplier = 550.57275523. Multiplier Fixed = 551.0. Partial Sum = 551.0
+Time Step 1: x = 25. u_x = 48.5357131958. x - u_x = [-23.40182114]. Multiplier = 553.929795635. Multiplier Fixed = 554.0. Partial Sum = 1105.0
+Time Step 2: x = 135. u_x = 48.5357131958. x - u_x = [ 87.10131073]. Multiplier = 7476.07289256. Multiplier Fixed = 7476.0. Partial Sum = 8581.0
+Time Step 3: x = 95. u_x = 48.5357131958. x - u_x = [ 46.88012695]. Multiplier = 2158.92994822. Multiplier Fixed = 2159.0. Partial Sum = 10740.0
+Time Step 4: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 13096.0
+Time Step 5: x = 36. u_x = 48.5357131958. x - u_x = [-12.36853409]. Multiplier = 157.144105327. Multiplier Fixed = 157.0. Partial Sum = 13253.0
+Time Step 6: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 15609.0
+Time Step 7: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 17965.0
+Time Step 8: x = 57. u_x = 48.5357131958. x - u_x = [ 9.20584869]. Multiplier = 71.6441511037. Multiplier Fixed = 72.0. Partial Sum = 18037.0
+Time Step 9: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 60665.0
+Time Step 10: x = 236. u_x = 48.5357131958. x - u_x = [ 188.44668579]. Multiplier = 35142.858827. Multiplier Fixed = 35143.0. Partial Sum = 95808.0
+Time Step 11: x = 148. u_x = 48.5357131958. x - u_x = [ 99.5674057]. Multiplier = 9893.14434947. Multiplier Fixed = 9893.0. Partial Sum = 105701.0
+Time Step 12: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 108057.0
+Time Step 13: x = 109. u_x = 48.5357131958. x - u_x = [ 61.44316864]. Multiplier = 3655.92997874. Multiplier Fixed = 3656.0. Partial Sum = 111713.0
+Time Step 14: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 114069.0
+Time Step 15: x = 155. u_x = 48.5357131958. x - u_x = [ 106.69022369]. Multiplier = 11334.6443647. Multiplier Fixed = 11335.0. Partial Sum = 125404.0
+Time Step 16: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 127760.0
+Time Step 17: x = 74. u_x = 48.5357131958. x - u_x = [ 25.92875671]. Multiplier = 648.429902447. Multiplier Fixed = 648.0. Partial Sum = 128408.0
+Time Step 18: x = 26. u_x = 48.5357131958. x - u_x = [-22.49281502]. Multiplier = 507.858369243. Multiplier Fixed = 508.0. Partial Sum = 128916.0
+Time Step 19: x = 77. u_x = 48.5357131958. x - u_x = [ 28.47801971]. Multiplier = 810.215623272. Multiplier Fixed = 810.0. Partial Sum = 129726.0
+Time Step 20: x = 60. u_x = 48.5357131958. x - u_x = [ 12.14617157]. Multiplier = 131.429871929. Multiplier Fixed = 131.0. Partial Sum = 129857.0
+Time Step 21: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 132213.0
+Time Step 22: x = 22. u_x = 48.5357131958. x - u_x = [-26.06425858]. Multiplier = 704.14407481. Multiplier Fixed = 704.0. Partial Sum = 132917.0
+Time Step 23: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 135273.0
+Time Step 24: x = 23. u_x = 48.5357131958. x - u_x = [-24.93653297]. Multiplier = 652.072648418. Multiplier Fixed = 652.0. Partial Sum = 135925.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 138281.0
+Time Step 26: x = 72. u_x = 48.5357131958. x - u_x = [ 24.0708313]. Multiplier = 550.57275523. Multiplier Fixed = 551.0. Partial Sum = 138832.0
+Time Step 27: x = 181. u_x = 48.5357131958. x - u_x = [ 133.11383057]. Multiplier = 17546.7872785. Multiplier Fixed = 17547.0. Partial Sum = 156379.0
+
+Summer 23
+Time Step 0: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2356.0
+Time Step 1: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 4712.0
+Time Step 2: x = 20. u_x = 48.5357131958. x - u_x = [-27.60554695]. Multiplier = 814.286927593. Multiplier Fixed = 814.0. Partial Sum = 5526.0
+Time Step 3: x = 70. u_x = 48.5357131958. x - u_x = [ 21.67658997]. Multiplier = 460.715608013. Multiplier Fixed = 461.0. Partial Sum = 5987.0
+Time Step 4: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 8343.0
+Time Step 5: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 10699.0
+Time Step 6: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 13055.0
+Time Step 7: x = 79. u_x = 48.5357131958. x - u_x = [ 30.97064209]. Multiplier = 928.072770489. Multiplier Fixed = 928.0. Partial Sum = 13983.0
+Time Step 8: x = 210. u_x = 48.5357131958. x - u_x = [ 161.53067017]. Multiplier = 26070.7159132. Multiplier Fixed = 26071.0. Partial Sum = 40054.0
+Time Step 9: x = 220. u_x = 48.5357131958. x - u_x = [ 171.82058716]. Multiplier = 29400.0016493. Multiplier Fixed = 29400.0. Partial Sum = 69454.0
+Time Step 10: x = 179. u_x = 48.5357131958. x - u_x = [ 130.74703979]. Multiplier = 17020.9301313. Multiplier Fixed = 17021.0. Partial Sum = 86475.0
+Time Step 11: x = 166. u_x = 48.5357131958. x - u_x = [ 118.42153168]. Multiplier = 13797.8586744. Multiplier Fixed = 13798.0. Partial Sum = 100273.0
+Time Step 12: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 102629.0
+Time Step 13: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 104985.0
+Time Step 14: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 107341.0
+Time Step 15: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 109697.0
+Time Step 16: x = 27. u_x = 48.5357131958. x - u_x = [-20.71891785]. Multiplier = 463.786942852. Multiplier Fixed = 464.0. Partial Sum = 110161.0
+Time Step 17: x = 29. u_x = 48.5357131958. x - u_x = [-18.85066414]. Multiplier = 381.644090069. Multiplier Fixed = 382.0. Partial Sum = 110543.0
+Time Step 18: x = 69. u_x = 48.5357131958. x - u_x = [ 20.96147919]. Multiplier = 418.787034405. Multiplier Fixed = 419.0. Partial Sum = 110962.0
+Time Step 19: x = 172. u_x = 48.5357131958. x - u_x = [ 123.76396942]. Multiplier = 15243.4301161. Multiplier Fixed = 15243.0. Partial Sum = 126205.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 128561.0
+Time Step 21: x = 103. u_x = 48.5357131958. x - u_x = [ 55.00388336]. Multiplier = 2966.35853709. Multiplier Fixed = 2966.0. Partial Sum = 131527.0
+Time Step 22: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 133883.0
+Time Step 23: x = 99. u_x = 48.5357131958. x - u_x = [ 50.55480957]. Multiplier = 2546.64424266. Multiplier Fixed = 2547.0. Partial Sum = 136430.0
+Time Step 24: x = 131. u_x = 48.5357131958. x - u_x = [ 82.63259125]. Multiplier = 6800.35859813. Multiplier Fixed = 6800.0. Partial Sum = 143230.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 145586.0
+Time Step 26: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 147942.0
+Time Step 27: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 150298.0
+
+Summer 24
+Time Step 0: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2356.0
+Time Step 1: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 4712.0
+Time Step 2: x = 73. u_x = 48.5357131958. x - u_x = [ 24.73152924]. Multiplier = 598.501328838. Multiplier Fixed = 599.0. Partial Sum = 5311.0
+Time Step 3: x = 50. u_x = 48.5357131958. x - u_x = [ 1.85012054]. Multiplier = 2.14413584495. Multiplier Fixed = 2.0. Partial Sum = 5313.0
+Time Step 4: x = 40. u_x = 48.5357131958. x - u_x = [-7.95964432]. Multiplier = 72.858399761. Multiplier Fixed = 73.0. Partial Sum = 5386.0
+Time Step 5: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 7742.0
+Time Step 6: x = 50. u_x = 48.5357131958. x - u_x = [ 2.10856247]. Multiplier = 2.14413584495. Multiplier Fixed = 2.0. Partial Sum = 7744.0
+Time Step 7: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 10100.0
+Time Step 8: x = 79. u_x = 48.5357131958. x - u_x = [ 31.36155701]. Multiplier = 928.072770489. Multiplier Fixed = 928.0. Partial Sum = 11028.0
+Time Step 9: x = 255. u_x = 48.5357131958. x - u_x = [ 206.46429443]. Multiplier = 42627.5017256. Multiplier Fixed = 42628.0. Partial Sum = 53656.0
+Time Step 10: x = 181. u_x = 48.5357131958. x - u_x = [ 132.83682251]. Multiplier = 17546.7872785. Multiplier Fixed = 17547.0. Partial Sum = 71203.0
+Time Step 11: x = 144. u_x = 48.5357131958. x - u_x = [ 95.74475861]. Multiplier = 9113.43005503. Multiplier Fixed = 9113.0. Partial Sum = 80316.0
+Time Step 12: x = 66. u_x = 48.5357131958. x - u_x = [ 18.06243896]. Multiplier = 305.001313579. Multiplier Fixed = 305.0. Partial Sum = 80621.0
+Time Step 13: x = 116. u_x = 48.5357131958. x - u_x = [ 68.14227295]. Multiplier = 4551.429994. Multiplier Fixed = 4551.0. Partial Sum = 85172.0
+Time Step 14: x = 184. u_x = 48.5357131958. x - u_x = [ 136.35733032]. Multiplier = 18350.5729994. Multiplier Fixed = 18351.0. Partial Sum = 103523.0
+Time Step 15: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 105879.0
+Time Step 16: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 108235.0
+Time Step 17: x = 196. u_x = 48.5357131958. x - u_x = [ 148.29043579]. Multiplier = 21745.7158827. Multiplier Fixed = 21746.0. Partial Sum = 129981.0
+Time Step 18: x = 3. u_x = 48.5357131958. x - u_x = [-44.67413712]. Multiplier = 2073.50117625. Multiplier Fixed = 2074.0. Partial Sum = 132055.0
+Time Step 19: x = 106. u_x = 48.5357131958. x - u_x = [ 58.36767578]. Multiplier = 3302.14425792. Multiplier Fixed = 3302.0. Partial Sum = 135357.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 137713.0
+Time Step 21: x = 104. u_x = 48.5357131958. x - u_x = [ 55.78181458]. Multiplier = 3076.2871107. Multiplier Fixed = 3076.0. Partial Sum = 140789.0
+Time Step 22: x = 18. u_x = 48.5357131958. x - u_x = [-29.90179825]. Multiplier = 932.429780376. Multiplier Fixed = 932.0. Partial Sum = 141721.0
+Time Step 23: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 144077.0
+Time Step 24: x = 64. u_x = 48.5357131958. x - u_x = [ 16.33023834]. Multiplier = 239.144166363. Multiplier Fixed = 239.0. Partial Sum = 144316.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 146672.0
+Time Step 26: x = 4. u_x = 48.5357131958. x - u_x = [-44.47372437]. Multiplier = 1983.42974986. Multiplier Fixed = 1983.0. Partial Sum = 148655.0
+Time Step 27: x = 161. u_x = 48.5357131958. x - u_x = [ 112.82593536]. Multiplier = 12648.2158064. Multiplier Fixed = 12648.0. Partial Sum = 161303.0
+
+Summer 25
+Time Step 0: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2356.0
+Time Step 1: x = 44. u_x = 48.5357131958. x - u_x = [-4.18033981]. Multiplier = 20.5726941946. Multiplier Fixed = 21.0. Partial Sum = 2377.0
+Time Step 2: x = 11. u_x = 48.5357131958. x - u_x = [-37.12413406]. Multiplier = 1408.92976512. Multiplier Fixed = 1409.0. Partial Sum = 3786.0
+Time Step 3: x = 64. u_x = 48.5357131958. x - u_x = [ 15.76526642]. Multiplier = 239.144166363. Multiplier Fixed = 239.0. Partial Sum = 4025.0
+Time Step 4: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 6381.0
+Time Step 5: x = 43. u_x = 48.5357131958. x - u_x = [-4.62884903]. Multiplier = 30.6441205862. Multiplier Fixed = 31.0. Partial Sum = 6412.0
+Time Step 6: x = 73. u_x = 48.5357131958. x - u_x = [ 25.35507965]. Multiplier = 598.501328838. Multiplier Fixed = 599.0. Partial Sum = 7011.0
+Time Step 7: x = 155. u_x = 48.5357131958. x - u_x = [ 107.13002777]. Multiplier = 11334.6443647. Multiplier Fixed = 11335.0. Partial Sum = 18346.0
+Time Step 8: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 20702.0
+Time Step 9: x = 28. u_x = 48.5357131958. x - u_x = [-19.60647202]. Multiplier = 421.71551646. Multiplier Fixed = 422.0. Partial Sum = 21124.0
+Time Step 10: x = 23. u_x = 48.5357131958. x - u_x = [-25.36361885]. Multiplier = 652.072648418. Multiplier Fixed = 652.0. Partial Sum = 21776.0
+Time Step 11: x = 18. u_x = 48.5357131958. x - u_x = [-30.0555439]. Multiplier = 932.429780376. Multiplier Fixed = 932.0. Partial Sum = 22708.0
+Time Step 12: x = 40. u_x = 48.5357131958. x - u_x = [-8.5255127]. Multiplier = 72.858399761. Multiplier Fixed = 73.0. Partial Sum = 22781.0
+Time Step 13: x = 40. u_x = 48.5357131958. x - u_x = [-8.24715042]. Multiplier = 72.858399761. Multiplier Fixed = 73.0. Partial Sum = 22854.0
+Time Step 14: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 25210.0
+Time Step 15: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 27566.0
+Time Step 16: x = 87. u_x = 48.5357131958. x - u_x = [ 39.07030487]. Multiplier = 1479.50135936. Multiplier Fixed = 1480.0. Partial Sum = 29046.0
+Time Step 17: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 31402.0
+Time Step 18: x = 136. u_x = 48.5357131958. x - u_x = [ 87.94454193]. Multiplier = 7650.00146617. Multiplier Fixed = 7650.0. Partial Sum = 39052.0
+Time Step 19: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 41408.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 43764.0
+Time Step 21: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 46120.0
+Time Step 22: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 48476.0
+Time Step 23: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 50832.0
+Time Step 24: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 53188.0
+Time Step 25: x = 55. u_x = 48.5357131958. x - u_x = [ 6.89719009]. Multiplier = 41.7870038869. Multiplier Fixed = 42.0. Partial Sum = 53230.0
+Time Step 26: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 55586.0
+Time Step 27: x = 38. u_x = 48.5357131958. x - u_x = [-9.77296829]. Multiplier = 111.001252544. Multiplier Fixed = 111.0. Partial Sum = 55697.0
+
+Summer 26
+Time Step 0: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2356.0
+Time Step 1: x = 8. u_x = 48.5357131958. x - u_x = [-40.0255928]. Multiplier = 1643.14404429. Multiplier Fixed = 1643.0. Partial Sum = 3999.0
+Time Step 2: x = 79. u_x = 48.5357131958. x - u_x = [ 31.42230225]. Multiplier = 928.072770489. Multiplier Fixed = 928.0. Partial Sum = 4927.0
+Time Step 3: x = 35. u_x = 48.5357131958. x - u_x = [-12.75314331]. Multiplier = 183.215531719. Multiplier Fixed = 183.0. Partial Sum = 5110.0
+Time Step 4: x = 144. u_x = 48.5357131958. x - u_x = [ 95.88991547]. Multiplier = 9113.43005503. Multiplier Fixed = 9113.0. Partial Sum = 14223.0
+Time Step 5: x = 32. u_x = 48.5357131958. x - u_x = [-15.55734253]. Multiplier = 273.429810894. Multiplier Fixed = 273.0. Partial Sum = 14496.0
+Time Step 6: x = 4. u_x = 48.5357131958. x - u_x = [-43.7565918]. Multiplier = 1983.42974986. Multiplier Fixed = 1983.0. Partial Sum = 16479.0
+Time Step 7: x = 25. u_x = 48.5357131958. x - u_x = [-22.53576851]. Multiplier = 553.929795635. Multiplier Fixed = 554.0. Partial Sum = 17033.0
+Time Step 8: x = 20. u_x = 48.5357131958. x - u_x = [-27.61205292]. Multiplier = 814.286927593. Multiplier Fixed = 814.0. Partial Sum = 17847.0
+Time Step 9: x = 182. u_x = 48.5357131958. x - u_x = [ 133.61080933]. Multiplier = 17812.7158522. Multiplier Fixed = 17813.0. Partial Sum = 35660.0
+Time Step 10: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 38016.0
+Time Step 11: x = 38. u_x = 48.5357131958. x - u_x = [-10.47475815]. Multiplier = 111.001252544. Multiplier Fixed = 111.0. Partial Sum = 38127.0
+Time Step 12: x = 17. u_x = 48.5357131958. x - u_x = [-31.33577347]. Multiplier = 994.501206768. Multiplier Fixed = 995.0. Partial Sum = 39122.0
+Time Step 13: x = 71. u_x = 48.5357131958. x - u_x = [ 22.73182678]. Multiplier = 504.644181621. Multiplier Fixed = 505.0. Partial Sum = 39627.0
+Time Step 14: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 41983.0
+Time Step 15: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 44339.0
+Time Step 16: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 46695.0
+Time Step 17: x = 3. u_x = 48.5357131958. x - u_x = [-44.85881424]. Multiplier = 2073.50117625. Multiplier Fixed = 2074.0. Partial Sum = 48769.0
+Time Step 18: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 51125.0
+Time Step 19: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 53481.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 55837.0
+Time Step 21: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 58193.0
+Time Step 22: x = 114. u_x = 48.5357131958. x - u_x = [ 66.38313293]. Multiplier = 4285.57284678. Multiplier Fixed = 4286.0. Partial Sum = 62479.0
+Time Step 23: x = 116. u_x = 48.5357131958. x - u_x = [ 68.01844025]. Multiplier = 4551.429994. Multiplier Fixed = 4551.0. Partial Sum = 67030.0
+Time Step 24: x = 3. u_x = 48.5357131958. x - u_x = [-45.19525909]. Multiplier = 2073.50117625. Multiplier Fixed = 2074.0. Partial Sum = 69104.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 71460.0
+Time Step 26: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 73816.0
+Time Step 27: x = 137. u_x = 48.5357131958. x - u_x = [ 88.70267487]. Multiplier = 7825.93003978. Multiplier Fixed = 7826.0. Partial Sum = 81642.0
+
+Summer 27
+Time Step 0: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 2356.0
+Time Step 1: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 4712.0
+Time Step 2: x = 50. u_x = 48.5357131958. x - u_x = [ 1.51431274]. Multiplier = 2.14413584495. Multiplier Fixed = 2.0. Partial Sum = 4714.0
+Time Step 3: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 7070.0
+Time Step 4: x = 19. u_x = 48.5357131958. x - u_x = [-28.55965996]. Multiplier = 872.358353985. Multiplier Fixed = 872.0. Partial Sum = 7942.0
+Time Step 5: x = 27. u_x = 48.5357131958. x - u_x = [-21.36260796]. Multiplier = 463.786942852. Multiplier Fixed = 464.0. Partial Sum = 8406.0
+Time Step 6: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 10762.0
+Time Step 7: x = 131. u_x = 48.5357131958. x - u_x = [ 82.95188141]. Multiplier = 6800.35859813. Multiplier Fixed = 6800.0. Partial Sum = 17562.0
+Time Step 8: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 19918.0
+Time Step 9: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 22274.0
+Time Step 10: x = 22. u_x = 48.5357131958. x - u_x = [-25.54603958]. Multiplier = 704.14407481. Multiplier Fixed = 704.0. Partial Sum = 22978.0
+Time Step 11: x = 126. u_x = 48.5357131958. x - u_x = [ 77.78205872]. Multiplier = 6000.71573008. Multiplier Fixed = 6001.0. Partial Sum = 28979.0
+Time Step 12: x = 59. u_x = 48.5357131958. x - u_x = [ 11.09547043]. Multiplier = 109.501298321. Multiplier Fixed = 110.0. Partial Sum = 29089.0
+Time Step 13: x = 64. u_x = 48.5357131958. x - u_x = [ 16.41822815]. Multiplier = 239.144166363. Multiplier Fixed = 239.0. Partial Sum = 29328.0
+Time Step 14: x = 22. u_x = 48.5357131958. x - u_x = [-26.30379868]. Multiplier = 704.14407481. Multiplier Fixed = 704.0. Partial Sum = 30032.0
+Time Step 15: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 32388.0
+Time Step 16: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 34744.0
+Time Step 17: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 37100.0
+Time Step 18: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 39456.0
+Time Step 19: x = 49. u_x = 48.5357131958. x - u_x = [ 1.13685226]. Multiplier = 0.215562236554. Multiplier Fixed = 0.0. Partial Sum = 39456.0
+Time Step 20: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 41812.0
+Time Step 21: x = 112. u_x = 48.5357131958. x - u_x = [ 63.70253754]. Multiplier = 4027.71569957. Multiplier Fixed = 4028.0. Partial Sum = 45840.0
+Time Step 22: x = 141. u_x = 48.5357131958. x - u_x = [ 92.58876801]. Multiplier = 8549.64433421. Multiplier Fixed = 8550.0. Partial Sum = 54390.0
+Time Step 23: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 56746.0
+Time Step 24: x = 72. u_x = 48.5357131958. x - u_x = [ 23.97177887]. Multiplier = 550.57275523. Multiplier Fixed = 551.0. Partial Sum = 57297.0
+Time Step 25: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 59653.0
+Time Step 26: x = 0. u_x = 48.5357131958. x - u_x = [-48.5357132]. Multiplier = 2355.71545543. Multiplier Fixed = 2356.0. Partial Sum = 62009.0
+Time Step 27: x = 91. u_x = 48.5357131958. x - u_x = [ 43.44367981]. Multiplier = 1803.21565379. Multiplier Fixed = 1803.0. Partial Sum = 63812.0
+
+Total Sum: 3742352.0
+St. Dv. Sqrd This way: 4779.50446999
+St. Dv. This way: 69.1339603233
+Len(x) - 1 = 783
+St. Dv. Old Way: 69.1339603233

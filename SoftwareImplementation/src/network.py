@@ -173,6 +173,18 @@ class Network(object):
                         for weight_count, weight in enumerate(neuron):
                             f.write(fixed_point.float2fix_bin(weight, W, F, twos_compliment=True) + "\n")
 
+
+    def read_parameters(self, data_path):
+        for count, layer in enumerate(self.biases):
+            old_shape = self.biases[count].shape
+            self.biases[count] = np.loadtxt("{}/biases_{}.txt".format(data_path, count))
+            self.biases[count] = self.biases[count].reshape(old_shape)
+
+        for layer_count, layer in enumerate(self.weights):
+            for neuron_count, neuron in enumerate(layer):
+                self.weights[layer_count][neuron_count] = np.loadtxt("{}/weight_{}_{}.txt".format(data_path, layer_count, neuron_count))
+
+
     def print_network_info(self):
         max_weight = 0
         for ed_is_dumb in self.weights:

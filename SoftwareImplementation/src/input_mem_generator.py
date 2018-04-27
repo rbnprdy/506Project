@@ -22,14 +22,21 @@ def main():
     noisy_data = post_processing.create_noisy_data(training_data, 80)
     # this is a "5"
     noisy_pixels1 = noisy_data[0][0]*256
+    clean_pixels1 = training_data[0][0]*256
     # this is a "0"
     noisy_pixels2 = noisy_data[1][0]*256
+    clean_pixels2 = training_data[0][0]*256
     # this is a "4"
     noisy_pixels3 = noisy_data[3][0]*256
+    clean_pixels3 = training_data[0][0]*256
 
+
+    clean_images = [clean_pixels1, clean_pixels2, clean_pixels3]
     noisy_images = [noisy_pixels1, noisy_pixels2, noisy_pixels3]
     
-    generate_input_mem_x(noisy_images, 28)
+    #generate_input_mem_x(noisy_images, 28)
+    generate_input_mem_x(clean_images, 28)
+
     for i in range(0, 10):
         generate_input_mem_average(running_average[i], i, 28)
 
