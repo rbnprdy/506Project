@@ -21,16 +21,17 @@ def main():
 	net = network.Network([784, 30, 10])
 
 	net.read_parameters("../floating_parameter_data")
-	net.convert_to_fix(15, 11)
+	net.convert_to_fix(15, 12)
 
+	#print net.weights[0][0]
 	print '1st image:'
-	print net.feedforward(noisy_pixels1)
+	net.feedforward(training_data[0][0])
 
-	print '2nd image:'
-	print net.feedforward(noisy_pixels2)
+	#print '2nd image:'
+	#print net.feedforward(noisy_pixels2)
 
-	print '3rd image:'
-	print net.feedforward(noisy_pixels3)
+	#print '3rd image:'
+	#print net.feedforward(noisy_pixels3)
 
 
 	#post_processing.create_hex_float_image(training_data[0][0], '../image_hex_data.txt')
